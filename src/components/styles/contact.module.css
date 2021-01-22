@@ -1,0 +1,39 @@
+.row {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.col {
+  flex: 1 1 8%;
+  margin: 0 0 0.5rem 0;
+  padding: 0.5em 10px;
+  box-sizing: border-box;
+  float: left;
+}
+
+.row.center {
+  justify-content: center;
+}
+
+.center .col {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.colspan3 {
+  flex-basis: 45%;
+}
+
+.col label {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  /* float: left; */
+}
+
+.col input {
+  height: 1.33rem;
+}

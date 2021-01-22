@@ -1,0 +1,559 @@
+.upperBody {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0rem auto;
+  text-align: center;
+}
+
+.upperBody div {
+  position: relative;
+}
+
+.upperBody .parallax {
+  margin: 0 auto;
+  background-position: fixed;
+  display: flex;
+  justify-content: center;
+}
+
+.upperBody .parallax .parallaxDiv {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.upperBody .parallax .parallaxDiv h4 {
+  position: absolute;
+  font-size: 60px;
+  padding-top: 8rem;
+  font-weight: 100;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.upperBody .parallax .parallaxDiv p {
+  position: absolute;
+  width: 40%;
+  font-size: 13px;
+  padding-top: 14rem;
+}
+
+.lowerBody {
+  max-width: 1170px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+.Circa {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  float: left;
+  margin-bottom: 1rem;
+}
+
+.Circa figure {
+  width: 80% auto;
+  display: flex;
+  flex-direction: column;
+  float: left;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+
+.Circa figure * {
+  box-sizing: border-box;
+  transition: all 0.45s ease;
+}
+
+/* .Circa figure:before,
+.Circa figure:after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: '';
+  transition: all 0.3s ease;
+  z-index: 1;
+  opacity: 0;
+  transform: scaleY(2);
+} */
+
+.Circa figure div {
+  height: 22rem;
+  width: 25.5rem;
+  flex: 1;
+  float: left;
+  display: block;
+  flex-direction: row;
+  backface-visibility: hidden;
+  margin-right: 1rem;
+  padding-bottom: 20px;
+}
+
+.Circa h3 {
+  font-size: small;
+}
+
+.Circa figure p {
+  font-size: 12px;
+  margin: 0 1rem 0 0;
+}
+
+.Circa figure figcaption {
+  background-color: rgb(156, 142, 109);
+  margin-right: 1rem;
+  margin-bottom: 3rem;
+  position: absolute;
+  top: 70%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  align-items: center;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.1em;
+  opacity: 0;
+  z-index: 2;
+  transition-delay: 0.1s;
+  font-size: 12px;
+  font-family: sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  /* position: relative; */
+  bottom: 20px;
+  z-index: 99;
+  /* padding-bottom: 1rem; */
+}
+
+.Circa figure:hover:before, .Circa figure:hover:after {
+  transform: scale(1);
+  opacity: 1;
+  cursor: pointer;
+}
+
+.Circa figure:hover div {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.Circa figure:hover figcaption {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.Circa figure figcaption h4 {
+  color: white;
+}
+
+@media screen and (max-width: 1080px) {
+  .Circa figure div {
+    height: 16rem;
+    width: 19rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .Circa figure div {
+    height: 20rem;
+    width: 25rem;
+  }
+}
+
+.Sphera {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+
+.Sphera figure {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  float: left;
+  padding-right: 1rem;
+  padding-top: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.Sphera figure * {
+  box-sizing: border-box;
+  transition: all 0.45s ease;
+}
+
+.Sphera figure div {
+  height: 13rem;
+  width: 17rem;
+  float: left;
+  display: block;
+  backface-visibility: hidden;
+}
+
+.Sphera h3 {
+  font-size: small;
+}
+
+.Sphera figure p {
+  font-size: 12px;
+  margin: 0 1rem 0 0;
+}
+
+.Sphera figure figcaption {
+  background-color: rgb(156, 142, 109);
+  margin-right: 1rem;
+  margin-bottom: 3rem;
+  position: absolute;
+  top: 65%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  align-items: center;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.1em;
+  opacity: 0;
+  z-index: 2;
+  transition-delay: 0.1s;
+  font-size: 12px;
+  font-family: sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.Sphera figure:hover:before, .Sphera figure:hover:after {
+  transform: scale(1);
+  opacity: 1;
+  cursor: pointer;
+}
+
+.Sphera figure:hover div {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.Sphera figure:hover figcaption {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.Sphera figure figcaption h4 {
+  color: white;
+}
+
+.Trigona {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+
+.Trigona figure {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  float: left;
+  padding-right: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.Trigona figure * {
+  box-sizing: border-box;
+  transition: all 0.45s ease;
+}
+
+.Trigona figure div {
+  height: 13rem;
+  width: 17rem;
+  float: left;
+  margin-right: 0rem;
+  display: block;
+  backface-visibility: hidden;
+}
+
+.Trigona h3 {
+  font-size: small;
+}
+
+.Trigona figure p {
+  font-size: 12px;
+  margin: 0 1rem 0 0;
+}
+
+.Trigona figure figcaption {
+  background-color: rgb(156, 142, 109);
+  margin-right: 1rem;
+  margin-bottom: 3rem;
+  position: absolute;
+  top: 65%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  align-items: center;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.1em;
+  opacity: 0;
+  z-index: 2;
+  transition-delay: 0.1s;
+  font-size: 12px;
+  font-family: sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.Trigona figure:hover:before, .Trigona figure:hover:after {
+  transform: scale(1);
+  opacity: 1;
+  cursor: pointer;
+}
+
+.Trigona figure:hover div {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.Trigona figure:hover figcaption {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.Trigona figure figcaption h4 {
+  color: white;
+}
+
+.solariaVideo {
+  width: 60%;
+  height: 60%;
+  margin: 0 auto;
+  display: flex;
+  padding-top: 2rem;
+  justify-content: center;
+}
+
+@media screen and (max-width: 600px) {
+  .Sphera figure div {
+    height: 20rem;
+    width: 25rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .Trigona figure div {
+    height: 20rem;
+    width: 25rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .Circa figure div {
+    height: 12rem;
+    width: 15rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .Sphera figure div {
+    height: 12rem;
+    width: 15rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .Trigona figure div {
+    height: 12rem;
+    width: 15rem;
+  }
+}
+
+.Modal {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Overlay effect: translucent background: black w/ partial opacity */
+  z-index: 1001;
+  /* Overlay effect: positioned over other containers */
+  width: 23rem;
+  /* Full width */
+  height: 24rem;
+  /* Full height */
+  position: fixed;
+  /* Fix position on the top-left corner*/
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  /* Enable scroll if needed */
+  /* Location of the content container */
+  /* max-height: calc(100vh - 225px); */
+}
+
+.Modal h1 {
+  background-color: white;
+  /* width: 80%; */
+  /* Height in proportion to its parent container */
+  /* margin: 0 auto; */
+  /* Auto margin according to the element width */
+  /* padding: 10px; */
+  padding-right: 10px;
+  padding-left: 10px;
+  /* margin-left: 50px; */
+  padding-top: 20px;
+  max-width: 640px;
+  max-height: 500px;
+  font-size: 25px;
+  text-transform: uppercase;
+}
+
+/* Modal content */
+
+.modalcontent {
+  background-color: white;
+  width: 80%;
+  /* Width in proportion to its parent container*/
+  max-width: 640px;
+  /* Max width where it stops expanding */
+  /* height: 10; */
+  /* Height in proportion to its parent container */
+  margin: auto;
+  /* Auto margin according to the element width */
+  padding: 10px;
+  display: flex;
+}
+
+.modalcontent h4 {
+  /* text-align: center; */
+  color: #aaaaaa;
+}
+
+.modalLeft {
+  width: 8rem;
+  height: 18rem;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  /* Positioned to the right of the parent container whichever size it is */
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.close:hover, .close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.row {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.col {
+  flex: 1 1 8%;
+  margin: 0 0 0.5rem 0;
+  padding: 1rem 30px;
+  box-sizing: border-box;
+}
+
+.row.center {
+  justify-content: center;
+}
+
+.center .col {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.colspan3 {
+  flex-basis: 10%;
+}
+
+.colspan4 {
+  flex-basis: 50%;
+}
+
+.title {
+  font-size: 45px;
+}
+
+.carouselStyle {
+  /* width: 80%; */
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
+}
+
+/* @media (min-width: 481px) and (max-width: 767px) {
+  
+ .upperBody .parallax {
+   
+ }
+  
+} */
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .parallax {
+    left: 0rem;
+  }
+  .upperBody .parallax .parallaxDiv h4 {
+    padding-top: 5rem;
+    font-size: 50px;
+    width: 60%;
+  }
+  .upperBody .parallax .parallaxDiv p {
+    left: 5rem;
+    width: 60%;
+    padding-top: 9rem;
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 200px) and (max-width: 319px) {
+  .parallax {
+    left: -7rem;
+    /* top: -2rem; */
+    /* top: 12rem; */
+  }
+  .upperBody .parallax .parallaxDiv h4 {
+    /* padding-top: 1rem; */
+    left: 7rem;
+    font-size: 50px;
+  }
+  .upperBody .parallax .parallaxDiv p {
+    /* padding-top: 5rem; */
+    left: 8rem;
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,328 @@
+.upperBody {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0rem auto;
+    text-align: center;
+}
+
+.upperBody div {
+    position: relative;
+}
+
+.upperBody .parallax {
+    margin: 0 auto;
+    background-position: fixed;
+    display: flex;
+    justify-content: center;
+    opacity: 60%;
+}
+
+.upperBody .parallax .parallaxDiv {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.upperBody .parallax .parallaxDiv h4 {
+    position: absolute;
+    font-size: 70px;
+    padding-top: 8rem;
+    font-weight: 100;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.upperBody .parallax .parallaxDiv p {
+    position: absolute;
+    width: 40%;
+    font-size: 14px;
+    padding-top: 14rem;
+}
+
+.lowerBody {
+    max-width: 1170px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    object-fit: cover;
+}
+
+.mirageRing {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+}
+
+.mirageRing figure {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    float: left;
+    padding-right: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.mirageRing figure * {
+    box-sizing: border-box;
+    transition: all 0.45s ease;
+}
+
+/* .mirageRing figure:before, .mirageRing figure:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '';
+    transition: all 0.3s ease;
+    z-index: 1;
+    opacity: 0;
+    transform: scaleY(2);
+} */
+
+.mirageRing figure div {
+    height: 13rem;
+    width: 17rem;
+    float: left;
+    display: block;
+    backface-visibility: hidden;
+}
+
+.mirageRing h3 {
+    font-size: small;
+}
+
+.mirageRing figure p {
+    font-size: 12px;
+    margin: 0 1rem 0 0;
+}
+
+.mirageRing figure figcaption {
+    background-color: rgb(156, 142, 109);
+    margin-right: 1rem;
+    margin-bottom: 3rem;
+    position: absolute;
+    top: 60%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.1em;
+    opacity: 0;
+    z-index: 2;
+    transition-delay: 0.1s;
+    font-size: 12px;
+    font-family: sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.mirageRing figure:hover:before, .mirageRing figure:hover:after {
+    transform: scale(1);
+    opacity: 1;
+    cursor: pointer;
+}
+
+.mirageRing figure:hover div {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.mirageRing figure:hover figcaption {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.mirageRing figure figcaption h4 {
+    color: white;
+}
+
+.Modal {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Overlay effect: translucent background: black w/ partial opacity */
+    z-index: 1001;
+    /* Overlay effect: positioned over other containers */
+    width: 23rem;
+    /* Full width */
+    height: 20rem;
+    /* Full height */
+    position: fixed;
+    /* Fix position on the top-left corner*/
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    /* Enable scroll if needed */
+    /* Location of the content container */
+    /* max-height: calc(100vh - 225px); */
+}
+
+.Modal h1 {
+    background-color: white;
+    /* width: 80%; */
+    /* Height in proportion to its parent container */
+    /* margin: 0 auto; */
+    /* Auto margin according to the element width */
+    /* padding: 10px; */
+    padding-right: 10px;
+    padding-left: 10px;
+    /* margin-left: 50px; */
+    padding-top: 20px;
+    max-width: 640px;
+    max-height: 500px;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+/* Modal content */
+
+.modalcontent {
+    background-color: white;
+    width: 80%;
+    /* Width in proportion to its parent container*/
+    max-width: 640px;
+    /* Max width where it stops expanding */
+    /* height: 10; */
+    /* Height in proportion to its parent container */
+    margin: auto;
+    /* Auto margin according to the element width */
+    padding: 10px;
+    display: flex;
+}
+
+.modalcontent h4 {
+    /* text-align: center; */
+    color: #aaaaaa;
+}
+
+.modalLeft {
+    width: 8rem;
+    height: 18rem;
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    /* Positioned to the right of the parent container whichever size it is */
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.row {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.col {
+    flex: 1 1 8%;
+    margin: 0 0 0.5rem 0;
+    padding: 1rem 30px;
+    box-sizing: border-box;
+}
+
+.row.center {
+    justify-content: center;
+}
+
+.center .col {
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.colspan3 {
+    flex-basis: 10%;
+}
+
+.colspan4 {
+    flex-basis: 50%;
+}
+
+.title {
+    font-size: 45px;
+}
+
+.carouselStyle {
+    /* width: 80%; */
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+    /* margin-bottom: 1rem; */
+}
+
+@media screen and (max-width: 600px) {
+    .mirageRing figure div {
+        height: 17rem;
+        width: 22rem;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .parallax {
+        left: -10rem;
+    }
+    .upperBody .parallax .parallaxDiv h4 {
+        padding-top: 5rem;
+        left: 8rem;
+        font-size: 50px;
+        width: 60%;
+    }
+    .upperBody .parallax .parallaxDiv p {
+        left: 13rem;
+        width: 40%;
+        padding-top: 9rem;
+        font-size: 13px;
+    }
+    .lowerBody figure div {
+        width: 18rem;
+        height: 13rem;
+    }
+}
+
+@media (min-width: 200px) and (max-width: 319px) {
+    .parallax {
+        left: -7rem;
+        width: 20rem;
+    }
+    .upperBody .parallax .parallaxDiv h4 {
+        /* padding-top: 1rem; */
+        left: 4.5rem;
+        font-size: 50px;
+    }
+    .upperBody .parallax .parallaxDiv p {
+        /* padding-top: 5rem; */
+        width: 30%;
+        left: 9rem;
+        font-size: 12px;
+    }
+    .lowerBody figure div {
+        width: 13rem;
+        height: 9rem;
+    }
+}

@@ -1,0 +1,175 @@
+.header {
+    padding-top: 7rem;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 15%;
+    height: auto;
+    display: table;
+    margin: 0 auto;
+    justify-content: center;
+    animation: fadein 5s;
+    -moz-animation: fadein 5s;
+    /* Firefox */
+    -webkit-animation: fadein 5s;
+    /* Safari and Chrome */
+    -o-animation: fadein 5s;
+    /* Opera */
+}
+
+.nav-list {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin: 5rem auto;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-item {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    /* width: 100%; */
+    color: black;
+    font-size: 11px;
+    margin-right: 1rem;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+}
+
+/* .nav-list {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin-bottom: 4rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-item {
+    display: inline-block;
+    
+    
+    width: 100%;
+    color: black;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 11px;
+    margin-right: 1rem;
+    text-decoration: none;
+} */
+
+.nav-item:hover {
+    color: grey;
+}
+
+.active-nav-item {
+    color: rgb(95, 95, 95)
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadein {
+    /* Firefox */
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadein {
+    /* Safari and Chrome */
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadein {
+    /* Opera */
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (min-width: 1281px)  {
+  
+    .header {
+        width: 100%;
+    }
+  
+  }
+
+@media (min-width: 1000px) and (max-width: 1280px) {
+    .logo {
+        width: 18%;
+    }
+    .header {
+        width: 90%;
+    }
+    
+  }
+
+@media (min-width: 768px) and (max-width: 999px) {
+    .logo {
+        width: 18%;
+    }
+    .header {
+        width: 90%;
+    }
+    
+  }
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .logo {
+        width: 25%;
+        padding-left: 3rem;
+    }
+    .header {
+        width: 90%;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .logo {
+        width: 32%;
+        padding-left: 3rem;
+    }
+    .header {
+        width: 320px;
+    }
+}
+
+@media (min-width: 240px) and (max-width: 319px) {
+    .header {
+        width: 240px;
+        margin-left: 1.5rem;
+    }
+    .logo {
+        width: 80px;
+        height: auto;
+        padding-left: 1rem;
+    }
+}

@@ -1,0 +1,111 @@
+/* * {
+  background: #000 !important;
+  color: #0f0 !important;
+  outline: solid #f00 1px !important;
+} */
+
+ #___gatsby {
+  height: 100%;
+}
+/* #gatsby-focus-wrapper {
+  height: 100vh;
+}
+
+#___gatsby {
+  height: 100vh;
+}
+
+#gatsby-announcer{
+  height: 100vh;
+} */
+
+#gatsby-announcer{
+  height: 100vh;
+}
+
+.container {
+  width: 100%;
+  /* width: 90vw; */
+  /* max-width: 1170px; */
+  /* margin: 0 auto; */
+  /* height of your footer */
+}
+
+.push {
+  padding-top: 10rem;
+  display: none;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+body {
+  font-family: 'Josefin Sans', serif;
+}
+
+h1 {
+  text-transform: capitalize;
+}
+
+p {
+  line-height: 2;
+}
+
+@font-face {
+  font-family: 'Josefin Sans';
+  src: local('Josefin Sans'), url(./../fonts//josefinsans/JosefinSans-Light.ttf) format('truetype');
+}
+
+/* 
+@media (min-width: 320px) and (max-width: 480px) {
+  
+  .container {
+    width: 300px;
+    justify-content: center;
+  }
+  
+} */
+
+/* @media screen and (min-width: 768px) {
+  .page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .page {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+} */
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .container {
+    width: 100%;
+  }
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .container {
+    width: 300px;
+    height: auto;
+  }
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5){
+
+  html,
+  body{
+    width:100%;
+    overflow-x:hidden;
+  }
+
+}

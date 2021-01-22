@@ -1,0 +1,116 @@
+body {
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 20rem;
+}
+
+.header {
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 32px;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+.header p {
+    font-size: 11px;
+}
+
+.header h2 {
+    font-size: 15px;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.mainBody {
+    font-size: 13px;
+    max-width: 1030px;
+}
+
+.mainBody article {
+    width: 100%;
+}
+
+.mainBody article .section0 {
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 23rem;
+    padding-left: 7rem;
+}
+
+.div0 {
+    position: relative;
+}
+
+.mainBody article .section1 {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.mainBody article .section2 {
+    width: 80%;
+    position: relative;
+    left: -105px;
+    z-index: 99;
+}
+
+.div1 {
+    float: right;
+    margin: 5px;
+}
+
+.img1 {
+    width: 15rem;
+    height: 15rem;
+    padding: 15px;
+}
+
+.mainBody article .section3 {
+    width: 90%;
+    position: relative;
+    left: 30px;
+    z-index: 99;
+}
+
+.div2 {
+    float: right;
+    margin: 5px;
+}
+
+.mainBody article .img2 {
+    width: 20rem;
+    height: 12rem;
+    padding: 15px;
+    padding-left: 5rem;
+}
+
+.mainBody article .section4 {
+    width: 80%;
+    position: relative;
+    left: 200px;
+    z-index: 99;
+}
+
+.img3 {
+    width: 20rem;
+    height: 15rem;
+    padding: 15px;
+}
+
+.mainBody article .section5 {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    left: 100px;
+    z-index: 99;
+}
+
+.mainBody article .section6 {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    left: 100px;
+    z-index: 99;
+}

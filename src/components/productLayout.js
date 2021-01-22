@@ -1,26 +1,23 @@
 import React from 'react'
 import Header from '../components/header'
-import Footer from '../components/footer'
+// import Footer from '../components/footer'
 
 import { ParallaxProvider } from 'react-scroll-parallax'
 
 import layoutStyle from './styles/layout.module.css'
 
-const Layout = (props) => {
+const ProductLayout = (props) => {
     return (
         <div className={layoutStyle.container}>
-            <Header />
+            {/* <div className={layoutStyle.content}> */}
             <ParallaxProvider>
-                {/* <RouteAnnouncement /> */}
+                <Header />
                 {props.children}
             </ParallaxProvider>
-            <div className={layoutStyle.push}></div>
-            <Footer />
         </div>
-
     )
 }
 
 
 
-export default Layout
+export default ProductLayout

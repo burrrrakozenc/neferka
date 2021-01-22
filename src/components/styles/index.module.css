@@ -1,0 +1,264 @@
+.page {
+  max-width: 1170px;
+  text-transform: capitalize;
+  margin: 0 auto;
+  padding-bottom: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#___gatsby {
+  height: 100%;
+}
+
+.page article {
+  position: relative;
+  /* margin: 1rem 0; */
+  /* margin-bottom: 1rem; */
+  display: inline-flex;
+}
+
+.indeximages {
+  width: 22rem;
+  height: 15rem;
+  opacity: 40%;
+  margin: 0 auto;
+}
+
+.indexText {
+  position: absolute;
+  top: 80px;
+  left: 110px;
+  color: black;
+  text-align: center;
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+
+.page h2 {
+  font-size: 25px;
+  text-align: center;
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-content: center
+}
+
+.page h4 {
+  width: 70%;
+  font-size: 9px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+/* @media screen and (min-width: 500px) {
+  .page {
+    display: grid;
+    grid-template-columns: 1fr ;
+    column-gap: 1rem;
+  }
+
+} */
+
+/* @media screen and (min-width: 768px) {
+  .page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+} */
+
+/* @media screen and (min-width: 992px) {
+  
+  .indeximages {
+    width: 22rem;
+    height: 13rem;
+    margin-right: 1rem;
+   
+  }
+} */
+
+@media (min-width: 1281px)  {
+  
+  .indeximages {
+    width: 22rem;
+    height: 15rem;
+    margin: 1rem;
+    /* margin: 1rem; */
+  }
+
+}
+
+@media (min-width: 1000px) and (max-width: 1280px) {
+  .page {
+    display: flex;
+    justify-content: center;
+  }
+
+  .indeximages {
+    width: 20rem;
+    height: 15rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    /* margin: 1rem; */
+  }
+
+  .indexText {
+    top: 70px;
+    left: 90px;
+  }
+  
+
+}
+
+/* @media (min-width: 980px) and (max-width: 1000px) {
+  .page article {
+    margin-left: 1rem;
+  }
+  .indeximages {
+    width: 20rem;
+    height: 14rem;
+    margin: 1rem;
+    margin: 1rem;
+  }
+  .indexText {
+    left: 96px;
+  }
+  
+} */
+
+@media (min-width: 768px) and (max-width: 999px) {
+  .indeximages {
+    width: 18rem;
+    height: 12rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    /* margin: 1rem; */
+  }
+  .indexText {
+    top: 50px;
+    left: 70px;
+  }
+}
+
+/* @media (min-width: 481px) and (max-width: 600px) {
+  .page  article{
+   padding-left: 5rem; 
+  }
+  .indexText {
+    padding-left: 5rem;
+  }
+} */
+
+@media (min-width: 481px) and (max-width: 767px) {
+.page article {
+  margin: 0.5rem;
+}
+
+  .indeximages {
+    width: 18rem;
+    height: 13rem;
+  }
+  .indexText {
+    top: 50px;
+    left: 60px;
+  }
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .indeximages {
+    width: 18rem;
+    height: 13rem;
+    opacity: 40%;
+  }
+  .page article {
+    padding-left: 3rem;
+    padding-bottom: 1rem;
+  }
+  .indexText {
+    top: 55px;
+    left: 95px;
+  }
+  .page h2 {
+    font-size: 23px;
+  }
+  .page h4 {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 200px) and (max-width: 319px) {
+  .page article {
+    padding-bottom: 1rem;
+  }
+  .indeximages {
+    width: 19rem;
+    height: 12rem;
+  }
+  .indexText {
+    top: 60px;
+    left: 50px;
+  }
+  .page h2 {
+    font-size: 100%;
+  }
+  .page h4 {
+    font-size: 90%;
+  }
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+/* @media (min-width: 240px) and (max-width: 480px) {
+  .indexText {
+    left: 150px;
+  }
+  .indeximages {
+    width: 14rem;
+    height: 10rem;
+  }
+} */
+
+/* 
+@media screen and (max-width: 992px) {
+  .page .indexText {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .page .indexText {
+    left: 33%;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .page {
+    left: -150px;
+  }
+  .page .indexText {
+    width: 60%;
+    left: 32%;
+  }
+  .indeximages{
+   width: 20rem;
+   height: 13rem; 
+  }
+  .page article .indexText h2{
+    font-size: 19px;
+  }
+} */
+
+/* @media screen and (max-width: 500px) {
+  
+} */

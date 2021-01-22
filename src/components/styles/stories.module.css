@@ -1,0 +1,123 @@
+.upperBody {
+  width: 100%;
+  margin: 0 auto;
+  
+  display: inline-block;
+}
+
+.upperBody h1 {
+  font-size: 50px;
+  text-align: center;
+}
+
+.upperBody p {
+  width: 60%;
+  margin: 1rem auto;
+  text-align: left;
+}
+
+.lowerBody {
+  max-width: 1170px;
+  width: 100%;
+  /* padding-left: 1%; */
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.lowerBody span {
+  display: inline-block;
+}
+
+.lowerBody ul {
+  width: 80%;
+  /* display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 0.5rem; */
+  list-style-type: none;
+  padding-bottom: 4rem;
+  /* padding-left: 5rem; */
+}
+
+.lowerBody ul li {
+  padding-bottom: 2rem;
+}
+
+.lowerBody div {
+  height: 18rem;
+  width: 27rem;
+}
+
+.lowerBody figure {
+  display: flex;
+  margin: 0 auto;
+}
+
+.lowerBody .titleP {
+  text-transform: capitalize;
+}
+
+.lowerBody figure p {
+  font-size: 16px;
+  padding-left: 1rem;
+  white-space: nowrap;
+}
+
+@media screen and (min-width: 672px) {
+  .lowerBody {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .lowerBody {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 672px) {
+  .lowerBody div {
+    width: 20rem;
+    height: 13rem;
+    display: flex;
+    justify-content: center;
+  }
+  .lowerBody ul {
+    padding: 0 auto;
+  }
+
+  .lowerBody ul li{
+    padding-bottom: 9rem;
+    /* padding-left: -3rem; */
+  }
+
+  .lowerBody figure {
+    display: block;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+.upperBody {
+  width: 80%;
+}
+.upperBody h1 {
+  font-size: 50px;
+  /* padding-left: 2rem; */
+}
+.upperBody  {
+  padding-left: 1rem;
+}
+  
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+  /* CSS */
+  
+}

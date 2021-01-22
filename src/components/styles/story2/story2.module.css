@@ -1,0 +1,109 @@
+body {
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 10rem;
+}
+
+.header {
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.headerImage {
+    width: 45rem;
+    height: 16rem;
+    margin: 0 auto;
+}
+
+.header h1 {
+    font-size: 32px;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+.header p {
+    font-size: 11px;
+}
+
+.mainBody {
+    font-size: 13px;
+    max-width: 1030px;
+    padding-bottom: 2rem;
+}
+
+.mainBody article {
+    width: 100%;
+    
+}
+
+.mainBody article .section1 {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.mainBody article .section2 {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.div1 {
+    float: left;
+    margin: 5px;
+}
+
+.img1 {
+    width: 18rem;
+    height: 12rem;
+    padding: 15px;
+}
+
+.mainBody article .section3 {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.div2 {
+    float: right;
+    margin: 5px;
+}
+
+.mainBody article .img2 {
+    width: 15rem;
+    height: 12rem;
+    padding: 5px;
+}
+
+.mainBody article .section4 {
+    width: 80%;
+    position: relative;
+    left: 200px;
+    z-index: 99;
+}
+
+.img3 {
+    width: 20rem;
+    height: 15rem;
+    padding: 15px;
+}
+
+.mainBody article .section5 {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    left: 100px;
+    z-index: 99;
+}
+
+.mainBody article .section6 {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    left: 100px;
+    z-index: 99;
+}
+
+.carousel {
+    padding-top: 10rem;
+    padding-left: 20rem;
+    justify-content: center;
+}
