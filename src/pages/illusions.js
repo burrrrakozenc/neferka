@@ -88,6 +88,8 @@ const Product = ({ node }) => {
 class Illusions extends React.Component {
   render() {
     const Illusions1 = this.props.data.illusions1.edges
+    const Illusions2 = this.props.data.illusions2.edges
+    const Illusions3 = this.props.data.illusions3.edges
     const parallax = this.props.data.parallax.edges
 
     return (
@@ -133,6 +135,22 @@ class Illusions extends React.Component {
               ))}
             </div>
           </section>
+          <section className={illusionsStyle.mirageNecklace}>
+            <h3>Mirage Necklace</h3>
+            <div className={illusionsStyle.mirageRingimage}>
+              {Illusions2.map(({ node }, i) => (
+                <Product node={node} key={node.id} />
+              ))}
+            </div>
+          </section>
+          <section className={illusionsStyle.perspective}>
+            <h3>Perspective</h3>
+            <div className={illusionsStyle.mirageRingimage}>
+              {Illusions3.map(({ node }, i) => (
+                <Product node={node} key={node.id} />
+              ))}
+            </div>
+          </section>
         </section>
       </Layout >
     )
@@ -143,27 +161,71 @@ Illusions.propTypes = propTypes
 
 export const query = graphql`
 {
-    illusions1: allContentfulIllusions{
-        edges {
-          node {
-            id
-            price
-            slug
-            title
-            category
-            image {
-              fluid {
-                ...GatsbyContentfulFluid
-              }
+    illusions1: allContentfulIllusions(filter: {category: {eq: "Mirage Ring"}}) {
+      edges {
+        node {
+          id
+          price
+          slug
+          title
+          category
+          image {
+            fluid {
+              src
             }
-            carousel {
-              fluid {
-                ...GatsbyContentfulFluid
-              }
+          }
+          carousel {
+            fluid {
+              src
             }
           }
         }
       }
+    }
+
+    illusions2: allContentfulIllusions(filter: {category: {eq: "Mirage Necklace"}}) {
+      edges {
+        node {
+          id
+          price
+          slug
+          title
+          category
+          image {
+            fluid {
+              src
+            }
+          }
+          carousel {
+            fluid {
+              src
+            }
+          }
+        }
+      }
+    }
+
+    illusions3: allContentfulIllusions(filter: {category: {eq: "Perspective"}}) {
+      edges {
+        node {
+          id
+          price
+          slug
+          title
+          category
+          image {
+            fluid {
+              src
+            }
+          }
+          carousel {
+            fluid {
+              src
+            }
+          }
+        }
+      }
+    }
 
       parallax: allContentfulParallax {
         edges {
