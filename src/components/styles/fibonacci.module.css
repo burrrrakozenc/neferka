@@ -14,7 +14,7 @@
     background-position: fixed;
     display: flex;
     justify-content: center;
-    opacity: 60%;
+    opacity: 0.5;
 }
 
 .upperBody .parallax .parallaxDiv {

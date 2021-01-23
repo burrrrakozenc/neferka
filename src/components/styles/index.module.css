@@ -21,8 +21,8 @@
 .indeximages {
   width: 22rem;
   height: 15rem;
-  opacity: 40%;
   margin: 0 auto;
+  opacity: 0.5;
 }
 
 .indexText {
@@ -80,15 +80,13 @@
   }
 } */
 
-@media (min-width: 1281px)  {
-  
+@media (min-width: 1281px) {
   .indeximages {
     width: 22rem;
     height: 15rem;
     margin: 1rem;
     /* margin: 1rem; */
   }
-
 }
 
 @media (min-width: 1000px) and (max-width: 1280px) {
@@ -96,7 +94,6 @@
     display: flex;
     justify-content: center;
   }
-
   .indeximages {
     width: 20rem;
     height: 15rem;
@@ -104,13 +101,10 @@
     margin-left: 1rem;
     /* margin: 1rem; */
   }
-
   .indexText {
     top: 70px;
     left: 90px;
   }
-  
-
 }
 
 /* @media (min-width: 980px) and (max-width: 1000px) {
@@ -153,10 +147,9 @@
 } */
 
 @media (min-width: 481px) and (max-width: 767px) {
-.page article {
-  margin: 0.5rem;
-}
-
+  .page article {
+    margin: 0.5rem;
+  }
   .indeximages {
     width: 18rem;
     height: 13rem;
@@ -176,7 +169,6 @@
   .indeximages {
     width: 18rem;
     height: 13rem;
-    opacity: 40%;
   }
   .page article {
     padding-left: 3rem;
