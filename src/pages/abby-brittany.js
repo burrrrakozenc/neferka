@@ -7,7 +7,7 @@ import '../components/styles/story2/story2carousel.module.css'
 import story2Style from '../components/styles/story2/story2.module.css'
 
 
-const IndexPage = ({ data }) => {
+const Story2 = ({ data }) => {
   const { allContentfulStory2: { nodes: story },
   } = data
 
@@ -31,7 +31,7 @@ const IndexPage = ({ data }) => {
                   </section>
                   <section className={story2Style.section2}>
                     <div className={story2Style.div1}>
-                      <img className={story2Style.img1} src={stry.rightImage.fluid.src} alt={stry.id} />
+                      <img className={story2Style.img1} src={stry.leftImage.fluid.src} alt={stry.id} />
                     </div>
                     <p>
                       {stry.mainText2.mainText2}
@@ -39,7 +39,7 @@ const IndexPage = ({ data }) => {
                   </section>
                   <section className={story2Style.section3}>
                     <div className={story2Style.div2}>
-                      <img className={story2Style.img2} src={stry.leftImage.fluid.src} alt={stry.id} />
+                      <img className={story2Style.img2} src={stry.rightImage.fluid.src} alt={stry.id} />
                     </div>
                     <p>
                       {stry.bottomText.bottomText}
@@ -125,4 +125,4 @@ export const query = graphql`
   }
   `
 
-export default IndexPage
+export default Story2

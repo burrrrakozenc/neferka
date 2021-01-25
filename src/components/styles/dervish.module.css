@@ -14,8 +14,13 @@
     background-position: fixed;
     display: flex;
     justify-content: center;
-    opacity: 60%;
-  }
+    opacity: 0.7;
+}
+
+.slugStyle {
+    font-family: 'Playfair Display', serif;
+    font-size: 13px;
+}
 
 .lowerBody {
     max-width: 1170px;
@@ -109,7 +114,6 @@
     transform: scale(1);
     opacity: 1;
     cursor: pointer;
-
 }
 
 .dervishNecklace figure:hover div {
@@ -120,7 +124,6 @@
 .dervishNecklace figure:hover figcaption {
     opacity: 1;
     cursor: pointer;
-
 }
 
 .dervishNecklace figure figcaption h4 {
@@ -148,13 +151,12 @@
 }
 
 @media screen and (max-width: 400px) {
-    .dervishNecklace figure{
+    .dervishNecklace figure {
         margin-left: 1rem;
     }
     .dervishNecklace figure div {
         height: 12rem;
         width: 15rem;
-        
     }
 }
 
@@ -287,16 +289,16 @@
 
 @media (min-width: 320px) and (max-width: 480px) {
     .parallax {
-      width: 10rem;
+        width: 10rem;
         left: -8rem;
     }
-  }
-  
-  @media (min-width: 200px) and (max-width: 319px) {
+}
+
+@media (min-width: 200px) and (max-width: 319px) {
     .parallax {
-      left: -11rem;
-      width: 15rem;
-      /* top: -2rem; */
-      /* top: 12rem; */
+        left: -11rem;
+        width: 15rem;
+        /* top: -2rem; */
+        /* top: 12rem; */
     }
-  }
+}

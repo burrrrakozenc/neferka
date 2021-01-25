@@ -2,23 +2,23 @@ import React from 'react'
 import Layout from '../components/layout'
 import { graphql } from 'gatsby'
 import aboutStyle from '../components/styles/about.module.css'
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
-const Story4 = ({ data }) => {
+const About = ({ data }) => {
 
   const { allContentfulAbout: { nodes: about },
   } = data
+
   return (
     <Layout>
-      <section className={aboutStyle}>
+      <section>
         {about.map((ab) => {
           return (
-            <body style={{
-              width: '100%',
-              justifyContent: 'center',
-              alignItems: 'center',
-              display: 'inline-block'
-            }}>
-              <div style={{
+            <body className={aboutStyle.aboutBody}>
+              <div className={aboutStyle.aboutP}>
+                {documentToReactComponents(JSON.parse(ab.aboutMainText.raw))}
+              </div>
+              {/* <div style={{
                   width: '50%',
                   display: 'flex',
                   top: '0',
@@ -88,11 +88,13 @@ const Story4 = ({ data }) => {
                   </p>
                   </div>
                 </div>
-              </div>
+              </div> */}
               <div style={{
                 width: '100%',
                 display: 'flex',
-                flexDirection: 'row'
+                flexDirection: 'row',
+                justifyContent:'center',
+                alignItems:'center'
               }}>
                 <div>
                   <img className={aboutStyle.img2} src={ab.image1.fluid.src} alt={ab.id} />
@@ -128,9 +130,12 @@ export const query = graphql`
             }
           }
           id
+          aboutMainText {
+            raw
+          }
         }
       }
   }
   `
 
-export default Story4
+export default About

@@ -12,10 +12,12 @@ body {
     font-size: 32px;
     font-weight: bolder;
     text-transform: uppercase;
+    font-family: 'Josefin Sans', serif;
 }
 
 .header p {
-    font-size: 11px;
+    font-size: 12px;
+    font-family: 'Josefin Sans', serif;
 }
 
 .header h2 {
@@ -27,6 +29,7 @@ body {
 .mainBody {
     font-size: 13px;
     max-width: 1030px;
+    font-family: 'Playfair Display', serif;
 }
 
 .mainBody article {
@@ -68,9 +71,9 @@ body {
 }
 
 .mainBody article .section3 {
-    width: 90%;
+    width: 80%;
     position: relative;
-    left: 30px;
+    left: 205px;
     z-index: 99;
 }
 

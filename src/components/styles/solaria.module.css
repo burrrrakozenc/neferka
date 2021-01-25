@@ -2,7 +2,6 @@
   width: 100%;
   max-width: 1170px;
   margin: 0rem auto;
-  text-align: center;
 }
 
 .upperBody div {
@@ -18,7 +17,6 @@
 
 .upperBody .parallax .parallaxDiv {
   width: 100%;
-  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,7 +24,7 @@
 
 .upperBody .parallax .parallaxDiv h4 {
   position: absolute;
-  font-size: 60px;
+  font-size: 70px;
   padding-top: 8rem;
   font-weight: 100;
   width: 50%;
@@ -39,6 +37,8 @@
   width: 40%;
   font-size: 13px;
   padding-top: 14rem;
+  text-align: left;
+  font-family: 'Playfair Display', serif;
 }
 
 .lowerBody {
@@ -103,7 +103,9 @@
 }
 
 .Circa h3 {
-  font-size: small;
+  font-size: 14px;
+  font-family: 'Playfair Display', serif;
+  font-weight: lighter;
 }
 
 .Circa figure p {
@@ -388,6 +390,11 @@
     height: 12rem;
     width: 15rem;
   }
+}
+
+.slugStyle {
+  font-family: 'Playfair Display', serif;
+  font-size: 13px;
 }
 
 .Modal {

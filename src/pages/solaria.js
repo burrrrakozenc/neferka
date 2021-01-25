@@ -56,8 +56,8 @@ const Product = ({ node }) => {
         <figcaption onKeyDown={onCloseModal} role="presentation" onEscKeyDown={onCloseModal} open={open} onClick={onOpenModal} onClose={onCloseModal} className={solariaStyle.figcaption} >
           Quick View
         </figcaption>
-        <p>{node.title}</p>
-        <p>{node.price}</p>
+        <p className={solariaStyle.slugStyle}>{node.title}</p>
+        <p className={solariaStyle.slugStyle}>{node.price}</p>
         <Modal onEscKeyDown={onCloseModal} open={open} onClose={onCloseModal} center>
           <section className={solariaStyle.row + ' ' + solariaStyle.center} closeButton>
             <div className={solariaStyle.col + ' ' + solariaStyle.colspan3}>

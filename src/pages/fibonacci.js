@@ -51,8 +51,8 @@ const Product = ({ node }) => {
                 <figcaption onKeyDown={onCloseModal} role="presentation" onEscKeyDown={onCloseModal} onClick={onOpenModal} className={fibonacciStyle.figcaption}>
                     Quick View
         </figcaption>
-                <p>{node.title}</p>
-                <p>{node.price}</p>
+                <p className={fibonacciStyle.slugStyle}>{node.title}</p>
+                <p className={fibonacciStyle.slugStyle}>{node.price}</p>
                 <Modal open={open} onClose={onCloseModal} center>
                     <section className={fibonacciStyle.row + ' ' + fibonacciStyle.center} closeButton>
                         <div className={fibonacciStyle.col + ' ' + fibonacciStyle.colspan3}>

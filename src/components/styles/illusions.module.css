@@ -14,7 +14,7 @@
     background-position: fixed;
     display: flex;
     justify-content: center;
-    opacity: 60%;
+    opacity: 0.7;
 }
 
 .upperBody .parallax .parallaxDiv {
@@ -37,9 +37,17 @@
 
 .upperBody .parallax .parallaxDiv p {
     position: absolute;
-    width: 40%;
+    width: 50%;
     font-size: 14px;
     padding-top: 14rem;
+    font-weight: 500;
+    text-align: left;
+    font-family: 'Playfair Display', serif;
+}
+
+.slugStyle {
+    font-family: 'Playfair Display', serif;
+    font-size: 13px;
 }
 
 .lowerBody {

@@ -50,8 +50,8 @@ const Product = ({ node }) => {
         <figcaption onKeyDown={onCloseModal} role="presentation" onEscKeyDown={onCloseModal} onClick={onOpenModal} className={illusionsStyle.figcaption}>
           Quick View
         </figcaption>
-        <p>{node.title}</p>
-        <p>{node.price}</p>
+        <p className={illusionsStyle.slugStyle}>{node.title}</p>
+        <p className={illusionsStyle.slugStyle}>{node.price}</p>
         <Modal open={open} onClose={onCloseModal} center>
           <section className={illusionsStyle.row + ' ' + illusionsStyle.center} closeButton>
             <div className={illusionsStyle.col + ' ' + illusionsStyle.colspan3}>

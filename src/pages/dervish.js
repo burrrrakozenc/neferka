@@ -53,8 +53,8 @@ const Product = ({ node }) => {
                 <figcaption onKeyDown={onCloseModal} role="presentation" onEscKeyDown={onCloseModal} onClick={onOpenModal} className={dervishStyle.figcaption}>
                     Quick View
         </figcaption>
-                <p>{node.title}</p>
-                <p>{node.price}</p>
+                <p className={dervishStyle.slugStyle}>{node.title}</p>
+                <p className={dervishStyle.slugStyle}>{node.price}</p>
                 <Modal open={open} onClose={onCloseModal} center>
                     <section className={dervishStyle.row + ' ' + dervishStyle.center} closeButton>
                         <div className={dervishStyle.col + ' ' + dervishStyle.colspan3}>

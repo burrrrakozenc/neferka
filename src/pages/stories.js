@@ -20,7 +20,7 @@ const Product = ({ node }) => {
         </Link>
         <span>
           <p className={storiesStyle.titleP}>{node.title}</p>
-          <p>{node.date}</p>
+          <p className={storiesStyle.dateP}>{node.date}</p>
         </span>
       </figure>
     </div >
@@ -84,7 +84,7 @@ Stories.propTypes = propTypes
 
 export const query = graphql`
 {
-    story2: allContentfulStory2 {
+    story1: allContentfulStory1 {
       edges {
         node {
           image {
@@ -99,7 +99,7 @@ export const query = graphql`
       }
     }
 
-    story1: allContentfulStory1 {
+    story2: allContentfulStory2 {
       edges {
         node {
           image {
@@ -160,70 +160,3 @@ export const query = graphql`
 `
 
 export default Stories
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const Stories = ({ data }) => {
-//   const { allContentfulHome: { nodes: home },
-//   } = data
-
-//   return (
-//     <Layout>
-//       <Link to={'/stories1'}>story1</Link>
-      // <div>
-      //   <section className={storiesStyle.upperBody}>
-      //     <h1 className={storiesStyle.upperBody.h1}>stories</h1>
-      //     <p className={storiesStyle.upperBody.p}>
-      //       bir takim aciklayici yazilar. - Tüm yaşamım nafile bir arayıştan, anlamsızca konuşmalardan başka bir şey değildi. Kızgınlık ya da sitem duymuyorum. Çünkü çoğu insanın yaşamı benimki gibi. Ama kalan süremi anlamlı bir işte kullanmak istiyorum.
-      //               </p>
-      //   </section>
-      // </div>
-//       <div>
-//         {home.map((hom) => {
-//           return (
-//             <section className={storiesStyle.lowerBody} key={hom.id}>
-//               <ul>
-//                 <li >
-//                   <figure>
-//                     <Link to={`/${hom.category}`}>
-//                       <Image fluid={hom.categoryImage.fluid} alt={hom.category} />
-//                     </Link>
-//                     <p>{hom.category}</p>
-//                   </figure>
-//                 </li>
-//               </ul>
-//             </section>
-//           )
-//         })}
-//       </div>
-//     </Layout>
-//   )
-// }
-
-// export const query = graphql`
-// {
-//   allContentfulHome {
-//     nodes {
-//       id
-//       category
-//       categoryImage {
-//         fluid {
-//           src
-//         }
-//       }
-//     }
-//   }
-// }
-// `

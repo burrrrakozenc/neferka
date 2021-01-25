@@ -2,6 +2,7 @@
     padding-top: 7rem;
     width: 100%;
     margin: 0 auto;
+    font-family: 'Josefin Sans', serif;
 }
 
 .logo {
@@ -29,6 +30,7 @@
     /* display: flex; */
     justify-content: center;
     align-items: center;
+    letter-spacing: 1px;
 }
 
 .nav-item {
@@ -74,6 +76,11 @@
 .active-nav-item {
     color: rgb(95, 95, 95)
 }
+
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+/* body {
+  font-family: 'Josefin Sans', serif;
+} */
 
 @keyframes fadein {
     from {

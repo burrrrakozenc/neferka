@@ -19,21 +19,23 @@ body {
     font-size: 32px;
     font-weight: bolder;
     text-transform: uppercase;
+    font-family: 'Josefin Sans', serif;
 }
 
 .header p {
-    font-size: 11px;
+    font-size: 12px;
+    font-family: 'Josefin Sans', serif;
 }
 
 .mainBody {
-    font-size: 13px;
+    font-size: 14px;
     max-width: 1030px;
     padding-bottom: 2rem;
+    font-family: 'Playfair Display', serif;
 }
 
 .mainBody article {
     width: 100%;
-    
 }
 
 .mainBody article .section1 {

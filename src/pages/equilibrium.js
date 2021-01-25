@@ -52,8 +52,8 @@ const Product = ({ node }) => {
                 <figcaption onKeyDown={onCloseModal} role="presentation" onEscKeyDown={onCloseModal} onClick={onOpenModal} className={equilibriumStyle.figcaption}>
                     Quick View
         </figcaption>
-                <p>{node.title}</p>
-                <p>{node.price}</p>
+                <p className={equilibriumStyle.slugStyle}>{node.title}</p>
+                <p className={equilibriumStyle.slugStyle}>{node.price}</p>
                 <Modal open={open} onClose={onCloseModal} center>
                     <section className={equilibriumStyle.row + ' ' + equilibriumStyle.center} closeButton>
                         <div className={equilibriumStyle.col + ' ' + equilibriumStyle.colspan3}>

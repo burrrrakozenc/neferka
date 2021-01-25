@@ -4,7 +4,6 @@ import Layout from '../components/layout'
 import styles from '../components/styles/index.module.css'
 import Image from 'gatsby-image'
 import { Link } from 'gatsby'
-// import '../components/styles/index.module.css'
 
 
 const IndexPage = ({ data }) => {
@@ -18,11 +17,10 @@ const IndexPage = ({ data }) => {
           return (
             <article key={hom.id}>
               <Link to={`/${hom.slug}`}>
-
                 <Image fluid={hom.categoryImage.fluid} alt={hom.title} className={styles.indeximages} />
                 <div className={styles.indexText}>
-                  <h2 style={{ textTransform: 'uppercase', fontWeight: 'normal' }}>&nbsp;&nbsp;&nbsp;{hom.category}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
-          <h4 style={{ fontWeight: 'bold' }}>{hom.desc}</h4>
+                  <h2 className={styles.mainHeader}>{hom.category}</h2>
+                  <h4 className={styles.descHeader}>{hom.desc}</h4>
                 </div>
               </Link>
             </article>

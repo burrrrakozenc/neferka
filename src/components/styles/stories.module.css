@@ -6,20 +6,23 @@
 }
 
 .upperBody h1 {
-  font-size: 50px;
+  font-size: 70px;
   text-align: center;
+  font-family: 'Josefin Sans', serif;
+  font-weight: lighter;
 }
 
 .upperBody p {
   width: 60%;
   margin: 1rem auto;
   text-align: left;
+  font-family: 'Playfair Display', serif;
 }
 
 .lowerBody {
   max-width: 1170px;
   width: 100%;
-  /* padding-left: 1%; */
+  font-family: 'Playfair Display', serif;
   display: flex;
   flex-wrap: nowrap;
 }
@@ -60,6 +63,29 @@
   font-size: 16px;
   padding-left: 1rem;
   white-space: nowrap;
+}
+
+.lowerBody figure .dateP {
+  font-size: 12px;
+  color: gray;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+/* body {
+  font-family: 'Playfair Display', serif;
+} */
+
+h1 {
+  text-transform: capitalize;
+}
+
+p {
+  line-height: 2;
+}
+
+@font-face {
+  font-family: 'Josefin Sans';
+  src: local('Josefin Sans'), url(./../fonts//josefinsans/JosefinSans-Light.ttf) format('truetype');
 }
 
 @media screen and (min-width: 672px) {

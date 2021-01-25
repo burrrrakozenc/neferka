@@ -32,8 +32,7 @@
 }
 
 .push {
-  padding-top: 10rem;
-  display: none;
+  margin: 10rem;
 }
 
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
