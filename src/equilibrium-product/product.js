@@ -39,10 +39,19 @@ class EquilibriumProduct extends Component {
               <div>
                 <figure>
                   <article>
-                    <h1>{title}</h1>
-                    <h4>{price}</h4>
-                    <h4>{category}</h4>
+                    <h1 style={{
+                      maxWidth: '250px',
+                      fontSize: '40px',
+                      fontWeight: '400'
+                    }}>{title}</h1>
+                    <h4 style={{
+                      fontFamily: 'Josefin Sans',
+                      fontSize: '18px',
+                      color: '#696969',
+                      fontWeight: '300'
+                    }}>{price}</h4>
                     <Buttona>Purchase</Buttona>
+                    <h4>{category}</h4>
                   </article>
                   <div>
                     {carousel.map((image) => {

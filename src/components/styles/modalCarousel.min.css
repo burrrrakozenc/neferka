@@ -21,7 +21,7 @@
 }
 
 .carousel .control-arrow:before, .carousel.carousel-slider .control-arrow:before {
-    margin: 0 5px;
+    margin: 5px;
     display: inline-block;
     border-top: 8px solid transparent;
     border-bottom: 8px solid transparent;
@@ -162,7 +162,8 @@
 }
 
 .carousel.carousel-slider .control-arrow:hover {
-    background: rgba(0, 0, 0, 0.2)
+    background: none;
+     /* rgba(0, 0, 0, 0.2) */
 }
 
 .carousel .slider-wrapper {

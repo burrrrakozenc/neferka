@@ -19,8 +19,8 @@ width: 120px;
   borderRadius: 3px;
   cursor: pointer;
   background-color: white;
-  color: gray;
-  border: 2px solid #DCDCDC;
+  color: black;
+  border: 2px solid black;
 
     &:hover {
       background-color: black;
@@ -33,59 +33,69 @@ width: 120px;
 `
 
 const propTypes = {
-    data: PropTypes.object.isRequired,
+  data: PropTypes.object.isRequired,
 }
 
 
 const Product = ({ node }) => {
-    const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false);
 
-    const onOpenModal = () => setOpen(true);
-    const onCloseModal = () => setOpen(false);
+  const onOpenModal = () => setOpen(true);
+  const onCloseModal = () => setOpen(false);
 
 
-    return (
-        <div>
-            <figure>
-                <Link to={`../${node.slug}`}>
-                    <Image fluid={node.image.fluid} alt={node.title} />
-                </Link>
-                <figcaption onKeyDown={onCloseModal} role="presentation" onEscKeyDown={onCloseModal} onClick={onOpenModal} className={dervishStyle.figcaption}>
-                    Quick View
+  return (
+    <div>
+      <figure>
+        <Link to={`../${node.slug}`}>
+          <Image fluid={node.image.fluid} alt={node.title} />
+        </Link>
+        <figcaption onKeyDown={onCloseModal} role="presentation" onEscKeyDown={onCloseModal} onClick={onOpenModal} className={dervishStyle.figcaption}>
+          Quick View
         </figcaption>
-                <p className={dervishStyle.slugStyle}>{node.title}</p>
-                <p className={dervishStyle.slugStyle}>{node.price}</p>
-                <Modal open={open} onClose={onCloseModal} center>
-                    <section className={dervishStyle.row + ' ' + dervishStyle.center} closeButton>
-                        <div className={dervishStyle.col + ' ' + dervishStyle.colspan3}>
-                            <div className={dervishStyle.modalLeft}>
-                                <h1>{node.title}</h1>
-                                <h4>{node.price}</h4>
-                                <div>
-                                    <Button>Purchase</Button>
-                                </div>
-                                <br />
-                                <br />
-                                <Link style={{ textDecoration: 'none' }} to={`../${node.slug}`}>View Full Item</Link>
-                            </div>
-                        </div>
-                        <div className={dervishStyle.col + ' ' + dervishStyle.colspan4}>
-                            <div>
-                                <Carousel showArrows={true} showThumbs={true} showIndicators={false} infiniteLoop={true} centerMode={true} thumbWidth={'80px'}>
-                                    {node.carousel.map(image => {
-                                        console.log(image)
-                                        return (
-                                            <img alt={node.title} key={image.id} src={image.fluid.src} />
-                                        )
-                                    })}
-                                </Carousel>
-                            </div>
-                        </div>
-                    </section>
-                </Modal>
-            </figure>
-        </div>
-    )
+        <p className={dervishStyle.slugStyle}>{node.title}</p>
+        <p className={dervishStyle.slugStyle}>{node.price}</p>
+        <Modal open={open} onClose={onCloseModal} center>
+          <section className={dervishStyle.row + ' ' + dervishStyle.center} closeButton>
+            <div className={dervishStyle.col + ' ' + dervishStyle.colspan3}>
+              <div className={dervishStyle.modalLeft}>
+                <h1 style={{
+                  fontFamily: 'Josefin Sans',
+                  fontSize: '30px',
+                  fontWeight: '500'
+                }}>
+                  {node.title}</h1>
+                <h4 style={{
+                  fontFamily: 'Josefin Sans',
+                  fontSize: '14px',
+                  color: '#696969',
+                  fontWeight: '300'
+                }}>{node.price}</h4>
+                <div>
+                  <Button>Purchase</Button>
+                </div>
+                <br />
+                <br />
+                <Link style={{ textDecoration: 'none',color: 'dark' }} to={`../${node.slug}`}>View Full Item</Link>
+              </div>
+            </div>
+            <div className={dervishStyle.col + ' ' + dervishStyle.colspan4}>
+              <div>
+                <Carousel showArrows={true} showThumbs={true} showIndicators={false} infiniteLoop={true} centerMode={true} thumbWidth={'80px'}>
+                  {node.carousel.map(image => {
+                    console.log(image)
+                    return (
+                      <img alt={node.title} key={image.id} src={image.fluid.src} />
+                    )
+                  })}
+                </Carousel>
+              </div>
+            </div>
+          </section>
+        </Modal>
+      </figure>
+    </div>
+  )
 }
 
 
@@ -93,78 +103,78 @@ const Product = ({ node }) => {
 
 class Dervish extends React.Component {
 
-    render() {
-        const DervishNecklace = this.props.data.dervishNecklace.edges
-        const DervishVideo = this.props.data.dervishVideo.edges
-        const parallax = this.props.data.parallax.edges
+  render() {
+    const DervishNecklace = this.props.data.dervishNecklace.edges
+    const DervishVideo = this.props.data.dervishVideo.edges
+    const parallax = this.props.data.parallax.edges
 
 
-        return (
-            <Layout>
-                <section className={dervishStyle.upperBody}>
-                    <div style={{
-                        // paddingBottom: '2rem',
-                        top: '-3rem'
-                    }}>
-                        {parallax.map(({ node }, i) => (
-                            <div>
-                                <ParallaxBanner layers={[
-                                    {
-                                        image: node.dervish.fluid.src,
-                                        amount: 0.3,
-                                    }
+    return (
+      <Layout>
+        <section className={dervishStyle.upperBody}>
+          <div style={{
+            // paddingBottom: '2rem',
+            top: '-3rem'
+          }}>
+            {parallax.map(({ node }, i) => (
+              <div>
+                <ParallaxBanner layers={[
+                  {
+                    image: node.dervish.fluid.src,
+                    amount: 0.3,
+                  }
 
-                                ]}
-                                    className={
-                                        dervishStyle.parallax
-                                    }
-                                    style={{
-                                        height: '20rem',
-                                        width: '40rem',
-                                    }}
-                                >
-                                </ParallaxBanner>
-                            </div>
-                        ))}
-                    </div>
-                </section>
-                <section className={dervishStyle.lowerBody}>
-                    <section className={dervishStyle.dervishNecklace}>
-                        <h3>Dervish Necklace</h3>
-                        <div className={dervishStyle.dervishnecklaceimage}>
-                            {DervishNecklace.map(({ node }, i) => (
-                                <Product node={node} key={node.id} />
-                            ))}
-                        </div>
-                    </section>
-                    <section>
-                        <div className={dervishStyle.dervishVideo}>
-                            {DervishVideo.map(({ node }, i) => (
-                                <div dangerouslySetInnerHTML={{ __html: node.markdownContent.childMarkdownRemark.html, }} />
-                            ))}
-                        </div>
-                        {/* <div className={dervishStyle.dervishVideo}>
+                ]}
+                  className={
+                    dervishStyle.parallax
+                  }
+                  style={{
+                    height: '20rem',
+                    width: '40rem',
+                  }}
+                >
+                </ParallaxBanner>
+              </div>
+            ))}
+          </div>
+        </section>
+        <section className={dervishStyle.lowerBody}>
+          <section className={dervishStyle.dervishNecklace}>
+            <h3>Dervish Necklace</h3>
+            <div className={dervishStyle.dervishnecklaceimage}>
+              {DervishNecklace.map(({ node }, i) => (
+                <Product node={node} key={node.id} />
+              ))}
+            </div>
+          </section>
+          <section>
+            <div className={dervishStyle.dervishVideo}>
+              {DervishVideo.map(({ node }, i) => (
+                <div dangerouslySetInnerHTML={{ __html: node.markdownContent.childMarkdownRemark.html, }} />
+              ))}
+            </div>
+            {/* <div className={dervishStyle.dervishVideo}>
                             {DervishVideo.map(({ node }, i) => (
                                 documentToReactComponents(node.richTextContent.json, options)
                             ))}
 
                         </div> */}
-                        {/* <div>
+            {/* <div>
                         {DervishVideo.map(({ node }, i) => (
                                 // <Video node={node} key={node.id}/>
                             ))}
                         </div> */}
-                        {/* <div dangerouslySetInnerHTML={{__html: DervishVideo.edges.node.markdownContent.childMarkdownRemark.html,}}/> */}
-                    </section>
-                    <section>
-                        {/* <div>
+            {/* <div dangerouslySetInnerHTML={{__html: DervishVideo.edges.node.markdownContent.childMarkdownRemark.html,}}/> */}
+          </section>
+          <section>
+            {/* <div>
                         
                             {this.show ? <div  className="back-drop"></div> : null}
                             <button onClick={() => this.setShow({ count: this.state.count(true) })} className="btn-openModal">Open Modal</button>
                             <Modal show={this.show}  />
                         </div> */}
 
-                        {/* <div
+            {/* <div
                             className="d-flex align-items-center justify-content-center"
                             style={{ height: "100vh" }}
                         >
@@ -174,11 +184,11 @@ class Dervish extends React.Component {
                         </div> */}
 
 
-                    </section>
-                </section>
-            </Layout>
-        )
-    }
+          </section>
+        </section>
+      </Layout>
+    )
+  }
 }
 
 Dervish.propTypes = propTypes

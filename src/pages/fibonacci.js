@@ -19,8 +19,8 @@ width: 120px;
   borderRadius: 3px;
   cursor: pointer;
   background-color: white;
-  color: gray;
-  border: 2px solid #DCDCDC;
+  color: black;
+  border: 2px solid black;
 
     &:hover {
       background-color: black;
@@ -57,14 +57,23 @@ const Product = ({ node }) => {
                     <section className={fibonacciStyle.row + ' ' + fibonacciStyle.center} closeButton>
                         <div className={fibonacciStyle.col + ' ' + fibonacciStyle.colspan3}>
                             <div className={fibonacciStyle.modalLeft}>
-                                <h1>{node.title}</h1>
-                                <h4>{node.price}</h4>
+                                <h1 style={{
+                                    fontFamily: 'Josefin Sans',
+                                    fontSize: '32px',
+                                    fontWeight: '500'
+                                }}>{node.title}</h1>
+                                <h4 style={{
+                                    fontFamily: 'Josefin Sans',
+                                    fontSize: '14px',
+                                    color: '#696969',
+                                    fontWeight: '300'
+                                }}>{node.price}</h4>
                                 <div>
                                     <Button>Purchase</Button>
                                 </div>
                                 <br />
                                 <br />
-                                <Link style={{ textDecoration: 'none' }} to={`../${node.slug}`}>View Full Item</Link>
+                                <Link style={{ textDecoration: 'none',color: 'gray' }} to={`../${node.slug}`}>View Full Item</Link>
                             </div>
                         </div>
                         <div className={fibonacciStyle.col + ' ' + fibonacciStyle.colspan4}>

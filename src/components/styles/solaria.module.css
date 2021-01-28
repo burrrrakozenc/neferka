@@ -427,14 +427,16 @@
   /* margin: 0 auto; */
   /* Auto margin according to the element width */
   /* padding: 10px; */
+  font-family: 'Playfair Display', serif;
   padding-right: 10px;
   padding-left: 10px;
   /* margin-left: 50px; */
   padding-top: 20px;
   max-width: 640px;
   max-height: 500px;
-  font-size: 25px;
+  font-size: 34px;
   text-transform: uppercase;
+  font-weight: 300;
 }
 
 /* Modal content */

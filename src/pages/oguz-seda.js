@@ -25,10 +25,10 @@ const Story4 = ({ data }) => {
                                 <article key={stry.id}>
                                     <section className={Story5Style.section1}>
                                         <div className={Story5Style.div2}>
-                                            <img className={Story5Style.img2} src={stry.rightImage.fluid.src} alt={stry.id} />
+                                            <img className={Story5Style.img2} src={stry.leftImage1.fluid.src} alt={stry.id} />
                                         </div>
                                         <div className={Story5Style.div2}>
-                                            <img className={Story5Style.img2} src={stry.rightImage.fluid.src} alt={stry.id} />
+                                            <img className={Story5Style.img2} src={stry.leftImage2.fluid.src} alt={stry.id} />
                                             <span style={{
                                                 fontSize: '10px'
                                             }}>{stry.bottomText}</span>
