@@ -51,6 +51,7 @@
     "react-stripe-checkout": "^2.6.3",
     "react-youtube": "^7.13.0",
     "sharp": "^0.27.0",
+    "slick-carousel": "^1.8.1",
     "strapi": "^3.4.1",
     "styled-components": "^5.2.1",
     "styled-react-modal": "^2.0.1"

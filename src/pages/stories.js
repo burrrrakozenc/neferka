@@ -37,44 +37,45 @@ class Stories extends React.Component {
 
     return (
       <Layout>
-        <div>
-          <section className={storiesStyle.upperBody}>
-            <h1 className={storiesStyle.h1}>STORIES</h1>
-            <p className={storiesStyle.p}>
-              One off pieces designed after stories. Some are custom design inquiries uniquely crafted to express a story, some are designed to express and manifest the poetry that lies in a tale, perhaps taking place somewhere.
+        <div className={storiesStyle.storyWrapper}>
+          <div className={storiesStyle.upperWrapper}>
+            <section className={storiesStyle.upperBody}>
+              <h1 className={storiesStyle.h1}>STORIES</h1>
+              <p className={storiesStyle.p}>
+                One off pieces designed after stories. Some are custom design inquiries uniquely crafted to express a story, some are designed to express and manifest the poetry that lies in a tale, perhaps taking place somewhere.
                     </p>
+            </section>
+          </div>
+          <section className={storiesStyle.lowerBody}>
+            <ul>
+              <li>
+                {Story1.map(({ node }, i) => (
+                  <Product node={node} key={node.id} />
+                ))}
+              </li>
+              <li>
+                {Story2.map(({ node }, i) => (
+                  <Product node={node} key={node.id} />
+                ))}
+              </li>
+              <li>
+                {Story3.map(({ node }, i) => (
+                  <Product node={node} key={node.id} />
+                ))}
+              </li>
+              <li>
+                {Story4.map(({ node }, i) => (
+                  <Product node={node} key={node.id} />
+                ))}
+              </li>
+              <li>
+                {Story5.map(({ node }, i) => (
+                  <Product node={node} key={node.id} />
+                ))}
+              </li>
+            </ul>
           </section>
         </div>
-        <section className={storiesStyle.lowerBody}>
-
-          <ul>
-            <li>
-              {Story1.map(({ node }, i) => (
-                <Product node={node} key={node.id} />
-              ))}
-            </li>
-            <li>
-              {Story2.map(({ node }, i) => (
-                <Product node={node} key={node.id} />
-              ))}
-            </li>
-            <li>
-              {Story3.map(({ node }, i) => (
-                <Product node={node} key={node.id} />
-              ))}
-            </li>
-            <li>
-              {Story4.map(({ node }, i) => (
-                <Product node={node} key={node.id} />
-              ))}
-            </li>
-            <li>
-              {Story5.map(({ node }, i) => (
-                <Product node={node} key={node.id} />
-              ))}
-            </li>
-          </ul>
-        </section>
       </Layout >
     )
   }

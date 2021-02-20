@@ -1,7 +1,7 @@
-body {
+.story4-body {
     width: 90%;
     margin: 0 auto;
-    padding-bottom: 20rem;
+    /* padding-bottom: 26rem; */
 }
 
 .header {
@@ -28,27 +28,46 @@ body {
 
 .mainBody {
     font-size: 13px;
-    max-width: 1030px;
+    max-width: 900px;
     font-family: 'Playfair Display', serif;
+    margin: 0 auto;
 }
 
 .mainBody article {
     width: 100%;
+    margin: 0 auto;
 }
 
 .mainBody article .section0 {
     width: 90%;
     margin: 0 auto;
     padding-bottom: 23rem;
-    padding-left: 7rem;
+    /* padding-left: 7rem; */
 }
 
 .div0 {
     position: relative;
+    z-index: 100;
+    height: 20rem;
+}
+
+.carousel-root {
+    width: 50rem;
+    height: 20rem;
+}
+
+.carousel-image {
+    width: 50rem;
+    height: 20rem;
+}
+
+.carousel .carousel-image {
+    /* width: 50rem; */
+    height: 20rem;
 }
 
 .mainBody article .section1 {
-    width: 60%;
+    width: 54.5%;
     margin: 0 auto;
 }
 
@@ -92,17 +111,17 @@ body {
 .mainBody article .section4 {
     width: 80%;
     position: relative;
-    left: 200px;
+    left: 205px;
     z-index: 99;
 }
 
-.img3 {
+/* .img3 {
     width: 20rem;
     height: 15rem;
     padding: 15px;
-}
+} */
 
-.mainBody article .section5 {
+/* .mainBody article .section5 {
     width: 80%;
     margin: 0 auto;
     position: relative;
@@ -116,4 +135,78 @@ body {
     position: relative;
     left: 100px;
     z-index: 99;
+} */
+
+@media (min-width: 501px) and (max-width: 900px) {
+    .mainBody article .section0 {
+        padding-bottom: 0rem;
+    }
+    .div0 {
+        height: 22rem;
+    }
+    .mainBody article .section1 {
+        width: 80%;
+    }
+    .mainBody article .section3 {
+        display: block;
+        width: 80%;
+        clear: both;
+        left: 0px;
+        float: initial;
+        margin: 0 auto;
+    }
+    .mainBody article .section3 .div2 {
+        /* clear: both; */
+        /* float: initial; */
+        /* justify-content: center;
+        align-items: center; */
+        text-align: center;
+    }
+    .mainBody article .img2 {
+        width: 17rem;
+        height: 13rem;
+        
+        padding: 0;
+    }
+    .mainBody article .section4 {
+        width: 80%;
+        position: relative;
+        padding-left: 5rem;
+        left: 0;
+        z-index: 99;
+    }
+}
+@media (min-width: 240px) and (max-width: 500px) {
+    .mainBody article .section0 {
+        padding-bottom: 0rem;
+    }
+    .div0 {
+        height: 12rem;
+    }
+    .mainBody article .section1 {
+        width: 100%;
+    }
+    .mainBody article .section3 {
+        display: block;
+        width: 90%;
+        clear: both;
+        left: 0px;
+        float: initial;
+    }
+    .mainBody article .section3 .div2 {
+        clear: both;
+        float: initial;
+    }
+    .mainBody article .img2 {
+        width: 17rem;
+        height: 13rem;
+        /* padding: 15px; */
+        padding: 0;
+    }
+    .mainBody article .section4 {
+        width: 100%;
+        /* position: relative; */
+        left: 0px;
+        /* z-index: 99; */
+    }
 }

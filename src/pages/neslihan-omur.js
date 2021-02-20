@@ -3,9 +3,8 @@ import Layout from '../components/layout'
 import { graphql } from 'gatsby'
 import { Carousel } from 'react-responsive-carousel';
 import story1Style from '../components/styles/story1/story1.module.css'
-import '../components/styles/story1/story1carousel.module.css'
-
-
+// import '../components/styles/story1/story1carousel.module.css'
+import 'react-responsive-carousel/lib/styles/carousel.min.css'
 
 const IndexPage = ({ data }) => {
 
@@ -13,7 +12,7 @@ const IndexPage = ({ data }) => {
     } = data
     return (
         <Layout>
-            <section className={story1Style}>
+            <section className={story1Style.body}>
                 {story.map((stry) => {
                     return (
                         <body>
@@ -26,25 +25,24 @@ const IndexPage = ({ data }) => {
                                 <article key={stry.id}>
                                     <section className={story1Style.section0}>
                                         <div className={story1Style.div0}>
-                                            <Carousel showArrows={true}
+                                            <Carousel  showArrows={true}
                                                 showStatus={false}
                                                 showIndicators={false}
                                                 infiniteLoop={true}
                                                 autoPlay={true}
                                                 showThumbs={false}
-                                                width={'60rem'}
-                                                style={{
-                                                    height: '100vh',
-                                                }}
+                                                // dynamicHeight={true}
+                                                width={'100%'}
                                             >
                                                 {stry.carousel.map(image => {
                                                     return (
                                                         <img key={image.id}
                                                             src={image.fluid.src}
                                                             alt={image.title}
-                                                            style={{
-                                                                height: '100vh'
-                                                            }}
+                                                            // style={{
+                                                            //     height: '100vh',
+                                                            //     // width: '60rem'
+                                                            // }}
                                                         />
                                                     )
                                                 })}

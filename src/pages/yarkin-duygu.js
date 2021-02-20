@@ -1,9 +1,11 @@
 import React from 'react'
 import Layout from '../components/layout'
 import { graphql } from 'gatsby'
+// import Img from 'gatsby-image'
 import { Carousel } from 'react-responsive-carousel';
 import '../components/styles/story2/story2carousel.module.css'
 import story3Style from '../components/styles/story3/story3.module.css'
+import '../components/styles/story3/story3.module.css'
 
 
 const Story3 = ({ data }) => {
@@ -15,12 +17,12 @@ const Story3 = ({ data }) => {
             <section className={story3Style}>
                 {story.map((stry) => {
                     return (
-                        <body>
+                        <div className={story3Style.story3Wrapper}>
                             <div className={story3Style.header}>
                                 <h1><b>{stry.title}</b></h1>
                                 <p>{stry.date}</p>
                             </div>
-                            <div className={story3Style.mainBody}>
+                            <div className={story3Style.mainBody} style={{ margin: '0 auto' }}>
                                 <article key={stry.id}>
                                     <section className={story3Style.section0}>
                                         <div className={story3Style.div0}>
@@ -30,19 +32,20 @@ const Story3 = ({ data }) => {
                                                 infiniteLoop={true}
                                                 autoPlay={true}
                                                 showThumbs={false}
-                                                width={'60rem'}
-                                                style={{
-                                                    height: '100vh',
-                                                }}
+                                                dynamicHeight={true}
+                                                className="carousel-root"
+                                                // className={story3Style.topCarouselRoot}
                                             >
                                                 {stry.carousel.map(image => {
                                                     return (
                                                         <img key={image.id}
                                                             src={image.fluid.src}
                                                             alt={image.title}
-                                                            style={{
-                                                                height: '100vh'
-                                                            }}
+                                                            // style={{
+                                                            //     height:"100%"
+                                                            // }}
+                                                            // className={story3Style.topCarouselImage}
+                                                            className="carousel-image"
                                                         />
                                                     )
                                                 })}
@@ -70,51 +73,43 @@ const Story3 = ({ data }) => {
                                                 infiniteLoop={true}
                                                 autoPlay={true}
                                                 showThumbs={false}
-                                                width={'25rem'}
-                                                style={{
-                                                    height: '45vh',
-                                                }}
+                                                dynamicHeight={true}
+                                                className={story3Style.carouselRoot1}
                                             >
                                                 {stry.carousel.map(image => {
                                                     return (
                                                         <img key={image.id}
                                                             src={image.fluid.src}
                                                             alt={image.title}
-                                                            style={{
-                                                                height: '45vh'
-                                                            }}
+                                                            className={story3Style.carouselImage1}
                                                         />
                                                     )
                                                 })}
                                             </Carousel>
                                         </div>
-                                        <div className={story3Style.textdiv}>
-                                            <p className={story3Style.p2}>
-                                                {stry.mainText3.mainText3}
-                                            </p>
-                                        </div>
+                                        {/* <div className={story3Style.textdiv}> */}
+                                        <p className={story3Style.p2}>
+                                            {stry.mainText3.mainText3}
+                                        </p>
+                                        {/* </div> */}
                                     </section>
                                     <section className={story3Style.section4}>
-                                        <div className={story3Style.div1}>
+                                        <div className={story3Style.div3}>
                                             <Carousel showArrows={true}
                                                 showStatus={false}
                                                 showIndicators={false}
                                                 infiniteLoop={true}
                                                 autoPlay={true}
                                                 showThumbs={false}
-                                                width={'25rem'}
-                                                style={{
-                                                    height: '35vh',
-                                                }}
+                                                dynamicHeight={true}
+                                                className={story3Style.carouselRoot2}
                                             >
                                                 {stry.carousel.map(image => {
                                                     return (
                                                         <img key={image.id}
                                                             src={image.fluid.src}
                                                             alt={image.title}
-                                                            style={{
-                                                                height: '35vh'
-                                                            }}
+                                                            className={story3Style.carouselImage2}
                                                         />
                                                     )
                                                 })}
@@ -126,7 +121,7 @@ const Story3 = ({ data }) => {
                                     </section>
                                 </article>
                             </div>
-                        </body>
+                        </div>
                     )
                 })}
             </section >

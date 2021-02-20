@@ -3,7 +3,9 @@ import Layout from '../components/layout'
 import { graphql } from 'gatsby'
 import { Carousel } from 'react-responsive-carousel';
 import Image from 'gatsby-image'
-import '../components/styles/story2/story2carousel.module.css'
+// import '../components/styles/story2/story2carousel.module.css'
+// import '../components/styles/story1/story1carousel.module.css'
+import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import story2Style from '../components/styles/story2/story2.module.css'
 
 
@@ -13,10 +15,10 @@ const Story2 = ({ data }) => {
 
   return (
     <Layout>
-      <section className={story2Style}>
+      <section className={story2Style.story2wrapper}>
         {story.map((stry) => {
           return (
-            <body>
+            <div>
               <div className={story2Style.header}>
                 <h1><b>{stry.title}</b></h1>
                 <p>{stry.date}</p>
@@ -45,36 +47,37 @@ const Story2 = ({ data }) => {
                       {stry.bottomText.bottomText}
                     </p>
                   </section>
+                  <section className={story2Style.section4}>
+                    <Carousel showArrows={true}
+                      showStatus={false}
+                      showIndicators={false}
+                      infiniteLoop={true}
+                      autoPlay={true}
+                      showThumbs={false}
+                      dynamicHeight={true}
+                      width={'100%'}
+                    >
+                      {stry.carousel.map(image => {
+                        return (
+                          <img key={image.id}
+                            src={image.fluid.src}
+                            alt={image.title}
+                            // height={'500px'}
+                            className="carousel-image"
+                          />
+                        )
+                      })}
+                    </Carousel>
+                  </section>
                 </article>
               </div>
-              <div classNam={story2Style.carousel} style={{
+              {/* <div classNam={story2Style.carousel} style={{
                 paddingTop: '8rem',
                 paddingLeft: '10rem'
               }}>
-                <Carousel showArrows={true}
-                  showStatus={false}
-                  showIndicators={false}
-                  infiniteLoop={true}
-                  autoPlay={true}
-                  showThumbs={false}
-                  width={'43rem'}
-                  style={{
-                    height: '50vh',
-                  }}>
-                  {stry.carousel.map(image => {
-                    return (
-                      <img key={image.id}
-                        src={image.fluid.src}
-                        alt={image.title}
-                        style={{
-                          height: '50vh'
-                        }}
-                      />
-                    )
-                  })}
-                </Carousel>
-              </div>
-            </body>
+
+              </div> */}
+            </div>
           )
         })}
       </section>

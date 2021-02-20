@@ -1,7 +1,14 @@
+.storyWrapper {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.upperWrapper {
+  margin: 0 auto;
+}
+
 .upperBody {
   width: 100%;
-  margin: 0 auto;
-  
   display: inline-block;
 }
 
@@ -32,7 +39,7 @@
 }
 
 .lowerBody ul {
-  width: 80%;
+  width: 100%;
   /* display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-gap: 0.5rem; */
@@ -76,6 +83,7 @@
 } */
 
 h1 {
+  font-size: 40px;
   text-transform: capitalize;
 }
 
@@ -88,7 +96,7 @@ p {
   src: local('Josefin Sans'), url(./../fonts//josefinsans/JosefinSans-Light.ttf) format('truetype');
 }
 
-@media screen and (min-width: 672px) {
+/* @media screen and (min-width: 672px) {
   .lowerBody {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -100,9 +108,9 @@ p {
   .lowerBody {
     grid-template-columns: 1fr 1fr 1fr;
   }
-}
+} */
 
-@media screen and (max-width: 672px) {
+/* @media screen and (max-width: 672px) {
   .lowerBody div {
     width: 20rem;
     height: 13rem;
@@ -115,26 +123,25 @@ p {
 
   .lowerBody ul li{
     padding-bottom: 9rem;
-    /* padding-left: -3rem; */
+    
   }
 
   .lowerBody figure {
     display: block;
   }
-}
+} */
 
 @media (min-width: 481px) and (max-width: 767px) {
-.upperBody {
-  width: 80%;
-}
-.upperBody h1 {
-  font-size: 50px;
-  /* padding-left: 2rem; */
-}
-.upperBody  {
-  padding-left: 1rem;
-}
-  
+  .upperBody {
+    width: 80%;
+  }
+  .upperBody h1 {
+    font-size: 50px;
+    /* padding-left: 2rem; */
+  }
+  .upperBody {
+    padding-left: 1rem;
+  }
 }
 
 /* 
@@ -142,8 +149,47 @@ p {
   ##Screen = B/w 320px to 479px
 */
 
-@media (min-width: 320px) and (max-width: 480px) {
-  
-  /* CSS */
-  
+
+@media (min-width: 401px) and (max-width: 480px) {
+  .upperBody h1 {
+    font-size: 60px;
+  }
+  .upperBody p {
+    width: 100%;
+  }
+  .lowerBody figure {
+    display: block;
+    /* margin-left: 3rem; */
+  }
+  .lowerBody ul li {
+    padding-bottom: 8rem;
+  }
+  .lowerBody ul {
+    padding-left: 0;
+    /* padding: 1rem auto; */
+  }
+  .lowerBody div {
+    width: 15rem;
+    height: 10rem;
+  }
+}
+
+@media (min-width: 240px) and (max-width: 400px) {
+  .upperBody h1 {
+    font-size: 60px;
+  }
+  .upperBody p {
+    width: 90%;
+  }
+  .lowerBody figure {
+    display: block;
+    margin-left: -2rem;
+  }
+  .lowerBody ul li {
+    padding-bottom: 9rem;
+  }
+  .lowerBody div {
+    width: 16rem;
+    height: 12rem;
+  }
 }

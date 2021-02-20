@@ -1,4 +1,4 @@
-body {
+.story5-body {
     width: 100%;
     margin: 0 auto;
     /* padding-bottom: 10rem; */
@@ -34,11 +34,11 @@ body {
 
 .mainBody article {
     width: 100%;
+    margin: 0 auto;
 }
 
 .mainBody article .section1 {
     width: 100%;
-    margin: 0 auto;
 }
 
 .mainBody article .section2 {
@@ -86,7 +86,6 @@ body {
 
 .mainBody article .section4 {
     width: 100%;
-    
 }
 
 .img3 {
@@ -102,10 +101,10 @@ body {
     justify-content: center;
     align-items: center;
     padding-left: 6rem;
-    padding-bottom: 15rem;
+    padding-bottom: 22rem;
 }
 
-.mainBody article .section5 .div5 { 
+.mainBody article .section5 .div5 {
     width: 100%;
     padding-bottom: 1rem;
 }
@@ -116,4 +115,40 @@ body {
     position: relative;
     left: 100px;
     z-index: 99;
+}
+
+@media (min-width: 240px) and (max-width: 500px) {
+    .mainBody article .section1 {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .div1 {
+        float: initial;
+        margin: 0px;
+        /* display: inline-block; */
+    }
+    .img1 {
+        width: 15rem;
+        height: 13rem;
+    }
+    .div2 {
+        /* display: block; */
+        float: initial;
+        clear: both;
+        margin: 0 auto;
+        padding-bottom: 1rem;
+    }
+    .mainBody article .img2 {
+        width: 15rem;
+        height: 10rem;
+        padding: 0px;
+        /* padding: 5px; */
+    }
+    .mainBody article .section5 {
+        /* float: initial;
+        clear: both; */
+        margin: 0 auto;
+        padding-left: 0;
+        padding-bottom: 4rem;
+    }
 }

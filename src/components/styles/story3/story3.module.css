@@ -1,6 +1,8 @@
-body {
+.story3Wrapper {
   width: 90%;
   margin: 0 auto;
+  display: block;
+  max-width: 900px;
 }
 
 .header {
@@ -27,12 +29,13 @@ body {
 
 .mainBody {
   font-size: 13px;
-  max-width: 1030px;
+  /* max-width: 900px; */
   font-family: 'Playfair Display', serif;
 }
 
 .mainBody article {
   width: 100%;
+  margin: 0 auto;
 }
 
 .mainBody article .section0 {
@@ -44,15 +47,38 @@ body {
 .div0 {
   position: relative;
   z-index: 100;
+  margin: 0 auto;
+}
+
+.carousel-root {
+  margin: 0 auto;
+  height: 25rem;
+  width: 50rem;
+}
+
+.carousel-image {
+  height: 25rem;
+  width: 50rem;
+}
+
+.topCarouselRoot {
+  /* margin: 0 auto; */
+  height: 30rem;
+  width: 50rem;
+}
+
+.topCarouselImage {
+  height: 30rem;
+  width: 50rem;
 }
 
 .mainBody article .section1 {
-  width: 60%;
+  width: 54.44%;
   margin: 0 auto;
 }
 
 .mainBody article .section2 {
-  width: 80%;
+  width: 72%;
   position: relative;
   left: 205px;
   z-index: 99;
@@ -65,28 +91,36 @@ body {
 
 .img1 {
   width: 15rem;
-  height: 15rem;
+  height: 10rem;
   padding: 15px;
 }
 
-.mainBody article .section3 {
-  width: 80%;
-  top: 150px;
-  /* left: 150px; */
-  z-index: 99;
+.section3 {
+  width: 88%;
+  /* top: 150px; */
+  /* left: -300px; */
+  /* z-index: 99; */
+  margin: 0 auto;
+  display: inline-block;
+  left: 100px;
 }
 
-.textdiv {
-  padding-top: 2rem;
-  margin: 0 auto;
-  
+.carouselRoot1 {
+  width: 20rem;
+  height: 13rem;
+}
+
+.carouselImage1 {
+  width: 20rem;
+  height: 13rem;
 }
 
 .div2 {
+  clear: both;
   float: left;
+  margin: 0 auto;
   /* margin: 15px; */
-  padding-right: 50px;
-  
+  padding-right: 30px;
   /* padding-bottom: 70px; */
 }
 
@@ -98,35 +132,268 @@ body {
 
 .mainBody article .section4 {
   width: 80%;
-  position: relative;
-  left: 200px;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  left: 10px;
   top: 60px;
   z-index: 99;
+  padding-left: 12.5rem;
 }
 
-.img3 {
+.div3 {
+  float: right;
+  margin: 5px;
+}
+
+.carouselRoot2 {
   width: 20rem;
-  height: 15rem;
-  padding: 15px;
+  height: 13rem;
 }
 
-.mainBody article .section5 {
-  width: 80%;
-  margin: 0 auto;
-  position: relative;
-  left: 100px;
-  z-index: 99;
-}
-
-.mainBody article .section6 {
-  width: 80%;
-  margin: 0 auto;
-  position: relative;
-  left: 100px;
-  z-index: 99;
+.carouselImage2 {
+  width: 20rem;
+  height: 13rem;
 }
 
 .carousel {
   z-index: 99;
   position: relative;
+}
+
+/* .div0 .carousel-image {
+  width: 35rem;
+}
+
+.div0 .carousel-root {
+  width: 35rem;
+  height: 30rem;
+  margin: 0 auto;
+}
+
+.div0 .carousel .carousel-image {
+  height: 30rem;
+} */
+
+/* @media (min-width: 769px) and (max-width: 960px) {
+  .story1-body {
+  }
+  .carousel-image {
+    width: 38rem;
+  }
+  .carousel-root {
+    width: 38rem;
+    height: 15rem;
+    margin: 0 auto;
+  }
+  .carousel .carousel-image {
+    height: 20rem;
+  }
+  .story1-section2 {
+    width: 100%;
+    padding-top: 7rem;
+  }
+  .story1-section3-wrapper {
+    width: 100%;
+    left: 0;
+  }
+  .story1-section4-wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .story1-section4-wrapper .img2 {
+    width: 15rem;
+    height: 15rem;
+    padding: 0;
+  }
+}*/
+
+@media (min-width: 501px) and (max-width: 900px) {
+  .story3Wrapper {
+    display: block;
+  }
+  .mainBody article .section0 {
+    padding-bottom: 8rem;
+    width: 100%;
+  }
+  .mainBody article .section0 .div0 {
+    margin: 0 auto;
+    padding-right: 3rem;
+  }
+  .mainBody article .section1 {
+    width: 100%;
+  }
+  .mainBody article .section2 {
+    width: 100%;
+    margin: 0 auto;
+    /* position: relative; */
+    left: 0px;
+    /* z-index: 99; */
+  }
+  .section3 {
+    margin: 0 auto;
+    width: 100%;
+    /* top: 150px; */
+    left: 0px;
+    /* z-index: 99; */
+    /* margin: 0 auto; */
+    display: inline-block;
+    /* left: 0px; */
+  }
+  .section3 .carouselRoot1 {
+    width: 15rem;
+    padding-bottom: 1rem;
+  }
+  .div2 {
+    left: 0;
+  }
+  .mainBody article .section4 {
+    display: inline-block;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    z-index: 99;
+    padding-left: 0rem;
+  }
+  .section4 .div3 {
+    clear: both;
+    float: right;
+    margin: 0 auto;
+  }
+  .section4 .carouselRoot2 {
+    width: 15rem;
+    padding-bottom: 1rem;
+  }
+}
+
+/* @media (min-width: 401px) and (max-width: 500px) {
+  .story1-body {
+  }
+  .carousel-image {
+    width: 18rem;
+  }
+  .carousel-root {
+    width: 18rem;
+    height: 5rem;
+    margin: 0 auto;
+  }
+  .carousel .carousel-image {
+    height: 12rem;
+  }
+  .story1-section2 {
+    width: 100%;
+    padding-top: 7rem;
+  }
+  .story1-section3-wrapper {
+    width: 100%;
+    left: 0;
+  }
+  .story1-section4-wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .story1-section4-wrapper .img2 {
+    width: 15rem;
+    height: 15rem;
+    padding: 0;
+  }
+}  */
+
+@media (min-width: 240px) and (max-width: 500px) {
+  .story3Wrapper {
+    display: block;
+  }
+  .mainBody article .section0 {
+    padding-bottom: 8rem;
+    width: 100%;
+  }
+  .mainBody article .section0 .div0 {
+    margin: 0 auto;
+    padding-right: 3rem;
+  }
+  .mainBody article .section1 {
+    width: 100%;
+  }
+  .mainBody article .section2 {
+    width: 100%;
+    margin: 0 auto;
+    /* position: relative; */
+    left: 0px;
+    /* z-index: 99; */
+  }
+  .section3 {
+    margin: 0 auto;
+    width: 100%;
+    /* top: 150px; */
+    left: 0px;
+    /* z-index: 99; */
+    /* margin: 0 auto; */
+    /* display: inline-block; */
+    /* left: 0px; */
+  }
+  .section3 .carouselRoot1 {
+    width: 120%;
+    padding-bottom: 1rem;
+  }
+  .div2 {
+    left: 0;
+  }
+  .mainBody article .section4 {
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    z-index: 99;
+    padding-left: 0rem;
+  }
+  .section4 .div3 {
+    clear: both;
+    float: initial;
+    margin: 0 auto;
+  }
+  .section4 .carouselRoot2 {
+    width: 100%;
+    padding-bottom: 1rem;
+  }
+  /* .section4 .carouselRoot1 {
+    width: 10rem;
+    padding-bottom: 1rem;
+  } */
+  /* .mainBody article .section2 p {
+    float: initial;
+    margin: 0 auto;
+  } */
+  /* .carousel-image {
+    
+    height: 5rem;
+  }
+  .topCarouselRoot {
+    width: 15rem;
+    height: 5rem;
+    margin: 0 auto;
+  }
+  .div0 .carousel-root .carousel-image {
+    height: 10rem;
+  } */
+  /* .section2 {
+    width: 100%;
+    padding-top: 7rem;
+  }
+  .section3 {
+    width: 100%;
+    left: 0;
+  }
+  .section4 {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .section4 .img2 {
+    width: 15rem;
+    height: 15rem;
+    padding: 0;
+  }
+   */
 }

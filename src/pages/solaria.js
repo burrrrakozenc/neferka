@@ -168,13 +168,6 @@ class Solaria extends React.Component {
               ))}
             </div>
           </section>
-          <section>
-            {/* <div className={solariaStyle.solariaVideo}>
-            {SolariaVideo.map(({ node }, i) => (
-              <div dangerouslySetInnerHTML={{ __html: node.markdownContent.childMarkdownRemark.html, }} />
-            ))}
-          </div>  */}
-          </section>
         </section>
       </Layout >
     )

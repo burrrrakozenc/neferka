@@ -12,21 +12,23 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
-      <section className={styles.page}>
-        {home.map((hom) => {
-          return (
-            <article key={hom.id}>
-              <Link to={`/${hom.slug}`}>
-                <Image fluid={hom.categoryImage.fluid} alt={hom.title} className={styles.indeximages} />
-                <div className={styles.indexText}>
-                  <h2 className={styles.mainHeader}>{hom.category}</h2>
-                  <h4 className={styles.descHeader}>{hom.desc}</h4>
-                </div>
-              </Link>
-            </article>
-          )
-        })}
-      </section>
+      <div className={styles.indexWrapper}>
+        <section className={styles.page}>
+          {home.map((hom) => {
+            return (
+              <article key={hom.id}>
+                <Link to={`/${hom.slug}`}>
+                  <Image fluid={hom.categoryImage.fluid} alt={hom.title} className={styles.indeximages} />
+                  <div className={styles.indexText}>
+                    <h2 className={styles.mainHeader}>{hom.category}</h2>
+                    <h4 className={styles.descHeader}>{hom.desc}</h4>
+                  </div>
+                </Link>
+              </article>
+            )
+          })}
+        </section>
+      </div>
     </Layout>
   )
 }

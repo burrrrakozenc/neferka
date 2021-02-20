@@ -1,23 +1,6 @@
-/* * {
-  background: #000 !important;
-  color: #0f0 !important;
-  outline: solid #f00 1px !important;
-} */
-
  #___gatsby {
   height: 100%;
 }
-/* #gatsby-focus-wrapper {
-  height: 100vh;
-}
-
-#___gatsby {
-  height: 100vh;
-}
-
-#gatsby-announcer{
-  height: 100vh;
-} */
 
 #gatsby-announcer{
   height: 100vh;
@@ -25,14 +8,11 @@
 
 .container {
   width: 100%;
-  /* width: 90vw; */
-  /* max-width: 1170px; */
-  /* margin: 0 auto; */
-  /* height of your footer */
+  margin: 0 auto;
 }
 
 .push {
-  margin: 10rem;
+  margin-bottom: 10rem;
 }
 
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
@@ -53,30 +33,6 @@ p {
   src: local('Josefin Sans'), url(./../fonts//josefinsans/JosefinSans-Light.ttf) format('truetype');
 }
 
-/* 
-@media (min-width: 320px) and (max-width: 480px) {
-  
-  .container {
-    width: 300px;
-    justify-content: center;
-  }
-  
-} */
-
-/* @media screen and (min-width: 768px) {
-  .page {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 2rem;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .page {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-} */
-
 @media (min-width: 481px) and (max-width: 767px) {
   .container {
     width: 100%;
@@ -90,7 +46,7 @@ p {
 
 @media (min-width: 320px) and (max-width: 480px) {
   .container {
-    width: 300px;
+    width: 280px;
     height: auto;
   }
 }

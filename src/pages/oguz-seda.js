@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 import { Carousel } from 'react-responsive-carousel';
 import '../components/styles/story1/story1carousel.module.css'
 import Story5Style from '../components/styles/story5/story5.module.css'
+import '../components/styles/story5/story5.module.css'
 
 
 const Story4 = ({ data }) => {
@@ -15,7 +16,7 @@ const Story4 = ({ data }) => {
             <section className={Story5Style}>
                 {story.map((stry) => {
                     return (
-                        <body>
+                        <div className="story5-body">
                             <div className={Story5Style.header}>
                                 <h1><b>{stry.title}</b></h1>
                                 <p>{stry.date}</p>
@@ -57,19 +58,15 @@ const Story4 = ({ data }) => {
                                                 infiniteLoop={true}
                                                 autoPlay={true}
                                                 showThumbs={false}
-                                                width={'50rem'}
-                                                style={{
-                                                    height: '90vh',
-                                                }}
+                                                width={'100%'}
+                                                className="carousel-root"
                                             >
                                                 {stry.carousel.map(image => {
                                                     return (
                                                         <img key={image.id}
                                                             src={image.fluid.src}
                                                             alt={image.title}
-                                                            style={{
-                                                                height: '90vh',
-                                                            }}
+                                                            className="carousel-image"
                                                         />
                                                     )
                                                 })}
@@ -78,7 +75,7 @@ const Story4 = ({ data }) => {
                                     </section>
                                 </article>
                             </div>
-                        </body>
+                        </div>
                     )
                 })}
             </section>

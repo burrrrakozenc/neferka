@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 import { Carousel } from 'react-responsive-carousel';
 import '../components/styles/story1/story1carousel.module.css'
 import Story4Style from '../components/styles/story4/story4.module.css'
+import '../components/styles/story4/story4.module.css'
 
 
 const Story4 = ({ data }) => {
@@ -15,7 +16,7 @@ const Story4 = ({ data }) => {
             <section className={Story4Style}>
                 {story.map((stry) => {
                     return (
-                        <body>
+                        <div className="story4-body">
                             <div className={Story4Style.header}>
                                 <h1><b>{stry.title}</b></h1>
                                 <p>{stry.date}</p>
@@ -30,19 +31,23 @@ const Story4 = ({ data }) => {
                                                 infiniteLoop={true}
                                                 autoPlay={true}
                                                 showThumbs={false}
-                                                width={'50rem'}
-                                                style={{
-                                                    height: '90vh',
-                                                }}
+                                                dynamicHeight={true}
+                                                width={'100%'}
+                                                className="carousel-root"
+                                                // style={{
+                                                //     height: '90vh',
+                                                // }}
                                             >
                                                 {stry.carousel.map(image => {
                                                     return (
                                                         <img key={image.id}
                                                             src={image.fluid.src}
                                                             alt={image.title}
-                                                            style={{
-                                                                height: '90vh',
-                                                            }}
+                                                            height={'500px'}
+                                                            className="carousel-image"
+                                                            // style={{
+                                                            //     height: '90vh',
+                                                            // }}
                                                         />
                                                     )
                                                 })}
@@ -73,7 +78,7 @@ const Story4 = ({ data }) => {
                                     </section>
                                 </article>
                             </div>
-                        </body>
+                        </div>
                     )
                 })}
             </section>

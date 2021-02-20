@@ -26,11 +26,13 @@
     flex-direction: row;
     flex-wrap: wrap;
     list-style-type: none;
-    margin: 5rem auto;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
     /* display: flex; */
     justify-content: center;
     align-items: center;
     letter-spacing: 1px;
+    padding-right: 2rem;
 }
 
 .nav-item {
@@ -39,7 +41,7 @@
     flex-direction: column;
     /* width: 100%; */
     color: black;
-    font-size: 11px;
+    font-size: 14px;
     margin-right: 1rem;
     text-decoration: none;
     margin-bottom: 0.5rem;
@@ -152,7 +154,7 @@
 @media (min-width: 481px) and (max-width: 767px) {
     .logo {
         width: 25%;
-        padding-left: 3rem;
+        /* padding-left: 3rem; */
     }
     .header {
         width: 90%;
@@ -162,21 +164,23 @@
 @media (min-width: 320px) and (max-width: 480px) {
     .logo {
         width: 32%;
-        padding-left: 3rem;
+        /* padding-left: 1.5rem; */
     }
     .header {
-        width: 320px;
+        padding-right: 4rem;
+        width: 100%;
     }
 }
 
 @media (min-width: 240px) and (max-width: 319px) {
     .header {
-        width: 240px;
-        margin-left: 1.5rem;
+        /* width: 240px; */
+        /* margin-left: 1.5rem; */
+        /* padding-right: 5rem; */
     }
     .logo {
         width: 80px;
         height: auto;
-        padding-left: 1rem;
+        /* padding-left: 1rem; */
     }
 }
