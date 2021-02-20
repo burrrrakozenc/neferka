@@ -3,7 +3,8 @@ import Layout from '../components/layout'
 import { graphql } from 'gatsby'
 // import Img from 'gatsby-image'
 import { Carousel } from 'react-responsive-carousel';
-import '../components/styles/story2/story2carousel.module.css'
+// import '../components/styles/story2/story2carousel.module.css'
+import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import story3Style from '../components/styles/story3/story3.module.css'
 import '../components/styles/story3/story3.module.css'
 

@@ -2,7 +2,8 @@ import React from 'react'
 import Layout from '../components/layout'
 import { graphql } from 'gatsby'
 import { Carousel } from 'react-responsive-carousel';
-import '../components/styles/story1/story1carousel.module.css'
+// import '../components/styles/story1/story1carousel.module.css'
+import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import Story5Style from '../components/styles/story5/story5.module.css'
 import '../components/styles/story5/story5.module.css'
 
@@ -58,7 +59,6 @@ const Story4 = ({ data }) => {
                                                 infiniteLoop={true}
                                                 autoPlay={true}
                                                 showThumbs={false}
-                                                width={'100%'}
                                                 className="carousel-root"
                                             >
                                                 {stry.carousel.map(image => {

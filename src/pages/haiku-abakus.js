@@ -2,7 +2,8 @@ import React from 'react'
 import Layout from '../components/layout'
 import { graphql } from 'gatsby'
 import { Carousel } from 'react-responsive-carousel';
-import '../components/styles/story1/story1carousel.module.css'
+// import '../components/styles/story1/story1carousel.module.css'
+import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import Story4Style from '../components/styles/story4/story4.module.css'
 import '../components/styles/story4/story4.module.css'
 
@@ -32,7 +33,6 @@ const Story4 = ({ data }) => {
                                                 autoPlay={true}
                                                 showThumbs={false}
                                                 dynamicHeight={true}
-                                                width={'100%'}
                                                 className="carousel-root"
                                                 // style={{
                                                 //     height: '90vh',
@@ -43,7 +43,7 @@ const Story4 = ({ data }) => {
                                                         <img key={image.id}
                                                             src={image.fluid.src}
                                                             alt={image.title}
-                                                            height={'500px'}
+                                                            // height={'500px'}
                                                             className="carousel-image"
                                                             // style={{
                                                             //     height: '90vh',
