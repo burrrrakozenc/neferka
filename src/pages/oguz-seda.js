@@ -60,7 +60,7 @@ const Story4 = ({ data }) => {
                                                 autoPlay={true}
                                                 showThumbs={false}
                                                 dynamicHeight={true}
-                                                width={'100%'}
+                                                // width={'100%'}
                                                 className="carousel-root"
                                             >
                                                 {stry.carousel.map(image => {

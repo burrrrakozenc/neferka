@@ -107,6 +107,16 @@
     padding-bottom: 1rem;
 }
 
+.carousel-root {
+    margin: 0 auto;
+    width: 40rem;
+    height: 20rem;
+}
+.carousel-image {
+    width: 40rem;
+    height: 20rem;
+}
+
 .mainBody article .section6 {
     width: 80%;
     margin: 0 auto;
@@ -123,7 +133,6 @@
     .div1 {
         float: initial;
         margin: 0px;
-        /* display: inline-block; */
     }
     .img1 {
         width: 15rem;
