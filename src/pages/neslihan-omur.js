@@ -27,7 +27,7 @@ const Story1 = ({ data }) => {
                             </div>
                             <div className="story1-lower-body">
                                 {/* <article key={stry.id}> */}
-                                <div className="story1-section1 carousel">
+                                <div className="story1-section1 story1-carousel">
                                     {/* <div className={story1Style.div0}> */}
                                     <Carousel showArrows={true}
                                         showStatus={false}
@@ -35,6 +35,7 @@ const Story1 = ({ data }) => {
                                         infiniteLoop={true}
                                         autoPlay={true}
                                         showThumbs={false}
+                                        className="story1-carousel-root"
                                     >
                                         {stry.carousel.map(image => {
                                             return (
@@ -43,7 +44,7 @@ const Story1 = ({ data }) => {
                                                     alt={image.title}
                                                     // height={'500px'}
                                                     // width={1000}
-                                                    className="carousel-image"
+                                                    className="story1-carousel-image"
                                                 />
                                             )
                                         })}
