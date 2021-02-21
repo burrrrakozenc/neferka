@@ -59,6 +59,8 @@ const Story4 = ({ data }) => {
                                                 infiniteLoop={true}
                                                 autoPlay={true}
                                                 showThumbs={false}
+                                                dynamicHeight={true}
+                                                width={'850px'}
                                                 className="carousel-root"
                                             >
                                                 {stry.carousel.map(image => {

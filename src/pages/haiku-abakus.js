@@ -33,6 +33,7 @@ const Story4 = ({ data }) => {
                                                 autoPlay={true}
                                                 showThumbs={false}
                                                 dynamicHeight={true}
+                                                width={'850px'}
                                                 className="carousel-root"
                                                 // style={{
                                                 //     height: '90vh',

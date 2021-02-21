@@ -30,6 +30,7 @@
     font-size: 13px;
     max-width: 1030px;
     font-family: 'Playfair Display', serif;
+    margin: 0 auto;
 }
 
 .mainBody article {
@@ -97,9 +98,6 @@
 .mainBody article .section5 {
     width: 100%;
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding-left: 6rem;
     padding-bottom: 22rem;
 }
