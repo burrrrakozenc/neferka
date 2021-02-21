@@ -53,12 +53,12 @@
 
 .carousel-root {
     width: 50rem;
-    height: 20rem;
+    height: 30rem;
 }
 
 .carousel-image {
     width: 50rem;
-    height: 20rem;
+    height: 30rem;
 }
 
 .carousel .carousel-image {
@@ -179,8 +179,23 @@
 @media (min-width: 240px) and (max-width: 500px) {
     .mainBody article .section0 {
         padding-bottom: 0rem;
+        /* max-width: 15rem; */
+        
     }
     .div0 {
+        height: 14rem;
+        text-align: center;
+    }
+    /* .div0 .story4-carousel-root {
+        width: 30% !important;
+    }
+    .div0 .story4-carousel-image {
+        width: 30% !important;
+    } */
+    /* .mainBody article .section0 .div0 .carousel-root {
+        width: 20%;
+    } */
+    .section0 .div0 .carousel-image {
         height: 12rem;
     }
     .mainBody article .section1 {
@@ -209,4 +224,5 @@
         left: 0px;
         /* z-index: 99; */
     }
+    
 }

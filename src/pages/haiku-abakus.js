@@ -32,8 +32,8 @@ const Story4 = ({ data }) => {
                                                 infiniteLoop={true}
                                                 autoPlay={true}
                                                 showThumbs={false}
-                                                dynamicHeight={true}
-                                                width={'850px'}
+                                                // dynamicHeight={true}
+                                                
                                                 className="carousel-root"
                                                 // style={{
                                                 //     height: '90vh',
@@ -44,7 +44,8 @@ const Story4 = ({ data }) => {
                                                         <img key={image.id}
                                                             src={image.fluid.src}
                                                             alt={image.title}
-                                                            // height={'500px'}
+                                                            width={'850px'}
+                                                            height={'500px'}
                                                             className="carousel-image"
                                                             // style={{
                                                             //     height: '90vh',
