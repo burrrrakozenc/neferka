@@ -33,11 +33,12 @@ const Story4 = ({ data }) => {
                                                 autoPlay={true}
                                                 showThumbs={false}
                                                 // dynamicHeight={true}
-                                                
+                                                width={'850px'}
+                                                height={'500px'}
                                                 className="carousel-root"
-                                                // style={{
-                                                //     height: '90vh',
-                                                // }}
+                                            // style={{
+                                            //     height: '90vh',
+                                            // }}
                                             >
                                                 {stry.carousel.map(image => {
                                                     return (
@@ -47,9 +48,9 @@ const Story4 = ({ data }) => {
                                                             width={'850px'}
                                                             height={'500px'}
                                                             className="carousel-image"
-                                                            // style={{
-                                                            //     height: '90vh',
-                                                            // }}
+                                                        // style={{
+                                                        //     height: '90vh',
+                                                        // }}
                                                         />
                                                     )
                                                 })}
