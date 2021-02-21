@@ -6,7 +6,7 @@ import { Carousel } from 'react-responsive-carousel';
 // import '../components/styles/story2/story2carousel.module.css'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import story3Style from '../components/styles/story3/story3.module.css'
-import '../components/styles/story3/story3.module.css'
+// import '../components/styles/story3/story3.module.css'
 
 
 const Story3 = ({ data }) => {
@@ -34,7 +34,7 @@ const Story3 = ({ data }) => {
                                                 autoPlay={true}
                                                 showThumbs={false}
                                                 dynamicHeight={true}
-                                                className="carousel-root"
+                                                className={story3Style.topCarouselRoot}
                                                 // className={story3Style.topCarouselRoot}
                                             >
                                                 {stry.carousel.map(image => {
@@ -45,8 +45,8 @@ const Story3 = ({ data }) => {
                                                             // style={{
                                                             //     height:"100%"
                                                             // }}
-                                                            // className={story3Style.topCarouselImage}
-                                                            className="carousel-image"
+                                                            className={story3Style.topCarouselImage}
+                                                            // className="carousel-image"
                                                         />
                                                     )
                                                 })}

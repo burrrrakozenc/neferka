@@ -41,7 +41,7 @@
 .mainBody article .section0 {
   width: 90%;
   margin: 0 auto;
-  padding-bottom: 26rem;
+  padding-bottom: 1rem;
 }
 
 .div0 {
@@ -50,7 +50,7 @@
   margin: 0 auto;
 }
 
-.carousel-root {
+/* .carousel-root {
   margin: 0 auto;
   height: 25rem;
   width: 50rem;
@@ -59,15 +59,15 @@
 .carousel-image {
   height: 25rem;
   width: 50rem;
-}
+} */
 
-.topCarouselRoot {
+.mainBody .section0 .div0 .topCarouselRoot {
   /* margin: 0 auto; */
   height: 30rem;
   width: 50rem;
 }
 
-.topCarouselImage {
+.mainBody .section0 .div0 .topCarouselImage {
   height: 30rem;
   width: 50rem;
 }
@@ -307,12 +307,21 @@
     display: block;
   }
   .mainBody article .section0 {
-    padding-bottom: 8rem;
+    padding-bottom: 1rem;
     width: 100%;
   }
   .mainBody article .section0 .div0 {
     margin: 0 auto;
     padding-right: 3rem;
+  }
+  .mainBody .section0 .div0 .topCarouselRoot {
+    /* margin: 0 auto; */
+    height: 12rem;
+    width: 17rem;
+  }
+  .mainBody .section0 .div0 .topCarouselImage {
+    height: 12rem;
+    width: 17rem;
   }
   .mainBody article .section1 {
     width: 100%;
