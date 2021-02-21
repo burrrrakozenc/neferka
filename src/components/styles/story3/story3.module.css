@@ -215,12 +215,21 @@
     display: block;
   }
   .mainBody article .section0 {
-    padding-bottom: 8rem;
+    padding-bottom: 2rem;
     width: 100%;
   }
   .mainBody article .section0 .div0 {
     margin: 0 auto;
     padding-right: 3rem;
+  }
+  .mainBody .section0 .div0 .topCarouselRoot {
+    margin: 0 auto;
+    width: 25rem;
+    height: 18rem;
+  }
+  .mainBody .section0 .div0 .topCarouselImage {
+    width: 25rem;
+    height: 18rem;
   }
   .mainBody article .section1 {
     width: 100%;

@@ -33,9 +33,7 @@ const Story4 = ({ data }) => {
                                                 autoPlay={true}
                                                 showThumbs={false}
                                                 // dynamicHeight={true}
-                                                width={'850px'}
-                                                height={'500px'}
-                                                className="carousel-root"
+                                                className={Story4Style.story4CarouselRoot}
                                             // style={{
                                             //     height: '90vh',
                                             // }}
@@ -45,9 +43,7 @@ const Story4 = ({ data }) => {
                                                         <img key={image.id}
                                                             src={image.fluid.src}
                                                             alt={image.title}
-                                                            width={'850px'}
-                                                            height={'500px'}
-                                                            className="carousel-image"
+                                                            className={Story4Style.story4CarouselImage}
                                                         // style={{
                                                         //     height: '90vh',
                                                         // }}

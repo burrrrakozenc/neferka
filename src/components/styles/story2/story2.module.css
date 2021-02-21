@@ -2,7 +2,7 @@
     width: 90%;
     margin: 0 auto;
     padding-bottom: 5rem;
-    max-width: 900;
+    max-width: 900px;
 }
 
 .header {
@@ -76,44 +76,41 @@
 }
 
 .mainBody article .section4 {
-    width: 90%;
-    display: inline-block;
+    width: 100%;
+    /* display: inline-block; */
     /* justify-content: center;
     align-items: center; */
     margin: 0 auto;
-    padding-top: 5rem;
+    padding-top: 3rem;
     /* position: relative; */
     /* left: 200px; */
     z-index: 99;
 }
 
-
-.mainBody article .section5 {
-    width: 80%;
+.mainBody article .section4 .story2CarouselRoot {
     margin: 0 auto;
-    position: relative;
-    left: 100px;
-    z-index: 99;
+    width: 50rem;
+    height: 30rem;
 }
 
-.mainBody article .section6 {
-    width: 80%;
-    margin: 0 auto;
-    position: relative;
-    left: 100px;
-    z-index: 99;
+.mainBody article .section4 .story2CarouselImage {
+    width: 50rem;
+    height: 30rem;
 }
 
-.carousel {
-    padding-top: 10rem;
-    padding-left: 20rem;
-    justify-content: center;
-}
-
-@media (min-width: 601px) and (max-width: 768px) {
+@media (min-width: 601px) and (max-width: 840px) {
     .headerImage {
         width: 35rem;
         height: 14rem;
+    }
+    .mainBody article .section4 .story2CarouselRoot {
+        margin: 0 auto;
+        width: 35rem;
+        height: 27rem;
+    }
+    .mainBody article .section4 .story2CarouselImage {
+        width: 35rem;
+        height: 27rem;
     }
 }
 
@@ -121,6 +118,15 @@
     .headerImage {
         width: 26rem;
         height: 11rem;
+    }
+    .mainBody article .section4 .story2CarouselRoot {
+        margin: 0 auto;
+        width: 25rem;
+        height: 17rem;
+    }
+    .mainBody article .section4 .story2CarouselImage {
+        width: 25rem;
+        height: 17rem;
     }
 }
 
@@ -136,28 +142,33 @@
     .mainBody article .section1 {
         width: 100%;
     }
+    .mainBody article .section2 .img1 {
+        width: 18rem;
+        height: 12rem;
+        padding: 0;
+    }
     .mainBody article .section2 {
         width: 100%;
     }
-    .mainBody article .section2 .img1 {
-        width: 15rem;
+    .div2 {
+        margin:  0;
+    }
+    .mainBody article .section3 .img2 {
+        width: 18rem;
         height: 12rem;
         padding: 0;
     }
     .mainBody article .section3 {
         width: 100%;
     }
-    .section4 .carousel-image {
-        width: 15rem;
-        /* height: 5rem; */
-    }
-    .section4 .carousel-root {
-        width: 15rem;
-        height: 5rem;
+    .mainBody article .section4 .story2CarouselRoot {
         margin: 0 auto;
+        width: 18rem;
+        height: 12rem;
     }
-    .section4 .carousel .carousel-image {
-        height: 10rem;
+    .mainBody article .section4 .story2CarouselImage {
+        width: 18rem;
+        height: 12rem;
     }
     /* .carousel {
         margin: 0 auto;

@@ -96,25 +96,27 @@
 }
 
 .mainBody article .section5 {
+    margin: 0 auto;
     width: 100%;
     position: relative;
-    padding-left: 6rem;
-    padding-bottom: 22rem;
+    /* padding-left: 6rem; */
+    padding-bottom: 10rem;
 }
 
 .mainBody article .section5 .div5 {
+    margin: 0 auto;
     width: 100%;
     padding-bottom: 1rem;
 }
 
-.carousel-root {
+.section5 .div5 .story5CarouselRoot {
     margin: 0 auto;
-    width: 40rem;
-    height: 20rem;
+    width: 50rem;
+    height: 30rem;
 }
-.carousel-image {
-    width: 40rem;
-    height: 20rem;
+.section5 .div5 .story5CarouselImage {
+    width: 50rem;
+    height: 30rem;
 }
 
 .mainBody article .section6 {
@@ -124,6 +126,7 @@
     left: 100px;
     z-index: 99;
 }
+
 
 @media (min-width: 240px) and (max-width: 500px) {
     .mainBody article .section1 {
@@ -157,5 +160,14 @@
         margin: 0 auto;
         padding-left: 0;
         padding-bottom: 4rem;
+    }
+    .section5 .div5 .story5CarouselRoot {
+        margin: 0 auto;
+        width: 18rem;
+        height: 12rem;
+    }
+    .section5 .div5 .story5CarouselImage {
+        width: 18rem;
+        height: 12rem;
     }
 }

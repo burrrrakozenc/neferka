@@ -59,15 +59,14 @@ const Story4 = ({ data }) => {
                                                 infiniteLoop={true}
                                                 autoPlay={true}
                                                 showThumbs={false}
-                                                width={'800px'}
-                                                className="carousel-root"
+                                                className={Story5Style.story5CarouselRoot}
                                             >
                                                 {stry.carousel.map(image => {
                                                     return (
                                                         <img key={image.id}
                                                             src={image.fluid.src}
                                                             alt={image.title}
-                                                            className="carousel-image"
+                                                            className={Story5Style.story5CarouselImage}
                                                         />
                                                     )
                                                 })}

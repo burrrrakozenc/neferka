@@ -5,6 +5,7 @@ import { Carousel } from 'react-responsive-carousel';
 // import story1Style from '../components/styles/story1/story1.module.css'
 // import '../components/styles/story1/story1carousel.module.css'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
+// import story1Style from '../components/styles/story1/story12.css'
 import '../components/styles/story1/story12.css'
 // import Slider from "react-slick";
 
@@ -27,7 +28,7 @@ const Story1 = ({ data }) => {
                             </div>
                             <div className="story1-lower-body">
                                 {/* <article key={stry.id}> */}
-                                <div className="story1-section1 story1-carousel">
+                                <div className="story1-section1">
                                     {/* <div className={story1Style.div0}> */}
                                     <Carousel showArrows={true}
                                         showStatus={false}
@@ -35,7 +36,7 @@ const Story1 = ({ data }) => {
                                         infiniteLoop={true}
                                         autoPlay={true}
                                         showThumbs={false}
-                                        className="story1-carousel-root"
+                                        className="story1CarouselRoot"
                                     >
                                         {stry.carousel.map(image => {
                                             return (
@@ -44,7 +45,7 @@ const Story1 = ({ data }) => {
                                                     alt={image.title}
                                                     // height={'500px'}
                                                     // width={1000}
-                                                    className="story1-carousel-image"
+                                                    className="story1CarouselImage"
                                                 />
                                             )
                                         })}
