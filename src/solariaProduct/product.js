@@ -38,7 +38,6 @@ class SolariaProduct extends Component {
                 <figure>
                   <article>
                     <h1 style={{
-                      maxWidth: '250px',
                       fontSize: '40px',
                       fontWeight: '400'
                     }}>{title}</h1>
@@ -54,7 +53,7 @@ class SolariaProduct extends Component {
                   <div>
                     {carousel.map((image) => {
                       return (
-                        <Img fluid={image.fluid} />
+                        <Img fluid={image.localFile.childImageSharp.fluid} />
                       )
                     })}
                     <div className={productStyle.push}>
@@ -96,8 +95,13 @@ export const pageQuery = graphql`
       price
       category
       carousel {
-        fluid {
-          src
+        localFile {
+          childImageSharp {
+            fluid {
+              src
+            }
+          }
+          id
         }
       }
     }

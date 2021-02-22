@@ -1,6 +1,13 @@
+.dervishContainer {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    /* max-width: 1170px; */
+}
+
 .upperBody {
     width: 100%;
-    max-width: 1170px;
+    /* max-width: 1170px; */
     margin: 0rem auto;
     text-align: center;
 }
@@ -17,26 +24,42 @@
     opacity: 0.7;
 }
 
+.upperBody .parallax .parallaxDiv {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.upperBody .parallax .parallaxDiv h4 {
+    position: absolute;
+    font-size: 70px;
+    padding-top: 8rem;
+    font-weight: 100;
+    padding-left: 1rem;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
 .slugStyle {
     font-family: 'Playfair Display', serif;
     font-size: 13px;
 }
 
 .lowerBody {
-    max-width: 1170px;
+    /* max-width: 1100px; */
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     margin: 0 auto;
-    object-fit: cover;
 }
 
 .dervishNecklace {
+    margin: 0 auto;
     width: 80%;
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
     margin-bottom: 1rem;
 }
 
@@ -48,6 +71,7 @@
     padding-right: 1rem;
     position: relative;
     overflow: hidden;
+    padding-bottom: 2rem;
 }
 
 .dervishNecklace figure * {
@@ -143,20 +167,26 @@
 
 /* @media screen and (max-width: 750px) */
 
-@media screen and (max-width: 600px) {
+@media (min-width:401px) and (max-width: 600px) {
     .dervishNecklace figure div {
         height: 20rem;
         width: 25rem;
     }
 }
 
-@media screen and (max-width: 400px) {
+@media (min-width:240px) and (max-width: 400px) {
+    .dervishNecklace {
+        width: 100%;
+    }
     .dervishNecklace figure {
-        margin-left: 1rem;
+        margin-left: 0;
+        margin: 0 auto;
+        width: 100%;
     }
     .dervishNecklace figure div {
-        height: 12rem;
-        width: 15rem;
+        height: 13rem;
+        width: 17rem;
+        margin: 0 auto;
     }
 }
 
@@ -290,8 +320,9 @@
 @media (min-width: 320px) and (max-width: 480px) {
     .parallax {
         width: 10rem;
-        left: -8rem;
+        left: -12rem;
     }
+    
 }
 
 @media (min-width: 200px) and (max-width: 319px) {

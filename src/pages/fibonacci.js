@@ -73,7 +73,7 @@ const Product = ({ node }) => {
                                 </div>
                                 <br />
                                 <br />
-                                <Link style={{ textDecoration: 'none',color: 'gray' }} to={`../${node.slug}`}>View Full Item</Link>
+                                <Link style={{ textDecoration: 'none', color: 'gray' }} to={`../${node.slug}`}>View Full Item</Link>
                             </div>
                         </div>
                         <div className={fibonacciStyle.col + ' ' + fibonacciStyle.colspan4}>
@@ -105,59 +105,61 @@ class Fibonacci extends React.Component {
 
         return (
             <Layout>
-                <section className={fibonacciStyle.upperBody}>
-                    <div style={{
-                        paddingBottom: '2rem',
-                        top: '-3rem'
-                    }}>
-                        {parallax.map(({ node }, i) => (
-                            <div>
-                                <ParallaxBanner layers={[
-                                    {
-                                        image: node.fibonacci.fluid.src,
-                                        amount: 0.3,
-                                    }
+                <div className={fibonacciStyle.fibonacciContainer}>
+                    <section className={fibonacciStyle.upperBody}>
+                        <div style={{
+                            paddingBottom: '2rem',
+                            top: '-3rem'
+                        }}>
+                            {parallax.map(({ node }, i) => (
+                                <div>
+                                    <ParallaxBanner layers={[
+                                        {
+                                            image: node.fibonacci.fluid.src,
+                                            amount: 0.3,
+                                        }
 
-                                ]}
-                                    style={{
-                                        height: '40rem',
-                                        width: '50rem',
-                                    }}
-                                    className={fibonacciStyle.parallax}
-                                >
-                                    <div className={fibonacciStyle.parallaxDiv}>
-                                        <h4>
-                                            FIBONACCI
+                                    ]}
+                                        style={{
+                                            height: '40rem',
+                                            width: '50rem',
+                                            // opacity: '0.8'
+                                        }}
+                                        className={fibonacciStyle.parallax}
+                                    >
+                                        <div className={fibonacciStyle.parallaxDiv}>
+                                            <h4>
+                                                FIBONACCI
                                         </h4>
-                                        <p>
-                                            {node.fibonacciMain.fibonacciMain}
-                                        </p>
-                                    </div>
+                                            <p>
+                                                {node.fibonacciMain.fibonacciMain}
+                                            </p>
+                                        </div>
 
-                                </ParallaxBanner>
+                                    </ParallaxBanner>
+                                </div>
+                            ))}
+                        </div>
+                    </section>
+                    <section className={fibonacciStyle.lowerBody}>
+                        <section className={fibonacciStyle.v2}>
+                            <h3>Fibonacci V2</h3>
+                            <div className={fibonacciStyle.v2image}>
+                                {fibonacciV2Product.map(({ node }, i) => (
+                                    <Product node={node} key={node.id} />
+                                ))}
                             </div>
-                        ))}
-                    </div>
-                </section>
-                <section className={fibonacciStyle.lowerBody}>
-                    <section className={fibonacciStyle.v2}>
-                        <h3>Fibonacci V2</h3>
-                        <div className={fibonacciStyle.v2image}>
-                            {fibonacciV2Product.map(({ node }, i) => (
-                                <Product node={node} key={node.id} />
-                            ))}
-                        </div>
+                        </section>
+                        <section className={fibonacciStyle.necklace}>
+                            <h3>Fibonacci Necklace</h3>
+                            <div>
+                                {fibonacciNecklaceProduct.map(({ node }, i) => (
+                                    <Product node={node} key={node.id} />
+                                ))}
+                            </div>
+                        </section>
                     </section>
-                    <section className={fibonacciStyle.necklace}>
-                        <h3>Fibonacci Necklace</h3>
-                        <div>
-                            {fibonacciNecklaceProduct.map(({ node }, i) => (
-                                <Product node={node} key={node.id} />
-                            ))}
-                        </div>
-                    </section>
-                </section>
-
+                </div>
             </Layout >
         )
     }

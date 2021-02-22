@@ -1,7 +1,14 @@
+
+.solariContainer {
+  margin: 0 auto;
+  width: 100%;
+  /* max-width: 1170px; */
+}
+
 .upperBody {
   width: 100%;
-  max-width: 1170px;
-  margin: 0rem auto;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .upperBody div {
@@ -43,13 +50,12 @@
 }
 
 .lowerBody {
-  max-width: 1170px;
+  max-width: 1100px;
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   margin: 0 auto;
-  object-fit: cover;
+  /* object-fit: cover; */
 }
 
 .Circa {
@@ -57,7 +63,9 @@
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  float: left;
+  float: initial;
+  clear: both;
+  /* float: left; */
   margin-bottom: 1rem;
 }
 
@@ -163,19 +171,12 @@
   color: white;
 }
 
-@media screen and (max-width: 1080px) {
+/* @media screen and (max-width: 1080px) {
   .Circa figure div {
     height: 16rem;
     width: 19rem;
   }
-}
-
-@media screen and (max-width: 600px) {
-  .Circa figure div {
-    height: 20rem;
-    width: 25rem;
-  }
-}
+} */
 
 .Sphera {
   width: 80%;
@@ -358,29 +359,60 @@
   justify-content: center;
 }
 
-@media screen and (max-width: 600px) {
+@media (min-width:501px) and (max-width: 700px) {
   .Sphera figure div {
     height: 20rem;
     width: 25rem;
   }
   .Trigona figure div {
+    height: 20rem;
+    width: 25rem;
+  }
+  .Circa figure div {
     height: 20rem;
     width: 25rem;
   }
 }
 
-@media screen and (max-width: 400px) {
+@media (min-width:240px) and (max-width: 500px) {
+  .Circa {
+    width: 100%;
+  }
+  .Circa figure {
+    margin: 0 auto;
+    padding-left: 0;
+    width: 100%;
+  }
   .Circa figure div {
-    height: 12rem;
-    width: 15rem;
+    height: 13rem;
+    width: 17rem;
+    margin: 0 auto;
+  }
+  .Sphera {
+    width: 100%;
+  }
+  .Sphera figure {
+    margin: 0 auto;
+    padding-left: 0;
+    width: 100%;
   }
   .Sphera figure div {
-    height: 12rem;
-    width: 15rem;
+    height: 13rem;
+    width: 17rem;
+    margin: 0 auto;
+  }
+  .Trigona {
+    width: 100%;
+  }
+  .Trigona figure {
+    margin: 0 auto;
+    padding-left: 0;
+    width: 100%;
   }
   .Trigona figure div {
-    height: 12rem;
-    width: 15rem;
+    height: 13rem;
+    width: 17rem;
+    margin: 0 auto;
   }
 }
 
@@ -526,13 +558,13 @@
 } */
 
 @media (min-width: 320px) and (max-width: 480px) {
-  .parallax {
-    left: 0rem;
-  }
+  /* .parallax {
+    left: 0;
+  } */
   .upperBody .parallax .parallaxDiv h4 {
     padding-top: 5rem;
     font-size: 50px;
-    width: 55%;
+    width: 80%;
   }
   .upperBody .parallax .parallaxDiv p {
     /* left: 5rem; */

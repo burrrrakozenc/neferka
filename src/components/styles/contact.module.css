@@ -37,3 +37,9 @@
 .col input {
   height: 1.33rem;
 }
+
+@media screen and (max-width:700px) {
+  .colspan3 {
+    flex-basis: 100%;
+  }
+}

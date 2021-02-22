@@ -69,14 +69,14 @@ const Product = ({ node }) => {
                 }}>{node.title}</h1>
                 <h4 style={{
                   fontFamily: 'Josefin Sans',
-                  fontSize:'14px',
+                  fontSize: '14px',
                   color: '#696969',
                   fontWeight: '300'
                 }}>{node.price}</h4>
                 <div>
-                  <Button style={{marginBottom:'2rem'}}>Purchase</Button>
+                  <Button style={{ marginBottom: '2rem' }}>Purchase</Button>
                 </div>
-                <Link style={{ textDecoration: 'none',color: 'gray' }} to={`../${node.slug}`}>View Full Item</Link>
+                <Link style={{ textDecoration: 'none', color: 'gray' }} to={`../${node.slug}`}>View Full Item</Link>
               </div>
             </div>
             <div className={solariaStyle.col + ' ' + solariaStyle.colspan4}>
@@ -108,67 +108,80 @@ class Solaria extends React.Component {
 
     return (
       <Layout>
-        <section className={solariaStyle.upperBody}>
-          <div style={{
-            top: '-3rem',
-          }}>
-            {parallax.map(({ node }, i) => (
-              <div>
-                <ParallaxBanner layers={[
-                  {
-                    image: node.solaria.fluid.src,
-                    amount: 0.3,
-                  }
+          <div className={solariaStyle.solariContainer}>
+            <section className={solariaStyle.upperBody}>
+              <div style={{
+                top: '-3rem',
+              }}>
+                {parallax.map(({ node }, i) => (
+                  <div>
+                    <ParallaxBanner layers={[
+                      {
+                        image: node.solaria.fluid.src,
+                        amount: 0.3,
+                      }
 
-                ]}
-                  style={{
-                    height: '40rem',
-                    width: '100%',
-                  }}
-                  className={
-                    solariaStyle.parallax
-                  }
-                >
-                  <div className={solariaStyle.parallaxDiv}>
-                    <h4>
-                      SOLARIA
+                    ]}
+                      style={{
+                        height: '40rem',
+                        width: '100%',
+                        opacity: '0.6'
+                      }}
+                      className={
+                        solariaStyle.parallax
+                      }
+                    >
+                      <div className={solariaStyle.parallaxDiv}>
+                        <h4>
+                          SOLARIA
                     </h4>
-                    <p>
-                      {node.solariaMain.solariaMain}
-                    </p>
-                  </div>
+                        <p>
+                          {node.solariaMain.solariaMain}
+                        </p>
+                      </div>
 
-                </ParallaxBanner>
+                    </ParallaxBanner>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-        </section>
-        <section className={solariaStyle.lowerBody}>
-          <section className={solariaStyle.Circa}>
-            <h3>Circa</h3>
-            <div className={solariaStyle.circaimage}>
-              {circaProduct.map(({ node }, i) => (
-                <Product node={node} key={node.id} />
-              ))}
-            </div>
-          </section>
-          <section className={solariaStyle.Sphera}>
-            <h3>Sphera</h3>
-            <div>
-              {spheraProduct.map(({ node }, i) => (
-                <Product node={node} key={node.id} />
-              ))}
-            </div>
-          </section>
-          <section className={solariaStyle.Trigona}>
-            <h3>Trigona</h3>
+            </section>
+            <section className={solariaStyle.lowerBody}>
+              <section className={solariaStyle.Circa}>
+                <h3>Circa</h3>
+                <div className={solariaStyle.circaimage}>
+                  {circaProduct.map(({ node }, i) => (
+                    <Product node={node} key={node.id} />
+                  ))}
+                </div>
+              </section>
+              <section className={solariaStyle.Sphera}>
+                <h3>Sphera</h3>
+                <div>
+                  {spheraProduct.map(({ node }, i) => (
+                    <Product node={node} key={node.id} />
+                  ))}
+                </div>
+              </section>
+              <section className={solariaStyle.Trigona}>
+                <h3>Trigona</h3>
+                <div>
+                  {trigonaProduct.map(({ node }, i) => (
+                    <Product node={node} key={node.id} />
+                  ))}
+                </div>
+              </section>
+              {/* <section className={solariaStyle.Trigona}>
             <div>
               {trigonaProduct.map(({ node }, i) => (
+                <>
+                <h3>Trigona</h3>
                 <Product node={node} key={node.id} />
+                </>
               ))}
             </div>
-          </section>
-        </section>
+          </section> */}
+            </section>
+          </div>
       </Layout >
     )
   }

@@ -76,7 +76,7 @@ const Product = ({ node }) => {
                 </div>
                 <br />
                 <br />
-                <Link style={{ textDecoration: 'none',color: 'dark' }} to={`../${node.slug}`}>View Full Item</Link>
+                <Link style={{ textDecoration: 'none', color: 'dark' }} to={`../${node.slug}`}>View Full Item</Link>
               </div>
             </div>
             <div className={dervishStyle.col + ' ' + dervishStyle.colspan4}>
@@ -111,70 +111,77 @@ class Dervish extends React.Component {
 
     return (
       <Layout>
-        <section className={dervishStyle.upperBody}>
-          <div style={{
-            // paddingBottom: '2rem',
-            top: '-3rem'
-          }}>
-            {parallax.map(({ node }, i) => (
-              <div>
-                <ParallaxBanner layers={[
-                  {
-                    image: node.dervish.fluid.src,
-                    amount: 0.3,
-                  }
+        <div className={dervishStyle.dervishContainer}>
+          <section className={dervishStyle.upperBody}>
+            <div style={{
+              // paddingBottom: '2rem',
+              top: '-3rem'
+            }}>
+              {parallax.map(({ node }, i) => (
+                <div>
+                  <ParallaxBanner layers={[
+                    {
+                      image: node.dervish.fluid.src,
+                      amount: 0.3,
+                    }
 
-                ]}
-                  className={
-                    dervishStyle.parallax
-                  }
-                  style={{
-                    height: '20rem',
-                    width: '40rem',
-                  }}
-                >
-                </ParallaxBanner>
-              </div>
-            ))}
-          </div>
-        </section>
-        <section className={dervishStyle.lowerBody}>
-          <section className={dervishStyle.dervishNecklace}>
-            <h3>Dervish Necklace</h3>
-            <div className={dervishStyle.dervishnecklaceimage}>
-              {DervishNecklace.map(({ node }, i) => (
-                <Product node={node} key={node.id} />
+                  ]}
+                    className={
+                      dervishStyle.parallax
+                    }
+                    style={{
+                      height: '20rem',
+                      width: '40rem',
+                      opacity: '0.55'
+                    }}
+                  >
+                    <div className={dervishStyle.parallaxDiv}>
+                      <h4 style={{color:'black'}}>
+                        DERVISH
+                    </h4>
+                    </div>
+                  </ParallaxBanner>
+                </div>
               ))}
             </div>
           </section>
-          <section>
-            <div className={dervishStyle.dervishVideo}>
-              {DervishVideo.map(({ node }, i) => (
-                <div dangerouslySetInnerHTML={{ __html: node.markdownContent.childMarkdownRemark.html, }} />
-              ))}
-            </div>
-            {/* <div className={dervishStyle.dervishVideo}>
+          <section className={dervishStyle.lowerBody}>
+            <section className={dervishStyle.dervishNecklace}>
+              <h3>Dervish Necklace</h3>
+              <div className={dervishStyle.dervishnecklaceimage}>
+                {DervishNecklace.map(({ node }, i) => (
+                  <Product node={node} key={node.id} />
+                ))}
+              </div>
+            </section>
+            <section>
+              <div className={dervishStyle.dervishVideo}>
+                {DervishVideo.map(({ node }, i) => (
+                  <div dangerouslySetInnerHTML={{ __html: node.markdownContent.childMarkdownRemark.html, }} />
+                ))}
+              </div>
+              {/* <div className={dervishStyle.dervishVideo}>
                             {DervishVideo.map(({ node }, i) => (
                                 documentToReactComponents(node.richTextContent.json, options)
                             ))}
 
                         </div> */}
-            {/* <div>
+              {/* <div>
                         {DervishVideo.map(({ node }, i) => (
                                 // <Video node={node} key={node.id}/>
                             ))}
                         </div> */}
-            {/* <div dangerouslySetInnerHTML={{__html: DervishVideo.edges.node.markdownContent.childMarkdownRemark.html,}}/> */}
-          </section>
-          <section>
-            {/* <div>
+              {/* <div dangerouslySetInnerHTML={{__html: DervishVideo.edges.node.markdownContent.childMarkdownRemark.html,}}/> */}
+            </section>
+            <section>
+              {/* <div>
                         
                             {this.show ? <div  className="back-drop"></div> : null}
                             <button onClick={() => this.setShow({ count: this.state.count(true) })} className="btn-openModal">Open Modal</button>
                             <Modal show={this.show}  />
                         </div> */}
 
-            {/* <div
+              {/* <div
                             className="d-flex align-items-center justify-content-center"
                             style={{ height: "100vh" }}
                         >
@@ -184,8 +191,9 @@ class Dervish extends React.Component {
                         </div> */}
 
 
+            </section>
           </section>
-        </section>
+        </div>
       </Layout>
     )
   }

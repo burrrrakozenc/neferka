@@ -1,6 +1,11 @@
+.illusionsContainer {
+    width: 100%;
+    margin: 0 auto;
+}
+
 .upperBody {
     width: 100%;
-    max-width: 1170px;
+    max-width: 1080px;
     margin: 0rem auto;
     text-align: center;
 }
@@ -51,7 +56,7 @@
 }
 
 .lowerBody {
-    max-width: 1170px;
+    max-width: 1080px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -163,7 +168,9 @@
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    margin-bottom: 1rem;
+    /* justify-content: center;
+    align-items: center; */
+    padding-bottom: 2rem;
 }
 
 .mirageNecklace figure {
@@ -480,26 +487,66 @@
 }
 
 @media screen and (max-width: 600px) {
-    .mirageRing figure div {
-        height: 17rem;
-        width: 22rem;
-        justify-content: center;
+    .mirageRing {
+        width: 100%;
     }
-    .mirageNecklace figure div {
-        height: 17rem;
-        width: 22rem;
-        justify-content: center;
+    .mirageRing figure {
+        margin-left: 0;
+        margin: 0 auto;
+        width: 100%;
+    }
+    .mirageRing figure div {
+        height: 13rem;
+        width: 17rem;
+        margin: 0 auto;
+    }
+    .perspective {
+        width: 100%;
+    }
+    .perspective figure {
+        margin-left: 0;
+        margin: 0 auto;
+        width: 100%;
     }
     .perspective figure div {
+        height: 13rem;
+        width: 17rem;
+        margin: 0 auto;
+    }
+    .mirageNecklace {
+        width: 100%;
+    }
+    .mirageNecklace figure {
+        margin-left: 0;
+        margin: 0 auto;
+        width: 100%;
+    }
+    .mirageNecklace figure div {
+        height: 13rem;
+        width: 17rem;
+        margin: 0 auto;
+    }
+
+    /* .mirageRing figure div {
         height: 17rem;
         width: 22rem;
         justify-content: center;
-    }
+    } */
+    /* .mirageNecklace figure div {
+        height: 17rem;
+        width: 22rem;
+        justify-content: center;
+    } */
+    /* .perspective figure div {
+        height: 17rem;
+        width: 22rem;
+        justify-content: center;
+    } */
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
     .parallax {
-        left: -10rem;
+        left: -14rem;
     }
     .upperBody .parallax .parallaxDiv h4 {
         padding-top: 5rem;
@@ -512,10 +559,7 @@
         width: 40%;
         padding-top: 9rem;
         font-size: 13px;
-    }
-    .lowerBody figure div {
-        width: 18rem;
-        height: 13rem;
+        opacity: 1.5;
     }
 }
 

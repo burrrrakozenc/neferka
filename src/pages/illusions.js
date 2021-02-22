@@ -72,7 +72,7 @@ const Product = ({ node }) => {
                 </div>
                 <br />
                 <br />
-                <Link style={{ textDecoration: 'none',color: 'gray' }} to={`../${node.slug}`}>View Full Item</Link>
+                <Link style={{ textDecoration: 'none', color: 'gray' }} to={`../${node.slug}`}>View Full Item</Link>
               </div>
             </div>
             <div className={illusionsStyle.col + ' ' + illusionsStyle.colspan4}>
@@ -103,64 +103,68 @@ class Illusions extends React.Component {
 
     return (
       <Layout>
-        <section className={illusionsStyle.upperBody}>
-          <div style={{
-            top: '-3rem'
-          }}>
-            {parallax.map(({ node }, i) => (
-              <div>
-                <ParallaxBanner layers={[
-                  {
-                    image: node.illusions.fluid.src,
-                    amount: 0.3,
-                  }
+        <div className={illusionsStyle.illusionsContainer}>
+          <section className={illusionsStyle.upperBody}>
+            <div style={{
+              top: '-3rem'
+            }}>
+              {parallax.map(({ node }, i) => (
+                <div>
+                  <ParallaxBanner layers={[
+                    {
+                      image: node.illusions.fluid.src,
+                      amount: 0.3,
+                    }
 
-                ]}
-                  style={{
-                    height: '40rem',
-                    width: '50rem',
-                  }}
-                  className={illusionsStyle.parallax}
-                >
-                  <div className={illusionsStyle.parallaxDiv}>
-                    <h4>
-                      ILLUSIONS
+                  ]}
+                    style={{
+                      height: '40rem',
+                      width: '50rem',
+                    }}
+                    className={illusionsStyle.parallax}
+                  >
+                    <div className={illusionsStyle.parallaxDiv}>
+                      <h4>
+                        ILLUSIONS
                                         </h4>
-                    <p>
-                      {node.illusionsMain.illusionsMain}
-                    </p>
-                  </div>
-                </ParallaxBanner>
+                      <p>
+                        {node.illusionsMain.illusionsMain}
+                      </p>
+                    </div>
+                  </ParallaxBanner>
+                </div>
+              ))}
+            </div>
+          </section>
+          <section className={illusionsStyle.lowerBody}>
+            <section className={illusionsStyle.mirageRing}>
+              <h3>Mirage Ring</h3>
+              <div className={illusionsStyle.mirageRingimage}>
+                {Illusions1.map(({ node }, i) => (
+                  <Product node={node} key={node.id} />
+                ))}
               </div>
-            ))}
-          </div>
-        </section>
-        <section className={illusionsStyle.lowerBody}>
-          <section className={illusionsStyle.mirageRing}>
-            <h3>Mirage Ring</h3>
-            <div className={illusionsStyle.mirageRingimage}>
-              {Illusions1.map(({ node }, i) => (
-                <Product node={node} key={node.id} />
-              ))}
+            </section>
+            <section className={illusionsStyle.mirageNecklace}>
+              <h3>Mirage Necklace</h3>
+              <div className={illusionsStyle.mirageRingimage}>
+                {Illusions2.map(({ node }, i) => (
+                  <Product node={node} key={node.id} />
+                ))}
+              </div>
+            </section>
+            <div className={illusionsStyle.perspectiveWrapper}>
+              <section className={illusionsStyle.perspective}>
+                <h3>Perspective</h3>
+                <div className={illusionsStyle.mirageRingimage}>
+                  {Illusions3.map(({ node }, i) => (
+                    <Product node={node} key={node.id} />
+                  ))}
+                </div>
+              </section>
             </div>
           </section>
-          <section className={illusionsStyle.mirageNecklace}>
-            <h3>Mirage Necklace</h3>
-            <div className={illusionsStyle.mirageRingimage}>
-              {Illusions2.map(({ node }, i) => (
-                <Product node={node} key={node.id} />
-              ))}
-            </div>
-          </section>
-          <section className={illusionsStyle.perspective}>
-            <h3>Perspective</h3>
-            <div className={illusionsStyle.mirageRingimage}>
-              {Illusions3.map(({ node }, i) => (
-                <Product node={node} key={node.id} />
-              ))}
-            </div>
-          </section>
-        </section>
+        </div>
       </Layout >
     )
   }
