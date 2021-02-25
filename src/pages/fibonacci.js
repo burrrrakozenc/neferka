@@ -142,22 +142,28 @@ class Fibonacci extends React.Component {
                         </div>
                     </section>
                     <section className={fibonacciStyle.lowerBody}>
-                        <section className={fibonacciStyle.v2}>
-                            <h3>Fibonacci V2</h3>
-                            <div className={fibonacciStyle.v2image}>
-                                {fibonacciV2Product.map(({ node }, i) => (
-                                    <Product node={node} key={node.id} />
-                                ))}
-                            </div>
-                        </section>
-                        <section className={fibonacciStyle.necklace}>
-                            <h3>Fibonacci Necklace</h3>
-                            <div>
-                                {fibonacciNecklaceProduct.map(({ node }, i) => (
-                                    <Product node={node} key={node.id} />
-                                ))}
-                            </div>
-                        </section>
+                        <div className={fibonacciStyle.fibonacciProductContainer}>
+                            <section className={fibonacciStyle.v2}>
+
+                                <h3>Fibonacci V2</h3>
+                                <div className={fibonacciStyle.v2image}>
+                                    {fibonacciV2Product.map(({ node }, i) => (
+                                        <Product node={node} key={node.id} />
+                                    ))}
+                                </div>
+
+                            </section>
+                        </div>
+                        <div className={fibonacciStyle.fibonacciProductContainer}>
+                            <section className={fibonacciStyle.necklace}>
+                                <h3>Fibonacci Necklace</h3>
+                                <div>
+                                    {fibonacciNecklaceProduct.map(({ node }, i) => (
+                                        <Product node={node} key={node.id} />
+                                    ))}
+                                </div>
+                            </section>
+                        </div>
                     </section>
                 </div>
             </Layout >

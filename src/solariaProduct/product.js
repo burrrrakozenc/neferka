@@ -50,12 +50,14 @@ class SolariaProduct extends Component {
                     <Button>Purchase</Button>
                     <h4>{category}</h4>
                   </article>
-                  <div>
-                    {carousel.map((image) => {
-                      return (
-                        <Img fluid={image.localFile.childImageSharp.fluid} />
-                      )
-                    })}
+                  <section>
+                    <div className={productStyle.imageContainer}>
+                      {carousel.map((image) => {
+                        return (
+                          <Img fluid={image.localFile.childImageSharp.fluid} />
+                        )
+                      })}
+                    </div>
                     <div className={productStyle.push}>
                       <footer className={productStyle.footer}>
                         <Link target="_blank" to="https://www.instagram.com/neferka_design/">
@@ -67,7 +69,7 @@ class SolariaProduct extends Component {
                 </Link>
                       </footer>
                     </div>
-                  </div>
+                  </section>
                 </figure>
               </div>
             </div>

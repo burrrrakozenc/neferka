@@ -19,7 +19,7 @@
     background-position: fixed;
     display: flex;
     justify-content: center;
-    opacity: 0.7;
+    opacity: 0.6;
 }
 
 .upperBody .parallax .parallaxDiv {
@@ -60,9 +60,14 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     margin: 0 auto;
     object-fit: cover;
+}
+
+.lowerBody .illusionsProductContainer {
+    width: 100%;
+    margin: 0 auto;
 }
 
 .mirageRing {
@@ -104,8 +109,8 @@
 .mirageRing figure div {
     height: 13rem;
     width: 17rem;
-    float: left;
-    display: block;
+    /* float: left; */
+    display: inline-block;
     backface-visibility: hidden;
 }
 
@@ -204,9 +209,10 @@
 .mirageNecklace figure div {
     height: 17rem;
     width: 26rem;
-    float: left;
-    display: block;
+    /* float: left; */
+    display: inline-block;
     backface-visibility: hidden;
+    margin: 0 auto;
 }
 
 .mirageNecklace h3 {
@@ -302,8 +308,10 @@
 .perspective figure div {
     height: 13rem;
     width: 17rem;
-    float: left;
-    display: block;
+    /* float: left; */
+    justify-content: center;
+    margin: 0 auto;
+    display: inline-block;
     backface-visibility: hidden;
 }
 
@@ -578,9 +586,5 @@
         width: 30%;
         left: 9rem;
         font-size: 12px;
-    }
-    .lowerBody figure div {
-        width: 13rem;
-        height: 9rem;
     }
 }

@@ -60,9 +60,16 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     margin: 0 auto;
     object-fit: cover;
+}
+
+.lowerBody .fibonacciProductContainer {
+    width: 100%;
+    margin: 0 auto;
+    /* vertical-align: middle; */
+    /* width: 100%; */
 }
 
 .v2 {
@@ -411,6 +418,9 @@
         width: 17rem;
         margin: 0 auto;
     }
+    .fibonacciProductContainer {
+        width: 100%;
+    }
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
@@ -441,10 +451,6 @@
         padding-top: 9rem;
         font-size: 13px;
     }
-    /* .lowerBody figure div {
-        width: 18rem;
-        height: 13rem;
-    } */
 }
 
 @media (min-width: 200px) and (max-width: 319px) {
@@ -453,18 +459,12 @@
         width: 20rem;
     }
     .upperBody .parallax .parallaxDiv h4 {
-        /* padding-top: 1rem; */
         left: 4.5rem;
         font-size: 50px;
     }
     .upperBody .parallax .parallaxDiv p {
-        /* padding-top: 5rem; */
         width: 30%;
         left: 9rem;
         font-size: 12px;
     }
-    /* .lowerBody figure div {
-        width: 13rem;
-        height: 9rem;
-    } */
 }

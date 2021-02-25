@@ -137,31 +137,37 @@ class Illusions extends React.Component {
             </div>
           </section>
           <section className={illusionsStyle.lowerBody}>
-            <section className={illusionsStyle.mirageRing}>
-              <h3>Mirage Ring</h3>
-              <div className={illusionsStyle.mirageRingimage}>
-                {Illusions1.map(({ node }, i) => (
-                  <Product node={node} key={node.id} />
-                ))}
-              </div>
-            </section>
-            <section className={illusionsStyle.mirageNecklace}>
-              <h3>Mirage Necklace</h3>
-              <div className={illusionsStyle.mirageRingimage}>
-                {Illusions2.map(({ node }, i) => (
-                  <Product node={node} key={node.id} />
-                ))}
-              </div>
-            </section>
-            <div className={illusionsStyle.perspectiveWrapper}>
-              <section className={illusionsStyle.perspective}>
-                <h3>Perspective</h3>
+            <div className={illusionsStyle.illusionsProductContainer}>
+              <section className={illusionsStyle.mirageRing}>
+                <h3>Mirage Ring</h3>
                 <div className={illusionsStyle.mirageRingimage}>
-                  {Illusions3.map(({ node }, i) => (
+                  {Illusions1.map(({ node }, i) => (
                     <Product node={node} key={node.id} />
                   ))}
                 </div>
               </section>
+            </div>
+            <div className={illusionsStyle.illusionsProductContainer}>
+              <section className={illusionsStyle.mirageNecklace}>
+                <h3>Mirage Necklace</h3>
+                <div className={illusionsStyle.mirageRingimage}>
+                  {Illusions2.map(({ node }, i) => (
+                    <Product node={node} key={node.id} />
+                  ))}
+                </div>
+              </section>
+            </div>
+            <div className={illusionsStyle.illusionsProductContainer}>
+              <div className={illusionsStyle.perspectiveWrapper}>
+                <section className={illusionsStyle.perspective}>
+                  <h3>Perspective</h3>
+                  <div className={illusionsStyle.mirageRingimage}>
+                    {Illusions3.map(({ node }, i) => (
+                      <Product node={node} key={node.id} />
+                    ))}
+                  </div>
+                </section>
+              </div>
             </div>
           </section>
         </div>
