@@ -122,6 +122,9 @@
 
 .mirageRing h3 {
     font-size: small;
+    font-family: 'Playfair Display', serif;
+    /* margin-left: 0.5rem; */
+    font-weight: 600;
 }
 
 .mirageRing figure p {
@@ -232,6 +235,9 @@
 
 .mirageNecklace h3 {
     font-size: small;
+    font-family: 'Playfair Display', serif;
+    /* margin-left: 0.5rem; */
+    font-weight: 600;
 }
 
 .mirageNecklace figure p {
@@ -339,6 +345,9 @@
 
 .perspective h3 {
     font-size: small;
+    font-family: 'Playfair Display', serif;
+    /* margin-left: 0.5rem; */
+    font-weight: 600;
 }
 
 .perspective figure p {

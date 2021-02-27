@@ -23,7 +23,16 @@
 }
 
 .colspan3 {
-  flex-basis: 45%;
+  flex-basis: 40%;
+}
+.col h3{
+  font-family: 'Josefin Sans', serif;
+}
+.col p{
+  font-family: 'Playfair Display', serif;
+}
+.col label{
+  font-family: 'Playfair Display', serif;
 }
 
 .col label {

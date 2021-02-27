@@ -137,7 +137,7 @@
   margin-right: 1rem;
   margin-bottom: 3rem;
   position: absolute;
-  top: 70%;
+  top: 60%;
   bottom: 0;
   left: 0;
   right: 0;
@@ -247,7 +247,7 @@
   margin-right: 1rem;
   margin-bottom: 3rem;
   position: absolute;
-  top: 65%;
+  top: 60%;
   bottom: 0;
   left: 0;
   right: 0;
@@ -314,7 +314,7 @@
   height: 13rem;
   width: 17rem;
   float: none;
-  margin-right: 0rem;
+  /* margin-right: 0rem; */
   display: block;
   backface-visibility: hidden;
 }
@@ -336,7 +336,7 @@
   margin-right: 1rem;
   margin-bottom: 3rem;
   position: absolute;
-  top: 65%;
+  top: 57%;
   bottom: 0;
   left: 0;
   right: 0;

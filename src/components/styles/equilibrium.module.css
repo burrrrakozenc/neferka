@@ -119,6 +119,9 @@
 
 .goldenBalance h3 {
     font-size: small;
+    font-family: 'Playfair Display', serif;
+    margin-left: 0.5rem;
+    font-weight: 600;
 }
 
 .goldenBalance figure p {
@@ -131,7 +134,7 @@
     margin-right: 1rem;
     margin-bottom: 3rem;
     position: absolute;
-    top: 60%;
+    top: 55%;
     bottom: 0;
     left: 0;
     right: 0;

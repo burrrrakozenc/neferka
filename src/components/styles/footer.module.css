@@ -2,12 +2,25 @@
   color: black;
   text-align: center;
   font-size: 23px;
-  text-decoration: underline;
+  padding-bottom: 10rem;
+  /* text-decoration: underline; */
 }
 
 a, a:visited, a:hover, a:active {
   color: inherit;
-  text-decoration: underline;
+  /* text-decoration: underline; */
+}
+
+.icons {
+  width: 100%;
+  margin: 0 auto;
+  font-size: 3rem;
+  /* display: block; */
+  /* position: relative;
+  z-index: 9999;
+  width: 100px;
+  height: 40px;
+  font-size: 25px; */
 }
 
 @media (min-width: 240px) and (max-width: 480px) {
