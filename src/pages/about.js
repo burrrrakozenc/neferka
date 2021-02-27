@@ -11,7 +11,7 @@ const About = ({ data }) => {
 
   return (
     <Layout>
-      <section>
+      <div className={aboutStyle.aboutContainer}>
         {about.map((ab) => {
           return (
             <body className={aboutStyle.aboutBody}>
@@ -37,7 +37,7 @@ const About = ({ data }) => {
             </body>
           )
         })}
-      </section>
+      </div>
     </Layout>
   )
 }

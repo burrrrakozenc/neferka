@@ -6,7 +6,7 @@
 .upperBody {
     width: 100%;
     max-width: 1080px;
-    margin: 0rem auto;
+    margin: 0 auto;
     text-align: center;
 }
 
@@ -63,11 +63,16 @@
     /* justify-content: center; */
     margin: 0 auto;
     object-fit: cover;
+    /* vertical-align: baseline; */
 }
 
-.lowerBody .illusionsProductContainer {
-    width: 100%;
+.illusionsProductContainer {
     margin: 0 auto;
+    width: 100%;
+    display: inline-flex;
+    flex-wrap: wrap;
+    float: none;
+    /* justify-content: center; */
 }
 
 .mirageRing {
@@ -82,7 +87,7 @@
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    float: left;
+    float: none;
     padding-right: 1rem;
     position: relative;
     overflow: hidden;
@@ -112,6 +117,7 @@
     /* float: left; */
     display: inline-block;
     backface-visibility: hidden;
+    margin: 0 auto;
 }
 
 .mirageRing h3 {
@@ -173,9 +179,18 @@
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    /* justify-content: center;
-    align-items: center; */
+    /* justify-content: center; */
+    /* align-items: center; */
     padding-bottom: 2rem;
+}
+
+.illusionsItem {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
 }
 
 .mirageNecklace figure {
@@ -277,11 +292,17 @@
     margin-bottom: 1rem;
 }
 
-.perspective figure {
+.perspectiveItem {
     display: flex;
+    margin: 0 auto;
+    /* width: 100%; */
+}
+
+.perspective figure {
+    display: inline-block;
     flex-direction: column;
     margin: 0 auto;
-    float: left;
+    float: none;
     padding-right: 1rem;
     position: relative;
     overflow: hidden;
@@ -310,6 +331,7 @@
     width: 17rem;
     /* float: left; */
     justify-content: center;
+    align-items: center;
     margin: 0 auto;
     display: inline-block;
     backface-visibility: hidden;
@@ -496,6 +518,7 @@
 
 @media screen and (max-width: 600px) {
     .mirageRing {
+        display: block;
         width: 100%;
     }
     .mirageRing figure {
@@ -509,6 +532,7 @@
         margin: 0 auto;
     }
     .perspective {
+        display: block;
         width: 100%;
     }
     .perspective figure {
@@ -522,6 +546,7 @@
         margin: 0 auto;
     }
     .mirageNecklace {
+        display: block;
         width: 100%;
     }
     .mirageNecklace figure {
@@ -534,7 +559,6 @@
         width: 17rem;
         margin: 0 auto;
     }
-
     /* .mirageRing figure div {
         height: 17rem;
         width: 22rem;

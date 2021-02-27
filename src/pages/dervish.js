@@ -105,6 +105,7 @@ class Dervish extends React.Component {
 
   render() {
     const DervishNecklace = this.props.data.dervishNecklace.edges
+    const DervishExtra1 = this.props.data.dervishExtra1.edges
     const DervishVideo = this.props.data.dervishVideo.edges
     const parallax = this.props.data.parallax.edges
 
@@ -136,7 +137,7 @@ class Dervish extends React.Component {
                     }}
                   >
                     <div className={dervishStyle.parallaxDiv}>
-                      <h4 style={{color:'black'}}>
+                      <h4 style={{ color: 'black' }}>
                         DERVISH
                     </h4>
                     </div>
@@ -146,42 +147,55 @@ class Dervish extends React.Component {
             </div>
           </section>
           <section className={dervishStyle.lowerBody}>
-            <section className={dervishStyle.dervishNecklace}>
-              <h3>Dervish Necklace</h3>
-              <div className={dervishStyle.dervishnecklaceimage}>
-                {DervishNecklace.map(({ node }, i) => (
-                  <Product node={node} key={node.id} />
-                ))}
-              </div>
-            </section>
-            <section>
-              <div className={dervishStyle.dervishVideo}>
+            <div className={dervishStyle.dervishProductContainer}>
+              <section className={dervishStyle.dervishNecklace}>
+                <h3>Dervish Necklace</h3>
+                <div className={dervishStyle.dervishItem}>
+                  {DervishNecklace.map(({ node }, i) => (
+                    <Product node={node} key={node.id} />
+                  ))}
+                </div>
+              </section>
+            </div>
+            {/* <div className={dervishStyle.dervishProductContainer}>
+              <section className={dervishStyle.dervishNecklace}>
+                  <h3>aaa</h3>
+                <div className={dervishStyle.dervishItem}>
+                  {DervishNecklace.map(({ node }, i) => (
+                    <Product node={node} key={node.id} />
+                  ))}
+                </div>
+              </section>
+            </div> */}
+
+            {/* <section> */}
+            {/* <div className={dervishStyle.dervishVideo}>
                 {DervishVideo.map(({ node }, i) => (
                   <div dangerouslySetInnerHTML={{ __html: node.markdownContent.childMarkdownRemark.html, }} />
                 ))}
-              </div>
-              {/* <div className={dervishStyle.dervishVideo}>
+              </div> */}
+            {/* <div className={dervishStyle.dervishVideo}>
                             {DervishVideo.map(({ node }, i) => (
                                 documentToReactComponents(node.richTextContent.json, options)
                             ))}
 
                         </div> */}
-              {/* <div>
+            {/* <div>
                         {DervishVideo.map(({ node }, i) => (
                                 // <Video node={node} key={node.id}/>
                             ))}
                         </div> */}
-              {/* <div dangerouslySetInnerHTML={{__html: DervishVideo.edges.node.markdownContent.childMarkdownRemark.html,}}/> */}
-            </section>
-            <section>
-              {/* <div>
+            {/* <div dangerouslySetInnerHTML={{__html: DervishVideo.edges.node.markdownContent.childMarkdownRemark.html,}}/> */}
+          </section>
+          {/* <section> */}
+            {/* <div>
                         
                             {this.show ? <div  className="back-drop"></div> : null}
                             <button onClick={() => this.setShow({ count: this.state.count(true) })} className="btn-openModal">Open Modal</button>
                             <Modal show={this.show}  />
                         </div> */}
 
-              {/* <div
+            {/* <div
                             className="d-flex align-items-center justify-content-center"
                             style={{ height: "100vh" }}
                         >
@@ -191,8 +205,8 @@ class Dervish extends React.Component {
                         </div> */}
 
 
-            </section>
-          </section>
+            {/* </section> */}
+          {/* </section> */}
         </div>
       </Layout>
     )
@@ -204,6 +218,27 @@ Dervish.propTypes = propTypes
 export const query = graphql`
 {
     dervishNecklace: allContentfulDervish(filter: {category: {eq: "Dervish Necklace"}}) {
+        edges {
+          node {
+            id
+            price
+            title
+            slug
+            category
+            image {
+              fluid {
+                src
+              }
+            }
+            carousel {
+                fluid {
+                  src
+                }
+              }
+          }
+        }
+      }
+      dervishExtra1: allContentfulDervish(filter: {category: {eq: "ExtraCategory1"}}) {
         edges {
           node {
             id

@@ -59,12 +59,26 @@
     object-fit: cover;
 }
 
+.equilibriumProductContainer {
+    margin: 0 auto;
+    width: 100%;
+}
+
 .goldenBalance {
     width: 80%;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
     margin-bottom: 1rem;
+}
+
+.equilibriumItem {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
 }
 
 .goldenBalance figure {

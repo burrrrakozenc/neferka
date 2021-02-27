@@ -55,12 +55,30 @@
     margin: 0 auto;
 }
 
+.dervishProductContainer {
+    margin: 0 auto;
+    width: 100%;
+    display: inline-flex;
+    flex-wrap: wrap;
+    float: none;
+    /* justify-content: center; */
+}
+
 .dervishNecklace {
     margin: 0 auto;
     width: 80%;
     display: flex;
     flex-direction: column;
     margin-bottom: 1rem;
+}
+
+.dervishItem {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
 }
 
 .dervishNecklace figure {
@@ -101,7 +119,10 @@
 }
 
 .dervishNecklace h3 {
-    font-size: small;
+    font-size: 14px;
+    font-family: 'Playfair Display', serif;
+    margin-left: 0.5rem;
+    font-weight: 600;
 }
 
 .dervishNecklace figure p {
@@ -322,7 +343,6 @@
         width: 10rem;
         left: -12rem;
     }
-    
 }
 
 @media (min-width: 200px) and (max-width: 319px) {

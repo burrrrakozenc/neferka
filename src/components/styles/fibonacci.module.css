@@ -82,11 +82,20 @@
     margin-bottom: 1rem;
 }
 
+.fibonacciItem {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
 .v2 figure {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    float: left;
+    float: none;
     padding-right: 1rem;
     position: relative;
     overflow: hidden;

@@ -136,14 +136,16 @@ class Equilibrium extends React.Component {
                     </div>
                 </section>
                 <section className={equilibriumStyle.lowerBody}>
+                    <div className={equilibriumStyle.equilibriumProductContainer}>
                     <section className={equilibriumStyle.goldenBalance}>
                         <h3>Golden Balance</h3>
-                        <div className={equilibriumStyle.goldenBalanceimage}>
+                        <div className={equilibriumStyle.equilibriumItem}>
                             {GoldenBalance.map(({ node }, i) => (
                                 <Product node={node} key={node.id} />
                             ))}
                         </div>
                     </section>
+                    </div>
                 </section>
             </Layout >
         )

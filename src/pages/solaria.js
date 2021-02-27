@@ -108,69 +108,75 @@ class Solaria extends React.Component {
 
     return (
       <Layout>
-          <div className={solariaStyle.solariContainer}>
-            <section className={solariaStyle.upperBody}>
-              <div style={{
-                top: '-3rem',
-              }}>
-                {parallax.map(({ node }, i) => (
-                  <div>
-                    <ParallaxBanner layers={[
-                      {
-                        image: node.solaria.fluid.src,
-                        amount: 0.3,
-                      }
+        <div className={solariaStyle.solariContainer}>
+          <section className={solariaStyle.upperBody}>
+            <div style={{
+              top: '-3rem',
+            }}>
+              {parallax.map(({ node }, i) => (
+                <div>
+                  <ParallaxBanner layers={[
+                    {
+                      image: node.solaria.fluid.src,
+                      amount: 0.3,
+                    }
 
-                    ]}
-                      style={{
-                        height: '40rem',
-                        width: '100%',
-                        opacity: '0.6'
-                      }}
-                      className={
-                        solariaStyle.parallax
-                      }
-                    >
-                      <div className={solariaStyle.parallaxDiv}>
-                        <h4>
-                          SOLARIA
+                  ]}
+                    style={{
+                      height: '40rem',
+                      width: '100%',
+                      opacity: '0.6'
+                    }}
+                    className={
+                      solariaStyle.parallax
+                    }
+                  >
+                    <div className={solariaStyle.parallaxDiv}>
+                      <h4>
+                        SOLARIA
                     </h4>
-                        <p>
-                          {node.solariaMain.solariaMain}
-                        </p>
-                      </div>
+                      <p>
+                        {node.solariaMain.solariaMain}
+                      </p>
+                    </div>
 
-                    </ParallaxBanner>
-                  </div>
-                ))}
-              </div>
-            </section>
-            <section className={solariaStyle.lowerBody}>
+                  </ParallaxBanner>
+                </div>
+              ))}
+            </div>
+          </section>
+          <section className={solariaStyle.lowerBody}>
+            <div className={solariaStyle.solariaProductContainer}>
               <section className={solariaStyle.Circa}>
                 <h3>Circa</h3>
-                <div className={solariaStyle.circaimage}>
+                <div className={solariaStyle.solariaItem}>
                   {circaProduct.map(({ node }, i) => (
                     <Product node={node} key={node.id} />
                   ))}
                 </div>
               </section>
+            </div>
+            <div className={solariaStyle.solariaProductContainer}>
               <section className={solariaStyle.Sphera}>
                 <h3>Sphera</h3>
-                <div>
+                <div className={solariaStyle.solariaItem}>
                   {spheraProduct.map(({ node }, i) => (
                     <Product node={node} key={node.id} />
                   ))}
                 </div>
               </section>
+            </div>
+            <div className={solariaStyle.solariaProductContainer}>
               <section className={solariaStyle.Trigona}>
                 <h3>Trigona</h3>
-                <div>
+                <div className={solariaStyle.solariaItem}>
                   {trigonaProduct.map(({ node }, i) => (
                     <Product node={node} key={node.id} />
                   ))}
                 </div>
               </section>
-              {/* <section className={solariaStyle.Trigona}>
+            </div>
+            {/* <section className={solariaStyle.Trigona}>
             <div>
               {trigonaProduct.map(({ node }, i) => (
                 <>
@@ -180,8 +186,8 @@ class Solaria extends React.Component {
               ))}
             </div>
           </section> */}
-            </section>
-          </div>
+          </section>
+        </div>
       </Layout >
     )
   }
