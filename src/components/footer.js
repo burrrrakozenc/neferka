@@ -7,13 +7,13 @@ const Footer = () => {
     return (
         <div>
             <footer className={footerStyle.footer}>
-                <a className={footerStyle.icons} href='https://facebook.com/timcombs'>
+                <a className={footerStyle.icons} href='https://www.instagram.com/neferka_design/'>
                     <FontAwesomeIcon
                         icon={['fab', 'instagram']}
                         title='github account for deSolidState' />
                 </a>
                 <span style={{fontSize:'3rem'}}>&nbsp;&nbsp;/&nbsp;&nbsp;</span>
-                <a className={footerStyle.icons} href='https://facebook.com/timcombs'>
+                <a className={footerStyle.icons} href='https://www.facebook.com/neferkadesign/'>
                     <FontAwesomeIcon
                         icon={['fab', 'facebook']}
                         title='github account for deSolidState' />
