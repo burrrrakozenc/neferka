@@ -30,7 +30,7 @@
 
 .upperBody .parallax .parallaxDiv h4 {
   position: absolute;
-  font-size: 70px;
+  font-size: 60px;
   padding-top: 8rem;
   font-weight: 100;
   width: 50%;
@@ -588,7 +588,8 @@
   } */
   .upperBody .parallax .parallaxDiv h4 {
     padding-top: 5rem;
-    font-size: 50px;
+    font-weight: 100;
+    font-size: 45px;
     width: 80%;
   }
   .upperBody .parallax .parallaxDiv p {
