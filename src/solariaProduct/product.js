@@ -5,6 +5,7 @@ import Img from 'gatsby-image'
 import Layout from '../components/productLayout'
 import styled from 'styled-components';
 import productStyle from '../components/styles/product.module.css'
+import Footer from '../components/footer';
 
 const Button = styled.button`
 width: 100px;
@@ -38,6 +39,7 @@ class SolariaProduct extends Component {
                 <figure>
                   <article>
                     <h1 style={{
+                      maxWidth: '250px',
                       fontSize: '40px',
                       fontWeight: '400'
                     }}>{title}</h1>
@@ -50,16 +52,14 @@ class SolariaProduct extends Component {
                     <Button>Purchase</Button>
                     <h4>{category}</h4>
                   </article>
-                  <section>
-                    <div className={productStyle.imageContainer}>
-                      {carousel.map((image) => {
-                        return (
-                          <Img fluid={image.localFile.childImageSharp.fluid} />
-                        )
-                      })}
-                    </div>
+                  <div>
+                    {carousel.map((image) => {
+                      return (
+                        <Img fluid={image.fluid} />
+                      )
+                    })}
                     <div className={productStyle.push}>
-                      <footer className={productStyle.footer}>
+                      {/* <footer className={productStyle.footer}>
                         <Link target="_blank" to="https://www.instagram.com/neferka_design/">
                           INSTAGRAM
                 </Link>
@@ -67,17 +67,15 @@ class SolariaProduct extends Component {
                         <Link target="_blank" to="https://www.facebook.com/neferkadesign">
                           FACEBOOK
                 </Link>
-                      </footer>
+                      </footer> */}
                     </div>
-                  </section>
+                    <Footer />
+                  </div>
                 </figure>
               </div>
             </div>
           </section>
         </div>
-        {/* <div className={productStyle.push}>
-
-        </div> */}
       </Layout >
     )
   }

@@ -5,8 +5,9 @@ import Img from 'gatsby-image'
 import Layout from '../components/productLayout'
 import styled from 'styled-components';
 import productStyle from '../components/styles/product.module.css'
+import Footer from '../components/footer';
 
-const Buttona = styled.button`
+const Button = styled.button`
 width: 100px;
   min-width: 100px;
   padding: 10px 10px;
@@ -47,7 +48,7 @@ class EquilibriumProduct extends Component {
                       color: '#696969',
                       fontWeight: '300'
                     }}>{price}</h4>
-                    <Buttona>Purchase</Buttona>
+                    <Button>Purchase</Button>
                     <h4>{category}</h4>
                   </article>
                   <div>
@@ -57,7 +58,7 @@ class EquilibriumProduct extends Component {
                       )
                     })}
                     <div className={productStyle.push}>
-                      <footer className={productStyle.footer}>
+                      {/* <footer className={productStyle.footer}>
                         <Link target="_blank" to="https://www.instagram.com/neferka_design/">
                           INSTAGRAM
                 </Link>
@@ -65,8 +66,9 @@ class EquilibriumProduct extends Component {
                         <Link target="_blank" to="https://www.facebook.com/neferkadesign">
                           FACEBOOK
                 </Link>
-                      </footer>
+                      </footer> */}
                     </div>
+                    <Footer />
                   </div>
                 </figure>
               </div>
