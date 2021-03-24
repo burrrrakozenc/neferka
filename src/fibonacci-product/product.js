@@ -5,6 +5,7 @@ import Img from 'gatsby-image'
 import Layout from '../components/productLayout'
 import styled from 'styled-components';
 import productStyle from '../components/styles/product.module.css'
+import Footer from '../components/footer';
 
 const Button = styled.button`
 width: 100px;
@@ -57,8 +58,8 @@ class FibonacciProduct extends Component {
                         <Img fluid={image.fluid} />
                       )
                     })}
-                    <div className={productStyle.push}>
-                      <footer className={productStyle.footer}>
+                     <div className={productStyle.push}>
+                      {/* <footer className={productStyle.footer}>
                         <Link target="_blank" to="https://www.instagram.com/neferka_design/">
                           INSTAGRAM
                 </Link>
@@ -66,8 +67,9 @@ class FibonacciProduct extends Component {
                         <Link target="_blank" to="https://www.facebook.com/neferkadesign">
                           FACEBOOK
                 </Link>
-                      </footer>
+                      </footer> */}
                     </div>
+                    <Footer/>
                   </div>
                 </figure>
               </div>

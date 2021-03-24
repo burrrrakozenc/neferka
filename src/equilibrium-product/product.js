@@ -18,9 +18,6 @@ width: 100px;
   border: 2px solid #DCDCDC;
 `
 
-
-
-
 class EquilibriumProduct extends Component {
   render() {
 
