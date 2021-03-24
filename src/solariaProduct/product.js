@@ -95,13 +95,8 @@ export const pageQuery = graphql`
       price
       category
       carousel {
-        localFile {
-          childImageSharp {
             fluid {
               src
-            }
-          }
-          id
         }
       }
     }
