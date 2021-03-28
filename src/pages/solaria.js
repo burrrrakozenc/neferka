@@ -81,7 +81,15 @@ const Product = ({ node }) => {
             </div>
             <div className={solariaStyle.col + ' ' + solariaStyle.colspan4}>
               <div>
-                <Carousel showArrows={true} showThumbs={true} showIndicators={false} infiniteLoop={true} centerMode={true}>
+                <Carousel
+                 showThumbs={true}
+                 showArrows={true}
+                 showStatus={false}
+                 showIndicators={false}
+                 infiniteLoop={true}
+                 autoPlay={true}
+                 infiniteLoop={true} 
+                 centerMode={true}>
                   {node.carousel.map(image => {
                     console.log(image)
                     return (

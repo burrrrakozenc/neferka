@@ -55,7 +55,7 @@ class SolariaProduct extends Component {
                   <div>
                     {carousel.map((image) => {
                       return (
-                        <Img fluid={image.fluid} />
+                        <Img className={productStyle.productImage} fluid={image.fluid} />
                       )
                     })}
                     <div className={productStyle.push}>
@@ -68,8 +68,8 @@ class SolariaProduct extends Component {
                           FACEBOOK
                 </Link>
                       </footer> */}
-                    </div>
                     <Footer />
+                    </div>
                   </div>
                 </figure>
               </div>

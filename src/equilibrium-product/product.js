@@ -54,7 +54,7 @@ class EquilibriumProduct extends Component {
                   <div>
                     {carousel.map((image) => {
                       return (
-                        <Img fluid={image.fluid} />
+                        <Img className={productStyle.productImage} fluid={image.fluid} />
                       )
                     })}
                     <div className={productStyle.push}>
@@ -68,7 +68,9 @@ class EquilibriumProduct extends Component {
                 </Link>
                       </footer> */}
                     </div>
-                    <Footer />
+                    <div className={productStyle.forFooter}>
+                      <Footer />
+                    </div>
                   </div>
                 </figure>
               </div>

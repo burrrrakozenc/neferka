@@ -55,7 +55,7 @@ class IllusionsProduct extends Component {
                   <div>
                     {carousel.map((image) => {
                       return (
-                        <Img fluid={image.fluid} />
+                        <Img className={productStyle.productImage} fluid={image.fluid} />
                       )
                     })}
                      <div className={productStyle.push}>

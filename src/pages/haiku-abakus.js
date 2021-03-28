@@ -6,7 +6,28 @@ import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import Story4Style from '../components/styles/story4/story4.module.css'
 import '../components/styles/story4/story4.module.css'
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
+import styled from 'styled-components';
 
+const Button = styled.button`
+width: 120px;
+  padding: 10px 10px;
+  font-size: 12px;
+  borderRadius: 3px;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+
+    &:hover {
+      background-color: black;
+      color: white;
+    }
+
+    &:focus {
+      outline: none
+    }
+  `
 
 const Story4 = ({ data }) => {
 
@@ -65,18 +86,31 @@ const Story4 = ({ data }) => {
                                         <div className={Story4Style.textdiv}>
                                             <p className={Story4Style.p2}>
                                                 {stry.mainText2.mainText2}
-                                                {stry.mainText3.mainText3}
                                             </p>
+                                            <div className={Story4Style.p3}>
+                                                {documentToReactComponents(JSON.parse(stry.mainText3.raw))}
+                                            </div>
                                         </div>
-                                    </section>
-                                    <section className={Story4Style.section4}>
-                                        <p>
-                                            {stry.title}
-                                            {stry.price}
-                                        </p>
                                     </section>
                                 </article>
                             </div>
+                            <section className={Story4Style.mainBody}
+                                style={{
+                                    textAlign: 'center',
+                                    paddingTop: '2rem',
+                                    fontSize: '20px'
+                                }}
+                            >
+                                <p>
+                                    {stry.title}
+                                </p>
+                                <p>
+                                    {stry.price}
+                                </p>
+                                <div>
+                                    <Button style={{ marginBottom: '2rem' }}>Purchase</Button>
+                                </div>
+                            </section>
                         </div>
                     )
                 })}
@@ -102,8 +136,8 @@ export const query = graphql`
           maintText1 {
             maintText1
           }
-          mainText3 {
-            mainText3
+          mainText3{
+            raw
           }
           mainText2 {
             mainText2

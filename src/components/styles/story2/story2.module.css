@@ -143,7 +143,7 @@
         width: 100%;
     }
     .mainBody article .section2 .img1 {
-        width: 18rem;
+        width: 17rem;
         height: 12rem;
         padding: 0;
     }
@@ -154,9 +154,10 @@
         margin:  0;
     }
     .mainBody article .section3 .img2 {
-        width: 18rem;
-        height: 12rem;
-        padding: 0;
+        width: 17rem;
+        height: 11rem;
+        padding: 10px;
+        margin-left: 1rem;
     }
     .mainBody article .section3 {
         width: 100%;

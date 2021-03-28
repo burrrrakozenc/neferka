@@ -92,6 +92,11 @@
     z-index: 99;
 }
 
+.mainBody .section3 .textdiv .p3 {
+    width: 40%;
+    text-align: center;
+}
+
 .div2 {
     float: right;
     margin: 5px;
@@ -218,5 +223,9 @@
         /* position: relative; */
         left: 0px;
         /* z-index: 99; */
+    }
+
+    .mainBody .section3 .textdiv .p3 {
+        width: 100%;
     }
 }

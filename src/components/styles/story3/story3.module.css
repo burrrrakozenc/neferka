@@ -90,9 +90,10 @@
 }
 
 .img1 {
-  width: 15rem;
+  width: 14.5rem;
   height: 10rem;
   padding: 15px;
+  
 }
 
 .section3 {
@@ -342,7 +343,10 @@
     left: 0px;
     /* z-index: 99; */
   }
-  .section3 {
+  .img1 {
+    padding-left: 1rem;
+  }
+   .section3 {
     margin: 0 auto;
     width: 100%;
     /* top: 150px; */

@@ -26,7 +26,7 @@ const Contact = ({ data }) => {
                 {contact.map((item) => {
                     return (
                         <div className={contactStyle.col + ' ' + contactStyle.colspan3}>
-                            <h3>
+                            <h3 style={{fontSize: '24px', fontWeight:'400'}}>
                                 {item.title}
                                 {/* {documentToReactComponents(JSON.parse(item.mainText.raw))} */}
                             </h3>
@@ -52,12 +52,21 @@ const Contact = ({ data }) => {
     <textarea name="message" id="message" rows="5" />
                         </label>
                         <div style={{
-                            paddingLeft: '10px'
+                            paddingLeft: '10px',
+                            display: 'flex',
+                            flexDirection:'row'
                         }}>
-                            <Button type="submit">Send</Button>
-                            <Button type="reset" value="Clear">Clear</Button>
+                            <div
+                            style={{
+                                paddingRight:'0.5rem'
+                            }}
+                            >
+                                <Button type="submit">Send</Button>
+                            </div>
+                            <div>
+                                <Button type="reset" value="Clear">Clear</Button>
+                            </div>
                         </div>
-
                     </form>
                 </div>
             </div>
