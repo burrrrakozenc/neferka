@@ -11,6 +11,8 @@ import { Modal } from 'react-responsive-modal';
 import '../components/styles/modalCarousel.min.css'
 import { Carousel } from 'react-responsive-carousel';
 import styled from 'styled-components';
+import Helmet from 'react-helmet'
+
 
 const Button = styled.button`
 width: 120px;
@@ -78,15 +80,14 @@ const Product = ({ node }) => {
                         </div>
                         <div className={fibonacciStyle.col + ' ' + fibonacciStyle.colspan4}>
                             <div>
-                                <Carousel 
-                                showThumbs={true}
-                                showArrows={true}
-                                showStatus={false}
-                                showIndicators={false}
-                                infiniteLoop={true}
-                                autoPlay={true}
-                                infiniteLoop={true} 
-                                centerMode={true}
+                                <Carousel
+                                    showThumbs={true}
+                                    showArrows={true}
+                                    showStatus={false}
+                                    showIndicators={false}
+                                    infiniteLoop={true}
+                                    autoPlay={true}
+                                    centerMode={true}
                                 // thumbWidth={'80px'}
                                 >
                                     {node.carousel.map(image => {
@@ -115,6 +116,11 @@ class Fibonacci extends React.Component {
 
         return (
             <Layout>
+                <Helmet>
+                    <meta charSet="utf-8" />
+                    <title>Fibonacci - Neferka</title>
+                    <link rel="canonical" href="http://neferka.design/fibonacci" />
+                </Helmet>
                 <div className={fibonacciStyle.fibonacciContainer}>
                     <section className={fibonacciStyle.upperBody}>
                         <div style={{

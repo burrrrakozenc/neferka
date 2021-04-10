@@ -11,6 +11,8 @@ import { Modal } from 'react-responsive-modal';
 import '../components/styles/modalCarousel.min.css'
 import { Carousel } from 'react-responsive-carousel';
 import styled from 'styled-components';
+import Helmet from 'react-helmet'
+
 
 const Button = styled.button`
 width: 120px;
@@ -86,7 +88,6 @@ const Product = ({ node }) => {
                                 showIndicators={false}
                                 infiniteLoop={true}
                                 autoPlay={true}
-                                infiniteLoop={true} 
                                 centerMode={true}
                                 >
                                     {node.carousel.map(image => {
@@ -112,6 +113,11 @@ class Equilibrium extends React.Component {
 
         return (
             <Layout>
+                <Helmet>
+                <meta charSet="utf-8" />
+                <title>Equilibrium - Neferka</title>
+                <link rel="canonical" href="http://neferka.design/equilibrium" />
+            </Helmet>
                 <section className={equilibriumStyle.upperBody}>
                     <div style={{
                         top: '-3rem',

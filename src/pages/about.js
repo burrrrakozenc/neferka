@@ -3,6 +3,8 @@ import Layout from '../components/layout'
 import { graphql } from 'gatsby'
 import aboutStyle from '../components/styles/about.module.css'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
+import Helmet from 'react-helmet'
+
 
 const About = ({ data }) => {
 
@@ -11,6 +13,11 @@ const About = ({ data }) => {
 
   return (
     <Layout>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>About - Neferka</title>
+        <link rel="canonical" href="http://neferka.design/about" />
+      </Helmet>
       <div className={aboutStyle.aboutContainer}>
         {about.map((ab) => {
           return (

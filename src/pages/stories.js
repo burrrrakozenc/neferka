@@ -5,6 +5,8 @@ import { graphql } from 'gatsby'
 import Image from 'gatsby-image'
 import { Link } from 'gatsby'
 import * as PropTypes from 'prop-types'
+import Helmet from 'react-helmet'
+
 
 const propTypes = {
   data: PropTypes.object.isRequired,
@@ -14,6 +16,11 @@ const Product = ({ node }) => {
 
   return (
     <div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Neferka - Stories</title>
+        <link rel="canonical" href="http://neferka.design/stories" />
+      </Helmet>
       <figure>
         <Link to={`/${node.slug}`}>
           <Image className={storiesStyle.image} fluid={node.image.fluid} alt={node.title} />

@@ -11,6 +11,8 @@ import { Modal } from 'react-responsive-modal';
 import '../components/styles/modalCarousel.min.css'
 import { Carousel } from 'react-responsive-carousel';
 import styled from 'styled-components';
+import Helmet from 'react-helmet'
+
 
 const Button = styled.button`
 width: 120px;
@@ -78,14 +80,13 @@ const Product = ({ node }) => {
             <div className={illusionsStyle.col + ' ' + illusionsStyle.colspan4}>
               <div>
                 <Carousel
-                showThumbs={true}
-                showArrows={true}
-                showStatus={false}
-                showIndicators={false}
-                infiniteLoop={true}
-                autoPlay={true}
-                infiniteLoop={true} 
-                centerMode={true}
+                  showThumbs={true}
+                  showArrows={true}
+                  showStatus={false}
+                  showIndicators={false}
+                  infiniteLoop={true}
+                  autoPlay={true}
+                  centerMode={true}
                 >
                   {node.carousel.map(image => {
                     console.log(image)
@@ -112,6 +113,11 @@ class Illusions extends React.Component {
 
     return (
       <Layout>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>Illusions - Neferka</title>
+          <link rel="canonical" href="http://neferka.design/illusions" />
+        </Helmet>
         <div className={illusionsStyle.illusionsContainer}>
           <section className={illusionsStyle.upperBody}>
             <div style={{
@@ -147,14 +153,14 @@ class Illusions extends React.Component {
           </section>
           <section className={illusionsStyle.lowerBody}>
             <div className={illusionsStyle.illusionsProductContainer}>
-            <section className={illusionsStyle.mirageRing}>
-              <h3>Mirage Ring</h3>
-              <div className={illusionsStyle.illusionsItem}>
-                {Illusions1.map(({ node }, i) => (
-                  <Product node={node} key={node.id} />
-                ))}
-              </div>
-            </section>
+              <section className={illusionsStyle.mirageRing}>
+                <h3>Mirage Ring</h3>
+                <div className={illusionsStyle.illusionsItem}>
+                  {Illusions1.map(({ node }, i) => (
+                    <Product node={node} key={node.id} />
+                  ))}
+                </div>
+              </section>
             </div>
             <div className={illusionsStyle.illusionsProductContainer}>
               <section className={illusionsStyle.mirageNecklace}>

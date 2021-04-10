@@ -4,6 +4,7 @@ import Layout from '../components/layout'
 import styles from '../components/styles/index.module.css'
 import Image from 'gatsby-image'
 import { Link } from 'gatsby'
+import Helmet from 'react-helmet'
 
 
 const IndexPage = ({ data }) => {
@@ -12,6 +13,11 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
+      <Helmet>
+                <meta charSet="utf-8" />
+                <title>Neferka Design</title>
+                <link rel="canonical" href="http://neferka.design/" />
+            </Helmet>
       <div className={styles.indexWrapper}>
         <section className={styles.page}>
           {home.map((hom) => {

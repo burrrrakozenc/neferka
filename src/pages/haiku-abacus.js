@@ -8,6 +8,7 @@ import Story4Style from '../components/styles/story4/story4.module.css'
 import '../components/styles/story4/story4.module.css'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import styled from 'styled-components';
+import Helmet from 'react-helmet'
 
 const Button = styled.button`
 width: 120px;
@@ -35,6 +36,11 @@ const Story4 = ({ data }) => {
     } = data
     return (
         <Layout>
+          <Helmet>
+                <meta charSet="utf-8" />
+                <title>Haiku Abacus - Neferka</title>
+                <link rel="canonical" href="http://neferka.design/haiku-abacus" />
+            </Helmet>
             <section className={Story4Style}>
                 {story.map((stry) => {
                     return (

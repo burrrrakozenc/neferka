@@ -7,6 +7,7 @@ import Image from 'gatsby-image'
 // import '../components/styles/story1/story1carousel.module.css'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import story2Style from '../components/styles/story2/story2.module.css'
+import Helmet from 'react-helmet'
 
 
 const Story2 = ({ data }) => {
@@ -15,6 +16,11 @@ const Story2 = ({ data }) => {
 
   return (
     <Layout>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Abby & Britanny - Neferka</title>
+        <link rel="canonical" href="http://neferka.design/abby-brittany" />
+      </Helmet>
       <section className={story2Style.story2wrapper}>
         {story.map((stry) => {
           return (

@@ -7,7 +7,7 @@ import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 // import story1Style from '../components/styles/story1/story12.css'
 import '../components/styles/story1/story12.css'
-// import Slider from "react-slick";
+import Helmet from 'react-helmet'
 
 
 
@@ -17,6 +17,11 @@ const Story1 = ({ data }) => {
     } = data
     return (
         <Layout>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Neslihan & Ömür - Neferka</title>
+                <link rel="canonical" href="http://neferka.design/neslihan-omur" />
+            </Helmet>
             <div className="story1-wrapper">
                 {story.map((stry) => {
                     return (

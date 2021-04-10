@@ -11,6 +11,7 @@ import { Modal } from 'react-responsive-modal';
 import '../components/styles/modalCarousel.min.css'
 import { Carousel } from 'react-responsive-carousel';
 import styled from 'styled-components';
+import Helmet from 'react-helmet'
 
 const Button = styled.button`
 width: 120px;
@@ -81,15 +82,14 @@ const Product = ({ node }) => {
             </div>
             <div className={dervishStyle.col + ' ' + dervishStyle.colspan4}>
               <div>
-                <Carousel 
-                showThumbs={true}
-                showArrows={true}
-                showStatus={false}
-                showIndicators={false}
-                infiniteLoop={true}
-                autoPlay={true}
-                infiniteLoop={true} 
-                centerMode={true}
+                <Carousel
+                  showThumbs={true}
+                  showArrows={true}
+                  showStatus={false}
+                  showIndicators={false}
+                  infiniteLoop={true}
+                  autoPlay={true}
+                  centerMode={true}
                 >
                   {node.carousel.map(image => {
                     console.log(image)
@@ -114,13 +114,16 @@ class Dervish extends React.Component {
 
   render() {
     const DervishNecklace = this.props.data.dervishNecklace.edges
-    const DervishExtra1 = this.props.data.dervishExtra1.edges
-    const DervishVideo = this.props.data.dervishVideo.edges
     const parallax = this.props.data.parallax.edges
 
 
     return (
       <Layout>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>Dervish - Neferka</title>
+          <link rel="canonical" href="http://neferka.design/dervish" />
+        </Helmet>
         <div className={dervishStyle.dervishContainer}>
           <section className={dervishStyle.upperBody}>
             <div style={{
@@ -197,14 +200,14 @@ class Dervish extends React.Component {
             {/* <div dangerouslySetInnerHTML={{__html: DervishVideo.edges.node.markdownContent.childMarkdownRemark.html,}}/> */}
           </section>
           {/* <section> */}
-            {/* <div>
+          {/* <div>
                         
                             {this.show ? <div  className="back-drop"></div> : null}
                             <button onClick={() => this.setShow({ count: this.state.count(true) })} className="btn-openModal">Open Modal</button>
                             <Modal show={this.show}  />
                         </div> */}
 
-            {/* <div
+          {/* <div
                             className="d-flex align-items-center justify-content-center"
                             style={{ height: "100vh" }}
                         >
@@ -214,7 +217,7 @@ class Dervish extends React.Component {
                         </div> */}
 
 
-            {/* </section> */}
+          {/* </section> */}
           {/* </section> */}
         </div>
       </Layout>

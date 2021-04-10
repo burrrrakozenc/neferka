@@ -6,7 +6,7 @@ import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import Story5Style from '../components/styles/story5/story5.module.css'
 import '../components/styles/story5/story5.module.css'
-
+import Helmet from 'react-helmet'
 
 const Story4 = ({ data }) => {
 
@@ -14,6 +14,11 @@ const Story4 = ({ data }) => {
     } = data
     return (
         <Layout>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Oguz & Seda - Neferka</title>
+                <link rel="canonical" href="http://neferka.design/oguz-seda" />
+            </Helmet>
             <section className={Story5Style}>
                 {story.map((stry) => {
                     return (

@@ -4,6 +4,7 @@ import Layout from '../components/layout'
 import contactStyle from '../components/styles/contact.module.css'
 import styled from 'styled-components'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
+import Helmet from 'react-helmet'
 
 const Button = styled.button`
 min-width: 80px;
@@ -22,6 +23,11 @@ const Contact = ({ data }) => {
 
     return (
         <Layout>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Contact - Neferka</title>
+                <link rel="canonical" href="http://neferka.design/contact" />
+            </Helmet>
             <div className={contactStyle.row + ' ' + contactStyle.center}>
                 {contact.map((item) => {
                     return (

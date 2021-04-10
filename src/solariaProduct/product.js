@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import Layout from '../components/productLayout'
 import styled from 'styled-components';
 import productStyle from '../components/styles/product.module.css'
 import Footer from '../components/footer';
+import Helmet from 'react-helmet'
 
 const Button = styled.button`
 width: 100px;
@@ -32,6 +33,11 @@ class SolariaProduct extends Component {
 
     return (
       <Layout>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>{title} - Neferka</title>
+          <link rel="canonical" href="http://neferka.design/solaria" />
+        </Helmet>
         <div>
           <section className={productStyle.productBody}>
             <div className={productStyle.div1}>
@@ -59,16 +65,7 @@ class SolariaProduct extends Component {
                       )
                     })}
                     <div className={productStyle.push}>
-                      {/* <footer className={productStyle.footer}>
-                        <Link target="_blank" to="https://www.instagram.com/neferka_design/">
-                          INSTAGRAM
-                </Link>
-                        <span>&nbsp;&nbsp;/&nbsp;&nbsp;</span>
-                        <Link target="_blank" to="https://www.facebook.com/neferkadesign">
-                          FACEBOOK
-                </Link>
-                      </footer> */}
-                    <Footer />
+                      <Footer />
                     </div>
                   </div>
                 </figure>

@@ -11,11 +11,8 @@ import { Modal } from 'react-responsive-modal';
 import '../components/styles/modalCarousel.min.css'
 import { Carousel } from 'react-responsive-carousel';
 import styled from 'styled-components';
+import Helmet from 'react-helmet'
 
-// import { Modal } from "react-bootstrap";
-// import styled from 'styled-components';
-// import { Carousel } from 'react-responsive-carousel';
-// import carouselStyle from '../components/styles/modalCarousel.min.css'
 const Button = styled.button`
 width: 120px;
   padding: 10px 10px;
@@ -88,7 +85,6 @@ const Product = ({ node }) => {
                  showIndicators={false}
                  infiniteLoop={true}
                  autoPlay={true}
-                 infiniteLoop={true} 
                  centerMode={true}>
                   {node.carousel.map(image => {
                     console.log(image)
@@ -116,6 +112,11 @@ class Solaria extends React.Component {
 
     return (
       <Layout>
+         <Helmet>
+                <meta charSet="utf-8" />
+                <title>Solaria - Neferka</title>
+                <link rel="canonical" href="http://neferka.design/solaria" />
+            </Helmet>
         <div className={solariaStyle.solariContainer}>
           <section className={solariaStyle.upperBody}>
             <div style={{
@@ -175,7 +176,7 @@ class Solaria extends React.Component {
               </section>
             </div>
             <div className={solariaStyle.solariaProductContainer}>
-              <section className={solariaStyle.Trigona}>
+              <section className={solariaStyle.Sphera}>
                 <h3>Trigona</h3>
                 <div className={solariaStyle.solariaItem}>
                   {trigonaProduct.map(({ node }, i) => (
@@ -184,16 +185,6 @@ class Solaria extends React.Component {
                 </div>
               </section>
             </div>
-            {/* <section className={solariaStyle.Trigona}>
-            <div>
-              {trigonaProduct.map(({ node }, i) => (
-                <>
-                <h3>Trigona</h3>
-                <Product node={node} key={node.id} />
-                </>
-              ))}
-            </div>
-          </section> */}
           </section>
         </div>
       </Layout >
@@ -284,6 +275,11 @@ export const query = graphql`
           solariaMain
         }
         }
+      }
+    }
+    metadata: site {
+      siteMetadata {
+        title
       }
     }
     
