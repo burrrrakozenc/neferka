@@ -73,7 +73,7 @@ const Product = ({ node }) => {
                   fontWeight: '300'
                 }}>{node.price}</h4>
                 <div>
-                  <Button>Purchase</Button>
+                <a href={node.link}><Button>Purchase</Button></a>
                 </div>
                 <br />
                 <br />
@@ -236,6 +236,7 @@ export const query = graphql`
             price
             title
             slug
+            link
             category
             image {
               fluid {
@@ -256,6 +257,7 @@ export const query = graphql`
             id
             price
             title
+            link
             slug
             category
             image {

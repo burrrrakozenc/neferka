@@ -71,7 +71,7 @@ const Product = ({ node }) => {
                   fontWeight: '300'
                 }}>{node.price}</h4>
                 <div>
-                  <Button style={{ marginBottom: '2rem' }}>Purchase</Button>
+                  <a href={node.link}><Button style={{ marginBottom: '2rem' }}>Purchase</Button></a>
                 </div>
                 <Link style={{ textDecoration: 'none', color: 'gray' }} to={`../${node.slug}`}>View Full Item</Link>
               </div>
@@ -197,11 +197,12 @@ Solaria.propTypes = propTypes
 
 export const query = graphql`
 {
-          circa: allContentfulSolaria(filter: {category: {eq: "circa"}}) {
+          circa: allContentfulSolaria(filter: {category: {eq: "Circa"}}) {
           edges {
           node {
           id
             price
+            link
             title
             slug
             category
@@ -219,12 +220,13 @@ export const query = graphql`
         }
       }
 
-    sphera: allContentfulSolaria(filter: {category: {eq: "sphera"}}) {
+    sphera: allContentfulSolaria(filter: {category: {eq: "Sphera"}}) {
           edges {
           node {
           id
             price
             title
+            link
             category
             slug
             image {
@@ -241,10 +243,11 @@ export const query = graphql`
         }
       }
 
-    trigona: allContentfulSolaria(filter: {category: {eq: "trigona"}}) {
+    trigona: allContentfulSolaria(filter: {category: {eq: "Trigona"}}) {
           edges {
           node {
           id
+          link
           price
           title
           category

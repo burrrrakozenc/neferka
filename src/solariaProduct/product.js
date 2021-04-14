@@ -29,6 +29,7 @@ class SolariaProduct extends Component {
       price,
       category,
       carousel,
+      link
     } = this.props.data.contentfulSolaria
 
     return (
@@ -55,7 +56,7 @@ class SolariaProduct extends Component {
                       color: '#696969',
                       fontWeight: '300'
                     }}>{price}</h4>
-                    <Button>Purchase</Button>
+                    <a href={link}><Button>Purchase</Button></a>
                     <h4>{category}</h4>
                   </article>
                   <div>
@@ -96,6 +97,7 @@ export const pageQuery = graphql`
               src
         }
       }
+      link
     }
   }
 `

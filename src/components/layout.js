@@ -14,7 +14,6 @@ const Layout = (props) => {
             <ParallaxProvider>
                 {props.children}
             </ParallaxProvider>
-
             <div className={layoutStyle.push}></div>
             <Footer />
         </div>

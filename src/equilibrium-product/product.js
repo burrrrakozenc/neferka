@@ -5,8 +5,10 @@ import Img from 'gatsby-image'
 import Layout from '../components/productLayout'
 import styled from 'styled-components';
 import productStyle from '../components/styles/product.module.css'
-import Footer from '../components/footer';
 import Helmet from 'react-helmet'
+import '../utils/fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import footerStyle from '../components/styles/footer.module.css'
 
 const Button = styled.button`
 width: 100px;
@@ -28,6 +30,7 @@ class EquilibriumProduct extends Component {
       price,
       category,
       carousel,
+      link
     } = this.props.data.contentfulEquilibrium
 
     return (
@@ -54,7 +57,7 @@ class EquilibriumProduct extends Component {
                       color: '#696969',
                       fontWeight: '300'
                     }}>{price}</h4>
-                    <Button>Purchase</Button>
+                    <a href={link}><Button>Purchase</Button></a>
                     <h4>{category}</h4>
                   </article>
                   <div>
@@ -64,19 +67,23 @@ class EquilibriumProduct extends Component {
                       )
                     })}
                     <div className={productStyle.push}>
-                      {/* <footer className={productStyle.footer}>
-                        <Link target="_blank" to="https://www.instagram.com/neferka_design/">
-                          INSTAGRAM
-                </Link>
-                        <span>&nbsp;&nbsp;/&nbsp;&nbsp;</span>
-                        <Link target="_blank" to="https://www.facebook.com/neferkadesign">
-                          FACEBOOK
-                </Link>
-                      </footer> */}
+                      <footer className={footerStyle.footer}>
+                        <a className={footerStyle.icons} href='https://www.instagram.com/neferka_design/'>
+                          <FontAwesomeIcon
+                            icon={['fab', 'instagram']}
+                            title='github account for deSolidState' />
+                        </a>
+                        <span style={{ fontSize: '3rem' }}>&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+                        <a className={footerStyle.icons} href='https://www.facebook.com/neferkadesign/'>
+                          <FontAwesomeIcon
+                            icon={['fab', 'facebook']}
+                            title='github account for deSolidState' />
+                        </a>
+                      </footer>
                     </div>
-                    <div className={productStyle.forFooter}>
+                    {/* <div className={productStyle.forFooter}>
                       <Footer />
-                    </div>
+                    </div> */}
                   </div>
                 </figure>
               </div>
@@ -106,6 +113,7 @@ export const pageQuery = graphql`
           src
         }
       }
+      link
     }
   }
 `
