@@ -114,7 +114,7 @@ const Story4 = ({ data }) => {
                                     {stry.price}
                                 </p>
                                 <div>
-                                <a href="https://www.etsy.com/listing/986901512/haiki-abacus?ref=shop_home_active_1"><Button style={{ marginBottom: '2rem' }}>Purchase</Button></a>
+                                <a target="_blank" href="https://www.etsy.com/listing/986901512/haiki-abacus?ref=shop_home_active_1"><Button style={{ marginBottom: '2rem' }}>Purchase</Button></a>
                                 </div>
                             </section>
                         </div>

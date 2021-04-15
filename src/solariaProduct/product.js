@@ -56,7 +56,7 @@ class SolariaProduct extends Component {
                       color: '#696969',
                       fontWeight: '300'
                     }}>{price}</h4>
-                    <a href={link}><Button>Purchase</Button></a>
+                    <a href={link} target="_blank"><Button>Purchase</Button></a>
                     <h4>{category}</h4>
                   </article>
                   <div>

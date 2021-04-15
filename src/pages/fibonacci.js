@@ -71,7 +71,7 @@ const Product = ({ node }) => {
                                     fontWeight: '300'
                                 }}>{node.price}</h4>
                                 <div>
-                                <a href={node.link}><Button>Purchase</Button></a>
+                                <a href={node.link} target="_blank"><Button>Purchase</Button></a>
                                 </div>
                                 <br />
                                 <br />
