@@ -71,7 +71,7 @@ const Product = ({ node }) => {
                   fontWeight: '300'
                 }}>{node.price}</h4>
                 <div>
-                  <a href={node.link}><Button style={{ marginBottom: '2rem' }}>Purchase</Button></a>
+                  <a href={node.link} target="_blank"><Button style={{ marginBottom: '2rem' }}>Purchase</Button></a>
                 </div>
                 <Link style={{ textDecoration: 'none', color: 'gray' }} to={`../${node.slug}`}>View Full Item</Link>
               </div>
